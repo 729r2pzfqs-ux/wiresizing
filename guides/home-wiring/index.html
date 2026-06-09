@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residential Home Wiring Guide | WireSizing</title>
+<meta name="description" content="Complete guide to residential electrical wire sizing. Standard wire gauges for lighting, outlets, kitchen circuits, HVAC, and service panels. NEC requirements for home wiring.">
+<link rel="canonical" href="https://wiresizing.com/guides/home-wiring/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Residential Home Wiring Guide | WireSizing">
+<meta property="og:description" content="Complete guide to residential electrical wire sizing. Standard wire gauges for lighting, outlets, kitchen circuits, HVAC, and service panels. NEC requirements for home wiring.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/guides/home-wiring/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Residential Home Wiring Guide | WireSizing">
+<meta name="twitter:description" content="Complete guide to residential electrical wire sizing. Standard wire gauges for lighting, outlets, kitchen circuits, HVAC, and service panels. NEC requirements for home wiring.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
+
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference & calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <a href="/guides/" class="hover:text-blue-600">Guides</a> &rsaquo;
+    <span class="text-gray-900">Residential Home Wiring Guide</span>
+  </nav>
+
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Home Electrical Wiring — Wire Sizing Guide</h1>
+  <p class="text-lg text-gray-600 mb-8">Residential wiring follows NEC (National Electrical Code) standards that specify minimum wire sizes for different circuit types. Most homes use three main wire gauges: 14 AWG for 15A lighting circuits, 12 AWG for 20A outlet circuits, and 10 AWG for 30A dedicated circuits.</p>
+
+  
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+    <h2 class="font-bold text-gray-900 mb-3">Standard Circuit Wiring</h2>
+    <p class="text-gray-700">General lighting circuits use 14 AWG wire on 15A breakers. Standard outlet circuits use 12 AWG wire on 20A breakers. Kitchen countertop, bathroom, garage, and outdoor outlets require 20A circuits (12 AWG) per NEC. Dedicated appliance circuits (dryers, ranges, water heaters) use larger wire — typically 10 AWG for 30A, 8 AWG for 40A, or 6 AWG for 50A.</p>
+  </div>
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+    <h2 class="font-bold text-gray-900 mb-3">Service Entrance</h2>
+    <p class="text-gray-700">The main service entrance cable connects the utility meter to the main breaker panel. Common sizes: 100A service uses 4 AWG copper or 2 AWG aluminum; 200A service uses 2/0 AWG copper or 4/0 AWG aluminum. Most modern homes are wired for 200A service.</p>
+  </div>
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+    <h2 class="font-bold text-gray-900 mb-3">Wire Types for Homes</h2>
+    <p class="text-gray-700">NM-B (Romex) is the standard for interior residential wiring — a non-metallic sheathed cable with two or three conductors plus ground. UF-B is rated for underground/outdoor use. THHN/THWN is used in conduit. MC cable (metal-clad) is used where additional protection is needed.</p>
+  </div>
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+    <h2 class="font-bold text-gray-900 mb-3">Grounding</h2>
+    <p class="text-gray-700">All residential circuits require an equipment grounding conductor. NM-B cable includes a bare copper ground wire. The ground wire is the same gauge as the circuit conductors (14 AWG ground on 15A circuits, 12 AWG on 20A circuits). The main grounding electrode conductor to ground rods is typically 6 AWG copper.</p>
+  </div>
+
+  <div class="bg-blue-50 rounded-xl p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-3">Related Wire Sizes</h2>
+    <div class="flex flex-wrap gap-3"><a href="/awg/14/" class="inline-flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-4 py-2 hover:shadow-md hover:border-blue-300 transition-all"><span class="font-bold text-gray-900">14 AWG</span><span class="text-sm text-blue-600">15A</span></a><a href="/awg/12/" class="inline-flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-4 py-2 hover:shadow-md hover:border-blue-300 transition-all"><span class="font-bold text-gray-900">12 AWG</span><span class="text-sm text-blue-600">20A</span></a><a href="/awg/10/" class="inline-flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-4 py-2 hover:shadow-md hover:border-blue-300 transition-all"><span class="font-bold text-gray-900">10 AWG</span><span class="text-sm text-blue-600">30A</span></a><a href="/awg/8/" class="inline-flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-4 py-2 hover:shadow-md hover:border-blue-300 transition-all"><span class="font-bold text-gray-900">8 AWG</span><span class="text-sm text-blue-600">40A</span></a><a href="/awg/6/" class="inline-flex items-center gap-2 bg-white rounded-lg border border-gray-200 px-4 py-2 hover:shadow-md hover:border-blue-300 transition-all"><span class="font-bold text-gray-900">6 AWG</span><span class="text-sm text-blue-600">55A</span></a></div>
+  </div>
+
+  <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-8">
+    <p class="text-sm text-yellow-800"><strong>Disclaimer:</strong> This guide is for informational purposes only. Always consult a licensed electrician and follow local building codes for actual installations. Wire sizing depends on specific conditions including ambient temperature, conduit fill, and derating factors.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+    <h4 class="font-bold text-gray-900 mb-2">Explore</h4>
+    <a href="/guides/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">All wiring guides &rarr;</a>
+    <a href="/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire size calculator &rarr;</a>
+    <a href="/awg/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">AWG wire chart &rarr;</a>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
