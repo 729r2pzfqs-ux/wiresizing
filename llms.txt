@@ -1,0 +1,63 @@
+# WireSizing.com
+
+> Wire gauge reference and sizing calculator. Free, ad-supported reference site with data calculated from ASTM B258 (AWG formulas), NEC Table 310.16 (ampacity), and IEC 60228 (metric sizes).
+
+## AWG Wire Gauge Chart
+- [Full AWG Chart](https://wiresizing.com/awg/): All 44 AWG sizes from 4/0 to 40
+- Individual pages for each gauge: /awg/14/, /awg/12/, /awg/4-0/, etc.
+- Each page includes: diameter (mm/inches/mils), area (mm²/circular mils), resistance (Ω/km, Ω/1000ft) for copper and aluminum, ampacity at 60/75/90°C, weight, skin depth, common uses, insulation types
+
+## Metric Wire Sizes (IEC 60228)
+- [Metric Chart](https://wiresizing.com/metric/): 19 standard sizes from 0.5 mm² to 300 mm²
+- Individual pages: /metric/2.5mm2/, /metric/4mm2/, /metric/10mm2/, etc.
+- Includes ampacity, resistance, weight, closest AWG equivalent
+
+## Wire Size by Amperage
+- [Amp Lookup](https://wiresizing.com/what-size/): 15A through 200A
+- Pages like /what-size/30-amp/, /what-size/50-amp/
+- Shows recommended copper and aluminum wire gauge per NEC Table 310.16
+
+## Appliance Wiring Guides
+- [All Appliances](https://wiresizing.com/appliances/): 13 guides
+- Dryer, water heater, stove, air conditioner, hot tub, EV charger, welder, well pump, pool pump, microwave, dishwasher, garage, bathroom
+- Each includes: wire size, breaker, voltage, typical amps, NEC reference, max distance
+
+## Ampacity Tables
+- [NEC 310.16](https://wiresizing.com/ampacity/): Copper at 60/75/90°C, aluminum at 75°C
+
+## Distance & Voltage Drop
+- [Distance Charts](https://wiresizing.com/distance/): 60 pages
+- Combinations of 10 common gauges × 6 distances (25, 50, 75, 100, 150, 200 ft)
+- Voltage drop at 120V and 240V for multiple amperages
+
+## Conversions
+- [AWG to mm²](https://wiresizing.com/convert/awg-to-mm2/)
+- [mm² to AWG](https://wiresizing.com/convert/mm2-to-awg/)
+
+## Comparisons
+- [Copper vs Aluminum](https://wiresizing.com/compare/copper-vs-aluminum/)
+- [Solid vs Stranded](https://wiresizing.com/compare/solid-vs-stranded/)
+
+## Wire Materials
+- [Materials](https://wiresizing.com/materials/): Copper, aluminum, silver, gold, nickel, nichrome, steel, tinned copper — with resistivity, density, temp coefficient
+
+## Application Guides
+- [Home Wiring](https://wiresizing.com/guides/home-wiring/)
+- [Automotive](https://wiresizing.com/guides/automotive/)
+- [Solar](https://wiresizing.com/guides/solar/)
+- [Marine](https://wiresizing.com/guides/marine/)
+- [Speaker Wire](https://wiresizing.com/guides/speaker-wire/)
+- [EV Charging](https://wiresizing.com/guides/ev-charging/)
+
+## Calculator
+- [Wire Size Calculator](https://wiresizing.com/calculator/): Enter amps, voltage, distance, material, phase — get recommended wire gauge with voltage drop calculation
+
+## Key Formulas
+- AWG diameter: d(n) = 0.005 × 92^((36-n)/39) inches
+- Area: A = π/4 × d²
+- Resistance: R = ρ × L / A
+- Voltage drop (single phase): Vdrop = 2 × I × R × L
+- Voltage drop (three phase): Vdrop = √3 × I × R × L
+
+## Contact
+- info@wiresizing.com
