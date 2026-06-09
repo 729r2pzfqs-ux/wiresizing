@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wire Gauge Conversions — AWG to mm², SWG, Diameter | WireSizing</title>
-<meta name="description" content="Convert between wire gauge systems. AWG to mm², AWG to SWG, gauge to diameter. Complete conversion tables and calculators.">
-<link rel="canonical" href="https://wiresizing.com/convert/">
+<title>Solid vs Stranded Wire — When to Use Each Type | WireSizing</title>
+<meta name="description" content="Solid vs stranded wire: what's the difference? Compare flexibility, resistance, applications, and when to use each type. A practical guide for choosing the right wire construction.">
+<link rel="canonical" href="https://wiresizing.com/compare/solid-vs-stranded/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,17 +15,17 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
-<meta property="og:title" content="Wire Gauge Conversions — AWG to mm², SWG, Diameter | WireSizing">
-<meta property="og:description" content="Convert between wire gauge systems. AWG to mm², AWG to SWG, gauge to diameter. Complete conversion tables and calculators.">
+<meta property="og:title" content="Solid vs Stranded Wire — When to Use Each Type | WireSizing">
+<meta property="og:description" content="Solid vs stranded wire: what's the difference? Compare flexibility, resistance, applications, and when to use each type. A practical guide for choosing the right wire construction.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://wiresizing.com/convert/">
+<meta property="og:url" content="https://wiresizing.com/compare/solid-vs-stranded/">
 <meta property="og:site_name" content="WireSizing">
 <meta property="og:image" content="https://wiresizing.com/og-default.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wire Gauge Conversions — AWG to mm², SWG, Diameter | WireSizing">
-<meta name="twitter:description" content="Convert between wire gauge systems. AWG to mm², AWG to SWG, gauge to diameter. Complete conversion tables and calculators.">
+<meta name="twitter:title" content="Solid vs Stranded Wire — When to Use Each Type | WireSizing">
+<meta name="twitter:description" content="Solid vs stranded wire: what's the difference? Compare flexibility, resistance, applications, and when to use each type. A practical guide for choosing the right wire construction.">
 <meta name="twitter:image" content="https://wiresizing.com/og-default.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
@@ -82,16 +82,84 @@
 </header>
 
 <div class="max-w-4xl mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold text-gray-900 mb-6">Wire Gauge Conversions</h1>
-  <div class="grid md:grid-cols-2 gap-4">
-    <a href="/convert/awg-to-mm2/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
-      <h3 class="font-bold text-gray-900 mb-2">AWG to mm²</h3>
-      <p class="text-sm text-gray-600">Convert American Wire Gauge to metric cross-sectional area</p>
-    </a>
-    <a href="/convert/mm2-to-awg/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
-      <h3 class="font-bold text-gray-900 mb-2">mm² to AWG</h3>
-      <p class="text-sm text-gray-600">Convert metric wire sizes to American Wire Gauge equivalent</p>
-    </a>
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <a href="/compare/" class="hover:text-blue-600">Comparisons</a> &rsaquo;
+    <span class="text-gray-900">Solid vs Stranded</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Solid vs Stranded Wire</h1>
+  <p class="text-gray-600 mb-8">Wire comes in two basic constructions: solid (a single conductor) and stranded (multiple thin wires twisted together). Both have the same AWG size designation but different physical properties and ideal uses.</p>
+
+  <div class="grid md:grid-cols-2 gap-6 mb-8">
+    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+      <h2 class="text-xl font-bold text-blue-800 mb-3">Solid Wire</h2>
+      <p class="text-sm text-gray-700 mb-4">A single solid conductor of the full cross-sectional area.</p>
+      <h3 class="font-bold text-gray-900 mb-2">Best For:</h3>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>In-wall residential wiring (Romex/NM-B)</li>
+        <li>Push-in terminal connections</li>
+        <li>Breadboard prototyping</li>
+        <li>Conduit runs with few bends</li>
+        <li>Outdoor direct burial</li>
+      </ul>
+      <h3 class="font-bold text-gray-900 mt-4 mb-2">Properties:</h3>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>Slightly lower DC resistance</li>
+        <li>Stiffer, holds shape when bent</li>
+        <li>More prone to fatigue if repeatedly flexed</li>
+        <li>Cheaper to manufacture</li>
+        <li>Available in smaller gauges (typically 10 AWG and smaller)</li>
+      </ul>
+    </div>
+    <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
+      <h2 class="text-xl font-bold text-green-800 mb-3">Stranded Wire</h2>
+      <p class="text-sm text-gray-700 mb-4">Multiple thin wire strands twisted together to form the conductor.</p>
+      <h3 class="font-bold text-gray-900 mb-2">Best For:</h3>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>Flexible cords and cables</li>
+        <li>Automotive and marine wiring</li>
+        <li>Appliance connections</li>
+        <li>Panel wiring in switchboards</li>
+        <li>Any application with movement or vibration</li>
+      </ul>
+      <h3 class="font-bold text-gray-900 mt-4 mb-2">Properties:</h3>
+      <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+        <li>Highly flexible, won't break from bending</li>
+        <li>Better for high-frequency (less skin effect)</li>
+        <li>Larger outer diameter for same gauge</li>
+        <li>Required for larger gauges (8 AWG and up)</li>
+        <li>Needs crimped or soldered terminations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Quick Comparison</h2>
+    </div>
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-gray-200 text-left text-gray-500 text-xs uppercase">
+          <th class="py-2 px-4">Property</th><th class="py-2 px-4">Solid</th><th class="py-2 px-4">Stranded</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-500">Flexibility</td><td class="py-2 px-4">Low — stiff</td><td class="py-2 px-4 font-medium text-green-700">High — very flexible</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 text-gray-500">DC Resistance</td><td class="py-2 px-4 font-medium text-blue-700">Slightly lower</td><td class="py-2 px-4">Slightly higher</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-500">Skin Effect</td><td class="py-2 px-4">More pronounced at high freq</td><td class="py-2 px-4 font-medium text-green-700">Less — better for AC/RF</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 text-gray-500">Fatigue Resistance</td><td class="py-2 px-4">Low — will break if flexed</td><td class="py-2 px-4 font-medium text-green-700">High — designed for movement</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-500">Outer Diameter</td><td class="py-2 px-4 font-medium text-blue-700">Smaller</td><td class="py-2 px-4">Larger (same gauge)</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 text-gray-500">Cost</td><td class="py-2 px-4 font-medium text-blue-700">Lower</td><td class="py-2 px-4">Higher</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-500">Termination</td><td class="py-2 px-4 font-medium text-blue-700">Push-in, screw terminals</td><td class="py-2 px-4">Crimp, solder, or ferrule</td></tr>
+        <tr><td class="py-2 px-4 text-gray-500">NEC Residential</td><td class="py-2 px-4 font-medium text-blue-700">Standard (14-10 AWG)</td><td class="py-2 px-4">Required for 8 AWG+</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-3">Key Takeaway</h2>
+    <p class="text-gray-700">For residential in-wall wiring (14, 12, and 10 AWG), solid wire is standard and preferred. For anything that moves, flexes, or is larger than 8 AWG, stranded wire is the right choice. The ampacity rating is the same for both — NEC Table 310.16 applies regardless of whether the conductor is solid or stranded.</p>
   </div>
 </div>
 

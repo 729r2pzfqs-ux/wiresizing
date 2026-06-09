@@ -63,8 +63,12 @@
   <url><loc>https://wiresizing.com/awg/8/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/awg/9/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/calculator/</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/compare/</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/compare/copper-vs-aluminum/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/compare/solid-vs-stranded/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/convert/</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/convert/awg-to-mm2/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/convert/mm2-to-awg/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/distance/</loc><lastmod>2026-06-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/distance/1-0-awg-100-feet/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/distance/1-0-awg-150-feet/</loc><lastmod>2026-06-09</lastmod><priority>0.6</priority></url>
