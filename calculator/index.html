@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wire Size Calculator — Find the Right Gauge for Any Circuit | WireSizing</title>
+<meta name="description" content="Free wire size calculator. Enter amps, voltage, distance, and material to find the correct wire gauge with voltage drop calculation. Based on NEC standards.">
+<link rel="canonical" href="https://wiresizing.com/calculator/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Wire Size Calculator — Find the Right Gauge for Any Circuit | WireSizing">
+<meta property="og:description" content="Free wire size calculator. Enter amps, voltage, distance, and material to find the correct wire gauge with voltage drop calculation. Based on NEC standards.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/calculator/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wire Size Calculator — Find the Right Gauge for Any Circuit | WireSizing">
+<meta name="twitter:description" content="Free wire size calculator. Enter amps, voltage, distance, and material to find the correct wire gauge with voltage drop calculation. Based on NEC standards.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wire Size Calculator", "url": "https://wiresizing.com/calculator/", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference & calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/calculator/" class="text-blue-600 font-medium">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">Wire Size Calculator</h1>
+  <p class="text-gray-600 mb-8">Enter your circuit parameters to find the correct wire gauge. Accounts for ampacity (NEC Table 310.16) and voltage drop.</p>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Current (Amps)</label>
+        <input type="number" id="calcAmps" value="20" min="1" max="400" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Voltage</label>
+        <select id="calcVoltage" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="120">120V (standard US)</option>
+          <option value="240" selected>240V (US heavy appliance)</option>
+          <option value="208">208V (commercial 3-phase)</option>
+          <option value="230">230V (European)</option>
+          <option value="277">277V (commercial lighting)</option>
+          <option value="480">480V (industrial)</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">One-way distance (feet)</label>
+        <input type="number" id="calcDist" value="50" min="1" max="2000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Conductor material</label>
+        <select id="calcMaterial" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="copper" selected>Copper</option>
+          <option value="aluminum">Aluminum</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Phase</label>
+        <select id="calcPhase" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="1" selected>Single phase</option>
+          <option value="3">Three phase</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Max voltage drop</label>
+        <select id="calcMaxDrop" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="3" selected>3% (NEC recommendation)</option>
+          <option value="5">5% (max total)</option>
+          <option value="2">2% (conservative)</option>
+        </select>
+      </div>
+    </div>
+
+    <button onclick="calculateWire()" class="w-full mt-6 bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors">Calculate Wire Size</button>
+
+    <div id="calcResult" class="mt-6 hidden">
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <div class="text-center">
+          <div class="text-sm text-blue-700 font-medium">Recommended Wire Size</div>
+          <div id="resultGauge" class="text-5xl font-bold text-blue-600 mt-2"></div>
+          <div id="resultDetails" class="text-sm text-gray-600 mt-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
+    <p class="text-sm text-yellow-800"><strong>Disclaimer:</strong> This calculator is for reference only. Always consult a licensed electrician and local building codes for actual electrical work. Wire sizing depends on many factors including insulation type, ambient temperature, conduit fill, and derating factors not covered by this calculator.</p>
+  </div>
+</div>
+
+<script>
+const awgData = [
+  {"n":-3,"l":"4/0","r_cu":0.049,"r_al":0.0753,"amp_cu":195,"amp_al":150},{"n":-2,"l":"3/0","r_cu":0.0618,"r_al":0.095,"amp_cu":165,"amp_al":130},{"n":-1,"l":"2/0","r_cu":0.0779,"r_al":0.1198,"amp_cu":145,"amp_al":115},{"n":0,"l":"1/0","r_cu":0.0983,"r_al":0.151,"amp_cu":125,"amp_al":100},{"n":1,"l":"1","r_cu":0.1239,"r_al":0.1905,"amp_cu":110,"amp_al":85},{"n":2,"l":"2","r_cu":0.1562,"r_al":0.2402,"amp_cu":95,"amp_al":75},{"n":3,"l":"3","r_cu":0.197,"r_al":0.3029,"amp_cu":85,"amp_al":65},{"n":4,"l":"4","r_cu":0.2484,"r_al":0.3819,"amp_cu":70,"amp_al":55},{"n":5,"l":"5","r_cu":0.3133,"r_al":0.4816,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.395,"r_al":0.6072,"amp_cu":55,"amp_al":40},{"n":7,"l":"7","r_cu":0.4981,"r_al":0.7657,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.6281,"r_al":0.9655,"amp_cu":40,"amp_al":30},{"n":9,"l":"9","r_cu":0.7921,"r_al":1.2175,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":0.9988,"r_al":1.5353,"amp_cu":30,"amp_al":25},{"n":11,"l":"11","r_cu":1.2594,"r_al":1.9359,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.5881,"r_al":2.4411,"amp_cu":20,"amp_al":15},{"n":13,"l":"13","r_cu":2.0026,"r_al":3.0782,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":2.5252,"r_al":3.8816,"amp_cu":15,"amp_al":0},{"n":15,"l":"15","r_cu":3.1842,"r_al":4.8946,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.0153,"r_al":6.1719,"amp_cu":10,"amp_al":0},{"n":17,"l":"17","r_cu":5.0631,"r_al":7.7827,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":6.3845,"r_al":9.8138,"amp_cu":7,"amp_al":0}
+];
+
+function calculateWire() {
+  const amps = parseFloat(document.getElementById('calcAmps').value);
+  const voltage = parseFloat(document.getElementById('calcVoltage').value);
+  const dist = parseFloat(document.getElementById('calcDist').value);
+  const material = document.getElementById('calcMaterial').value;
+  const phase = parseInt(document.getElementById('calcPhase').value);
+  const maxDrop = parseFloat(document.getElementById('calcMaxDrop').value) / 100;
+
+  const maxVdrop = voltage * maxDrop;
+  const phaseFactor = phase === 3 ? 1.732 : 2;
+
+  let bestByAmp = null;
+  let bestByDrop = null;
+
+  for (const g of awgData) {
+    const ampacity = material === 'copper' ? g.amp_cu : g.amp_al;
+    const resistance = material === 'copper' ? g.r_cu : g.r_al;
+
+    if (ampacity >= amps && !bestByAmp) bestByAmp = g;
+
+    const vdrop = phaseFactor * amps * (resistance / 1000) * dist;
+    if (vdrop <= maxVdrop && !bestByDrop) bestByDrop = g;
+  }
+
+  const result = document.getElementById('calcResult');
+  const resultGauge = document.getElementById('resultGauge');
+  const resultDetails = document.getElementById('resultDetails');
+
+  if (!bestByAmp && !bestByDrop) {
+    resultGauge.textContent = 'Too large';
+    resultDetails.textContent = 'This circuit exceeds the calculator range. Consult an electrician.';
+    result.classList.remove('hidden');
+    return;
+  }
+
+  // Pick the larger wire (lower AWG number) of the two requirements
+  let recommended = bestByAmp;
+  if (bestByDrop && (!recommended || bestByDrop.n < recommended.n)) {
+    recommended = bestByDrop;
+  }
+
+  const r = material === 'copper' ? recommended.r_cu : recommended.r_al;
+  const actualDrop = phaseFactor * amps * (r / 1000) * dist;
+  const dropPct = (actualDrop / voltage * 100).toFixed(1);
+
+  resultGauge.textContent = recommended.l + ' AWG';
+  let details = material.charAt(0).toUpperCase() + material.slice(1) + ' conductor';
+  details += ' · Voltage drop: ' + actualDrop.toFixed(1) + 'V (' + dropPct + '%)';
+  if (bestByDrop && bestByAmp && bestByDrop.n < bestByAmp.n) {
+    details += ' · ⚠️ Upsized for voltage drop';
+  }
+  resultDetails.textContent = details;
+  result.classList.remove('hidden');
+}
+</script>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

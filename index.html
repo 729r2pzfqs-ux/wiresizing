@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WireSizing — Wire Gauge Chart, AWG Reference & Calculator</title>
+<meta name="description" content="Free wire gauge reference and sizing calculator. AWG chart with diameter, ampacity, resistance. Find the right wire size for any circuit. Based on NEC and IEC standards.">
+<link rel="canonical" href="https://wiresizing.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="WireSizing — Wire Gauge Chart, AWG Reference & Calculator">
+<meta property="og:description" content="Free wire gauge reference and sizing calculator. AWG chart with diameter, ampacity, resistance. Find the right wire size for any circuit. Based on NEC and IEC standards.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WireSizing — Wire Gauge Chart, AWG Reference & Calculator">
+<meta name="twitter:description" content="Free wire gauge reference and sizing calculator. AWG chart with diameter, ampacity, resistance. Find the right wire size for any circuit. Based on NEC and IEC standards.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "WireSizing", "url": "https://wiresizing.com", "description": "Free wire gauge reference and sizing calculator. AWG chart with diameter, ampacity, resistance. Find the right wire size for any circuit. Based on NEC and IEC standards.", "potentialAction": {"@type": "SearchAction", "target": "https://wiresizing.com/awg/{search_term_string}/", "query-input": "required name=search_term_string"}}</script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference & calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+
+<section class="bg-gradient-to-b from-blue-600 to-blue-800 text-white py-16 md:py-24">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Wire Gauge Reference &amp; Calculator</h1>
+    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Find the right wire size for any circuit. AWG &amp; metric charts with ampacity, resistance, and diameter. Based on NEC and IEC standards.</p>
+    <div class="max-w-xl mx-auto">
+      <input type="text" id="searchInput" placeholder="Search &mdash; e.g. 12 AWG, 30 amps, dryer, 2.5 mm²" class="w-full px-6 py-4 rounded-2xl text-gray-900 text-lg shadow-lg border-0 focus:ring-4 focus:ring-blue-300 outline-none" autocomplete="off">
+    </div>
+    <div id="searchResults" class="max-w-xl mx-auto mt-2 text-left"></div>
+  </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-4 -mt-8">
+  <div class="flex flex-wrap justify-center gap-4 text-sm">
+    <span class="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-200 text-gray-700"><svg class="w-4 h-4 inline mr-1 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>44 AWG sizes</span>
+    <span class="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-200 text-gray-700"><svg class="w-4 h-4 inline mr-1 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>NEC ampacity tables</span>
+    <span class="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-200 text-gray-700"><svg class="w-4 h-4 inline mr-1 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>AWG &amp; metric</span>
+    <span class="bg-white rounded-full px-4 py-2 shadow-sm border border-gray-200 text-gray-700"><svg class="w-4 h-4 inline mr-1 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Voltage drop calculator</span>
+  </div>
+</div>
+
+<section class="max-w-7xl mx-auto px-4 mt-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Wire Sizes</h2>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+    
+        <a href="/awg/4-0/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">4/0 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">195A</div>
+          <div class="text-xs text-gray-500 mt-1">11.684 mm &middot; 107.2193 mm²</div>
+        </a>
+        <a href="/awg/2-0/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">2/0 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">145A</div>
+          <div class="text-xs text-gray-500 mt-1">9.2658 mm &middot; 67.4309 mm²</div>
+        </a>
+        <a href="/awg/1-0/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">1/0 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">125A</div>
+          <div class="text-xs text-gray-500 mt-1">8.2515 mm &middot; 53.4751 mm²</div>
+        </a>
+        <a href="/awg/2/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">2 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">95A</div>
+          <div class="text-xs text-gray-500 mt-1">6.5437 mm &middot; 33.6308 mm²</div>
+        </a>
+        <a href="/awg/4/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">4 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">70A</div>
+          <div class="text-xs text-gray-500 mt-1">5.1894 mm &middot; 21.1506 mm²</div>
+        </a>
+        <a href="/awg/6/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">6 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">55A</div>
+          <div class="text-xs text-gray-500 mt-1">4.1154 mm &middot; 13.3018 mm²</div>
+        </a>
+        <a href="/awg/8/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">8 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">40A</div>
+          <div class="text-xs text-gray-500 mt-1">3.2636 mm &middot; 8.3656 mm²</div>
+        </a>
+        <a href="/awg/10/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">10 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">30A</div>
+          <div class="text-xs text-gray-500 mt-1">2.5882 mm &middot; 5.2612 mm²</div>
+        </a>
+        <a href="/awg/12/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">12 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">20A</div>
+          <div class="text-xs text-gray-500 mt-1">2.0525 mm &middot; 3.3088 mm²</div>
+        </a>
+        <a href="/awg/14/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">14 AWG</div>
+          <div class="text-2xl font-bold text-blue-600 mt-1">15A</div>
+          <div class="text-xs text-gray-500 mt-1">1.6277 mm &middot; 2.0809 mm²</div>
+        </a>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 mt-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Wire Size by Amperage</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    
+        <a href="/what-size/15-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">15A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">14 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Standard lighting and outlet c</div>
+        </a>
+        <a href="/what-size/20-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">20A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">12 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Kitchen, bathroom, garage circ</div>
+        </a>
+        <a href="/what-size/30-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">30A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">10 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Dryers, water heaters, small A</div>
+        </a>
+        <a href="/what-size/40-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">40A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">8 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Electric ranges, large AC unit</div>
+        </a>
+        <a href="/what-size/50-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">50A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">6 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Ranges, hot tubs, EV chargers,</div>
+        </a>
+        <a href="/what-size/60-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">60A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">6 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Sub-panels, large EV chargers,</div>
+        </a>
+        <a href="/what-size/70-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">70A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">4 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Large sub-panels, commercial e</div>
+        </a>
+        <a href="/what-size/80-amp/" class="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div class="text-lg font-bold text-gray-900">80A Circuit</div>
+          <div class="text-xl font-bold text-blue-600 mt-1">4 AWG</div>
+          <div class="text-xs text-gray-500 mt-1">Copper &middot; Large sub-panels, industrial f</div>
+        </a>
+  </div>
+  <div class="text-center mt-6">
+    <a href="/what-size/" class="text-blue-600 hover:text-blue-800 font-medium">View all amperage lookups &rarr;</a>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 mt-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Appliance Wiring Guides</h2>
+  <div class="grid md:grid-cols-2 gap-4">
+    
+        <a href="/appliances/dryer/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Electric Dryer</div>
+            <div class="text-sm text-blue-600">10 AWG &middot; 30A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/water-heater/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Electric Water Heater</div>
+            <div class="text-sm text-blue-600">10 AWG &middot; 30A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/stove/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Electric Range / Stove</div>
+            <div class="text-sm text-blue-600">6 AWG &middot; 50A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/air-conditioner/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Central Air Conditioner</div>
+            <div class="text-sm text-blue-600">10 AWG &middot; 30A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/hot-tub/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Hot Tub / Spa</div>
+            <div class="text-sm text-blue-600">6 AWG &middot; 50A double-pole GFCI</div>
+          </div>
+        </a>
+        <a href="/appliances/ev-charger/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">EV Charger (Level 2)</div>
+            <div class="text-sm text-blue-600">6 AWG &middot; 50A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/well-pump/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Well Pump</div>
+            <div class="text-sm text-blue-600">12 AWG &middot; 20A double-pole</div>
+          </div>
+        </a>
+        <a href="/appliances/welder/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+          <div>
+            <div class="font-semibold text-gray-900">Welder</div>
+            <div class="text-sm text-blue-600">6 AWG &middot; 50A double-pole</div>
+          </div>
+        </a>
+  </div>
+  <div class="text-center mt-6">
+    <a href="/appliances/" class="text-blue-600 hover:text-blue-800 font-medium">View all appliance guides &rarr;</a>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 mt-16">
+  <div class="bg-blue-50 rounded-2xl p-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">How WireSizing Works</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Calculated from Standards</h3>
+        <p class="text-sm text-gray-600">All wire data calculated from the AWG formula (ASTM B258), material resistivities, and NEC/IEC ampacity standards.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Complete Reference</h3>
+        <p class="text-sm text-gray-600">Every AWG size from 4/0 to 40, all 19 IEC metric sizes, 8 conductor materials, and NEC ampacity at 60/75/90&deg;C.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Practical Guides</h3>
+        <p class="text-sm text-gray-600">Appliance wiring guides with NEC references, breaker sizes, and wire types. Real-world sizing for dryers, hot tubs, EV chargers, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const searchData = [
+  {"t":"4/0 AWG Wire","u":"/awg/4-0/","k":"4/0 awg 11.684mm 107.2193mm2 195 amps"},{"t":"3/0 AWG Wire","u":"/awg/3-0/","k":"3/0 awg 10.4049mm 85.0288mm2 165 amps"},{"t":"2/0 AWG Wire","u":"/awg/2-0/","k":"2/0 awg 9.2658mm 67.4309mm2 145 amps"},{"t":"1/0 AWG Wire","u":"/awg/1-0/","k":"1/0 awg 8.2515mm 53.4751mm2 125 amps"},{"t":"1 AWG Wire","u":"/awg/1/","k":"1 awg 7.3481mm 42.4077mm2 110 amps"},{"t":"2 AWG Wire","u":"/awg/2/","k":"2 awg 6.5437mm 33.6308mm2 95 amps"},{"t":"3 AWG Wire","u":"/awg/3/","k":"3 awg 5.8273mm 26.6705mm2 85 amps"},{"t":"4 AWG Wire","u":"/awg/4/","k":"4 awg 5.1894mm 21.1506mm2 70 amps"},{"t":"5 AWG Wire","u":"/awg/5/","k":"5 awg 4.6213mm 16.7732mm2  amps"},{"t":"6 AWG Wire","u":"/awg/6/","k":"6 awg 4.1154mm 13.3018mm2 55 amps"},{"t":"7 AWG Wire","u":"/awg/7/","k":"7 awg 3.6649mm 10.5488mm2  amps"},{"t":"8 AWG Wire","u":"/awg/8/","k":"8 awg 3.2636mm 8.3656mm2 40 amps"},{"t":"9 AWG Wire","u":"/awg/9/","k":"9 awg 2.9064mm 6.6342mm2  amps"},{"t":"10 AWG Wire","u":"/awg/10/","k":"10 awg 2.5882mm 5.2612mm2 30 amps"},{"t":"11 AWG Wire","u":"/awg/11/","k":"11 awg 2.3048mm 4.1723mm2  amps"},{"t":"12 AWG Wire","u":"/awg/12/","k":"12 awg 2.0525mm 3.3088mm2 20 amps"},{"t":"13 AWG Wire","u":"/awg/13/","k":"13 awg 1.8278mm 2.624mm2  amps"},{"t":"14 AWG Wire","u":"/awg/14/","k":"14 awg 1.6277mm 2.0809mm2 15 amps"},{"t":"15 AWG Wire","u":"/awg/15/","k":"15 awg 1.4495mm 1.6502mm2  amps"},{"t":"16 AWG Wire","u":"/awg/16/","k":"16 awg 1.2908mm 1.3087mm2 10 amps"},{"t":"17 AWG Wire","u":"/awg/17/","k":"17 awg 1.1495mm 1.0378mm2  amps"},{"t":"18 AWG Wire","u":"/awg/18/","k":"18 awg 1.0237mm 0.823mm2 7 amps"},{"t":"19 AWG Wire","u":"/awg/19/","k":"19 awg 0.9116mm 0.6527mm2  amps"},{"t":"20 AWG Wire","u":"/awg/20/","k":"20 awg 0.8118mm 0.5176mm2  amps"},{"t":"21 AWG Wire","u":"/awg/21/","k":"21 awg 0.7229mm 0.4105mm2  amps"},{"t":"22 AWG Wire","u":"/awg/22/","k":"22 awg 0.6438mm 0.3255mm2  amps"},{"t":"23 AWG Wire","u":"/awg/23/","k":"23 awg 0.5733mm 0.2582mm2  amps"},{"t":"24 AWG Wire","u":"/awg/24/","k":"24 awg 0.5106mm 0.2047mm2  amps"},{"t":"25 AWG Wire","u":"/awg/25/","k":"25 awg 0.4547mm 0.1624mm2  amps"},{"t":"26 AWG Wire","u":"/awg/26/","k":"26 awg 0.4049mm 0.1288mm2  amps"},{"t":"27 AWG Wire","u":"/awg/27/","k":"27 awg 0.3606mm 0.1021mm2  amps"},{"t":"28 AWG Wire","u":"/awg/28/","k":"28 awg 0.3211mm 0.081mm2  amps"},{"t":"29 AWG Wire","u":"/awg/29/","k":"29 awg 0.2859mm 0.0642mm2  amps"},{"t":"30 AWG Wire","u":"/awg/30/","k":"30 awg 0.2546mm 0.0509mm2  amps"},{"t":"31 AWG Wire","u":"/awg/31/","k":"31 awg 0.2268mm 0.0404mm2  amps"},{"t":"32 AWG Wire","u":"/awg/32/","k":"32 awg 0.2019mm 0.032mm2  amps"},{"t":"33 AWG Wire","u":"/awg/33/","k":"33 awg 0.1798mm 0.0254mm2  amps"},{"t":"34 AWG Wire","u":"/awg/34/","k":"34 awg 0.1601mm 0.0201mm2  amps"},{"t":"35 AWG Wire","u":"/awg/35/","k":"35 awg 0.1426mm 0.016mm2  amps"},{"t":"36 AWG Wire","u":"/awg/36/","k":"36 awg 0.127mm 0.0127mm2  amps"},{"t":"37 AWG Wire","u":"/awg/37/","k":"37 awg 0.1131mm 0.01mm2  amps"},{"t":"38 AWG Wire","u":"/awg/38/","k":"38 awg 0.1007mm 0.008mm2  amps"},{"t":"39 AWG Wire","u":"/awg/39/","k":"39 awg 0.0897mm 0.0063mm2  amps"},{"t":"40 AWG Wire","u":"/awg/40/","k":"40 awg 0.0799mm 0.005mm2  amps"}
+  ,{"t":"Wire Size for 15A Circuit","u":"/what-size/15-amp/","k":"15 amp amps wire size gauge"},{"t":"Wire Size for 20A Circuit","u":"/what-size/20-amp/","k":"20 amp amps wire size gauge"},{"t":"Wire Size for 30A Circuit","u":"/what-size/30-amp/","k":"30 amp amps wire size gauge"},{"t":"Wire Size for 40A Circuit","u":"/what-size/40-amp/","k":"40 amp amps wire size gauge"},{"t":"Wire Size for 50A Circuit","u":"/what-size/50-amp/","k":"50 amp amps wire size gauge"},{"t":"Wire Size for 60A Circuit","u":"/what-size/60-amp/","k":"60 amp amps wire size gauge"},{"t":"Wire Size for 70A Circuit","u":"/what-size/70-amp/","k":"70 amp amps wire size gauge"},{"t":"Wire Size for 80A Circuit","u":"/what-size/80-amp/","k":"80 amp amps wire size gauge"},{"t":"Wire Size for 100A Circuit","u":"/what-size/100-amp/","k":"100 amp amps wire size gauge"},{"t":"Wire Size for 125A Circuit","u":"/what-size/125-amp/","k":"125 amp amps wire size gauge"},{"t":"Wire Size for 150A Circuit","u":"/what-size/150-amp/","k":"150 amp amps wire size gauge"},{"t":"Wire Size for 200A Circuit","u":"/what-size/200-amp/","k":"200 amp amps wire size gauge"}
+  ,{"t":"Electric Dryer Wiring Guide","u":"/appliances/dryer/","k":"electric dryer wire size gauge amps"},{"t":"Electric Water Heater Wiring Guide","u":"/appliances/water-heater/","k":"electric water heater wire size gauge amps"},{"t":"Electric Range / Stove Wiring Guide","u":"/appliances/stove/","k":"electric range / stove wire size gauge amps"},{"t":"Central Air Conditioner Wiring Guide","u":"/appliances/air-conditioner/","k":"central air conditioner wire size gauge amps"},{"t":"Hot Tub / Spa Wiring Guide","u":"/appliances/hot-tub/","k":"hot tub / spa wire size gauge amps"},{"t":"EV Charger (Level 2) Wiring Guide","u":"/appliances/ev-charger/","k":"ev charger (level 2) wire size gauge amps"},{"t":"Well Pump Wiring Guide","u":"/appliances/well-pump/","k":"well pump wire size gauge amps"},{"t":"Welder Wiring Guide","u":"/appliances/welder/","k":"welder wire size gauge amps"},{"t":"Garage Sub-Panel Wiring Guide","u":"/appliances/garage/","k":"garage sub-panel wire size gauge amps"},{"t":"Pool Pump Wiring Guide","u":"/appliances/pool-pump/","k":"pool pump wire size gauge amps"},{"t":"Dishwasher Wiring Guide","u":"/appliances/dishwasher/","k":"dishwasher wire size gauge amps"},{"t":"Microwave Oven Wiring Guide","u":"/appliances/microwave/","k":"microwave oven wire size gauge amps"},{"t":"Bathroom Circuit Wiring Guide","u":"/appliances/bathroom/","k":"bathroom circuit wire size gauge amps"}
+  ,{"t":"AWG to mm² Converter","u":"/convert/awg-to-mm2/","k":"awg mm2 mm² convert conversion metric"}
+  ,{"t":"Wire Size Calculator","u":"/calculator/","k":"calculator wire size voltage drop"}
+  ,{"t":"Ampacity Tables","u":"/ampacity/","k":"ampacity amps current capacity nec table"}
+];
+const si = document.getElementById('searchInput');
+const sr = document.getElementById('searchResults');
+si.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (q.length < 2) { sr.innerHTML = ''; return; }
+  const matches = searchData.filter(d => d.k.includes(q) || d.t.toLowerCase().includes(q)).slice(0, 8);
+  sr.innerHTML = matches.length ? '<div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">' +
+    matches.map(m => '<a href="' + m.u + '" class="block px-4 py-3 hover:bg-blue-50 border-b border-gray-100 last:border-0"><span class="font-medium text-gray-900">' + m.t + '</span></a>').join('') + '</div>' : '';
+});
+</script>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

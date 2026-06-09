@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About WireSizing — Sources & Methodology | WireSizing</title>
+<meta name="description" content="How WireSizing calculates wire specifications. Data sources, formulas, and methodology. All values calculated from ASTM B258, NEC Table 310.16, and IEC 60228.">
+<link rel="canonical" href="https://wiresizing.com/about/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="About WireSizing — Sources & Methodology | WireSizing">
+<meta property="og:description" content="How WireSizing calculates wire specifications. Data sources, formulas, and methodology. All values calculated from ASTM B258, NEC Table 310.16, and IEC 60228.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/about/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About WireSizing — Sources & Methodology | WireSizing">
+<meta name="twitter:description" content="How WireSizing calculates wire specifications. Data sources, formulas, and methodology. All values calculated from ASTM B258, NEC Table 310.16, and IEC 60228.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+
+
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference & calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+
+<div class="max-w-3xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold text-gray-900 mb-6">About WireSizing</h1>
+
+  <div class="prose max-w-none text-gray-700">
+    <p class="mb-4">WireSizing.com is a free wire gauge reference and sizing tool. All wire specifications on this site are calculated from published standards and formulas — no data is copied from other sources.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mt-8 mb-3">Data Sources</h2>
+    <p class="mb-4">Our calculations are based on the following standards and references:</p>
+    <div class="bg-gray-50 rounded-xl p-4 mb-4">
+      <p class="mb-2"><strong>AWG Dimensions:</strong> ASTM B258 — Standard Specification for Standard Nominal Diameters and Cross-Sectional Areas of AWG Sizes of Solid Round Wires Used as Electrical Conductors</p>
+      <p class="mb-2"><strong>Ampacity:</strong> NEC (NFPA 70) Table 310.16 — Allowable Ampacities of Insulated Conductors</p>
+      <p class="mb-2"><strong>Metric Sizes:</strong> IEC 60228 — Conductors of Insulated Cables</p>
+      <p class="mb-2"><strong>Resistivity:</strong> ASM International Metals Reference Book, CRC Handbook of Chemistry and Physics</p>
+      <p><strong>Wire Properties:</strong> Calculated from first principles using material resistivity, density, and geometric formulas</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-gray-900 mt-8 mb-3">Key Formulas</h2>
+    <div class="bg-gray-50 rounded-xl p-4 mb-4 font-mono text-sm space-y-2">
+      <p><strong>AWG Diameter:</strong> d(n) = 0.005 &times; 92<sup>(36&minus;n)/39</sup> inches</p>
+      <p><strong>Cross-sectional Area:</strong> A = &pi;/4 &times; d²</p>
+      <p><strong>Resistance:</strong> R = &rho; &times; L / A (where &rho; = resistivity)</p>
+      <p><strong>Voltage Drop:</strong> V<sub>drop</sub> = 2 &times; I &times; R &times; L (single phase)</p>
+      <p><strong>Weight:</strong> W = A &times; &rho;<sub>material</sub> &times; L</p>
+      <p><strong>Skin Depth:</strong> &delta; = &radic;(&rho; / (&pi; &times; f &times; &mu;<sub>0</sub>))</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-gray-900 mt-8 mb-3">Disclaimer</h2>
+    <p class="mb-4">This site is for informational and reference purposes only. It is not a substitute for professional electrical engineering advice. Always consult a licensed electrician and follow local building codes and the National Electrical Code (NEC) for actual electrical installations.</p>
+    <p class="mb-4">Ampacity values shown are based on specific conditions (30°C ambient, not more than 3 current-carrying conductors in raceway). Actual ampacity may be lower due to ambient temperature, conduit fill, bundling, and other derating factors per NEC 310.15.</p>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
