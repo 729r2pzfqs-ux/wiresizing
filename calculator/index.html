@@ -167,14 +167,16 @@ function calculateWire() {
   let bestByAmp = null;
   let bestByDrop = null;
 
-  for (const g of awgData) {
+  // Iterate from smallest wire (highest AWG) to largest to find the minimum adequate size
+  for (let i = awgData.length - 1; i >= 0; i--) {
+    const g = awgData[i];
     const ampacity = material === 'copper' ? g.amp_cu : g.amp_al;
     const resistance = material === 'copper' ? g.r_cu : g.r_al;
 
-    if (ampacity >= amps && !bestByAmp) bestByAmp = g;
+    if (ampacity >= amps) bestByAmp = g;
 
     const vdrop = phaseFactor * amps * (resistance / 1000) * dist;
-    if (vdrop <= maxVdrop && !bestByDrop) bestByDrop = g;
+    if (vdrop <= maxVdrop) bestByDrop = g;
   }
 
   const result = document.getElementById('calcResult');
