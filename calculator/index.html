@@ -173,10 +173,10 @@ function calculateWire() {
     const ampacity = material === 'copper' ? g.amp_cu : g.amp_al;
     const resistance = material === 'copper' ? g.r_cu : g.r_al;
 
-    if (ampacity >= amps) bestByAmp = g;
+    if (!bestByAmp && ampacity >= amps) bestByAmp = g;
 
     const vdrop = phaseFactor * amps * (resistance / 1000) * dist;
-    if (vdrop <= maxVdrop) bestByDrop = g;
+    if (!bestByDrop && vdrop <= maxVdrop) bestByDrop = g;
   }
 
   const result = document.getElementById('calcResult');
