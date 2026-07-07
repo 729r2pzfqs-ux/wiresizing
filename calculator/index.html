@@ -167,11 +167,13 @@ function calculateWire() {
   let bestByAmp = null;
   let bestByDrop = null;
 
-  // Iterate from smallest wire (highest AWG) to largest to find the minimum adequate size
+  // Iterate from smallest wire (highest AWG) to largest to find the minimum adequate size.
+  // Skip gauges with no NEC ampacity rating for the chosen material (odd sizes, small aluminum).
   for (let i = awgData.length - 1; i >= 0; i--) {
     const g = awgData[i];
     const ampacity = material === 'copper' ? g.amp_cu : g.amp_al;
     const resistance = material === 'copper' ? g.r_cu : g.r_al;
+    if (ampacity <= 0) continue;
 
     if (!bestByAmp && ampacity >= amps) bestByAmp = g;
 
@@ -183,9 +185,9 @@ function calculateWire() {
   const resultGauge = document.getElementById('resultGauge');
   const resultDetails = document.getElementById('resultDetails');
 
-  if (!bestByAmp && !bestByDrop) {
+  if (!bestByAmp) {
     resultGauge.textContent = 'Too large';
-    resultDetails.textContent = 'This circuit exceeds the calculator range. Consult an electrician.';
+    resultDetails.textContent = 'No wire in this range is rated for ' + amps + 'A in ' + material + '. This circuit exceeds the calculator range — consult an electrician.';
     result.classList.remove('hidden');
     return;
   }
@@ -235,6 +237,7 @@ function calculateWire() {
       <div>
         <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
         <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="/privacy/" class="block text-sm mb-2 hover:text-white">Privacy Policy</a>
         <a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a>
       </div>
     </div>
