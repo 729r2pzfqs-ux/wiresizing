@@ -60,12 +60,13 @@
           <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
           <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
           <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
           <div class="border-t border-gray-100 my-1"></div>
           <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
         </div>
       </div>
     </nav>
-    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
@@ -79,6 +80,7 @@
     <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
     <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
     <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
     <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
   </div>
 </header>
@@ -152,7 +154,7 @@
 
 <script>
 const awgData = [
-  {"n":-3,"l":"4/0","r_cu":0.049,"r_al":0.0753,"amp_cu":195,"amp_al":150},{"n":-2,"l":"3/0","r_cu":0.0618,"r_al":0.095,"amp_cu":165,"amp_al":130},{"n":-1,"l":"2/0","r_cu":0.0779,"r_al":0.1198,"amp_cu":145,"amp_al":115},{"n":0,"l":"1/0","r_cu":0.0983,"r_al":0.151,"amp_cu":125,"amp_al":100},{"n":1,"l":"1","r_cu":0.1239,"r_al":0.1905,"amp_cu":110,"amp_al":85},{"n":2,"l":"2","r_cu":0.1562,"r_al":0.2402,"amp_cu":95,"amp_al":75},{"n":3,"l":"3","r_cu":0.197,"r_al":0.3029,"amp_cu":85,"amp_al":65},{"n":4,"l":"4","r_cu":0.2484,"r_al":0.3819,"amp_cu":70,"amp_al":55},{"n":5,"l":"5","r_cu":0.3133,"r_al":0.4816,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.395,"r_al":0.6072,"amp_cu":55,"amp_al":40},{"n":7,"l":"7","r_cu":0.4981,"r_al":0.7657,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.6281,"r_al":0.9655,"amp_cu":40,"amp_al":30},{"n":9,"l":"9","r_cu":0.7921,"r_al":1.2175,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":0.9988,"r_al":1.5353,"amp_cu":30,"amp_al":25},{"n":11,"l":"11","r_cu":1.2594,"r_al":1.9359,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.5881,"r_al":2.4411,"amp_cu":20,"amp_al":15},{"n":13,"l":"13","r_cu":2.0026,"r_al":3.0782,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":2.5252,"r_al":3.8816,"amp_cu":15,"amp_al":0},{"n":15,"l":"15","r_cu":3.1842,"r_al":4.8946,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.0153,"r_al":6.1719,"amp_cu":10,"amp_al":0},{"n":17,"l":"17","r_cu":5.0631,"r_al":7.7827,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":6.3845,"r_al":9.8138,"amp_cu":7,"amp_al":0}
+  {"n":-3,"l":"4/0","r_cu":0.049,"r_al":0.0753,"amp_cu":230,"amp_al":180},{"n":-2,"l":"3/0","r_cu":0.0618,"r_al":0.095,"amp_cu":200,"amp_al":155},{"n":-1,"l":"2/0","r_cu":0.0779,"r_al":0.1198,"amp_cu":175,"amp_al":135},{"n":0,"l":"1/0","r_cu":0.0983,"r_al":0.151,"amp_cu":150,"amp_al":120},{"n":1,"l":"1","r_cu":0.1239,"r_al":0.1905,"amp_cu":130,"amp_al":100},{"n":2,"l":"2","r_cu":0.1562,"r_al":0.2402,"amp_cu":115,"amp_al":90},{"n":3,"l":"3","r_cu":0.197,"r_al":0.3029,"amp_cu":100,"amp_al":75},{"n":4,"l":"4","r_cu":0.2484,"r_al":0.3819,"amp_cu":85,"amp_al":65},{"n":5,"l":"5","r_cu":0.3133,"r_al":0.4816,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.395,"r_al":0.6072,"amp_cu":65,"amp_al":50},{"n":7,"l":"7","r_cu":0.4981,"r_al":0.7657,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.6281,"r_al":0.9655,"amp_cu":50,"amp_al":40},{"n":9,"l":"9","r_cu":0.7921,"r_al":1.2175,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":0.9988,"r_al":1.5353,"amp_cu":35,"amp_al":30},{"n":11,"l":"11","r_cu":1.2594,"r_al":1.9359,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.5881,"r_al":2.4411,"amp_cu":25,"amp_al":20},{"n":13,"l":"13","r_cu":2.0026,"r_al":3.0782,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":2.5252,"r_al":3.8816,"amp_cu":20,"amp_al":0},{"n":15,"l":"15","r_cu":3.1842,"r_al":4.8946,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.0153,"r_al":6.1719,"amp_cu":13,"amp_al":0},{"n":17,"l":"17","r_cu":5.0631,"r_al":7.7827,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":6.3845,"r_al":9.8138,"amp_cu":10,"amp_al":0}
 ];
 
 function calculateWire() {

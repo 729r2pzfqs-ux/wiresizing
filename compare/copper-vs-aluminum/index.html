@@ -62,12 +62,13 @@
           <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
           <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
           <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
           <div class="border-t border-gray-100 my-1"></div>
           <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
         </div>
       </div>
     </nav>
-    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
@@ -81,6 +82,7 @@
     <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
     <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
     <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
     <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
   </div>
 </header>
@@ -139,131 +141,131 @@
     <table class="w-full text-sm">
       <thead>
         <tr class="border-b border-gray-200 text-left text-gray-500 text-xs uppercase">
-          <th class="py-2 px-3">AWG</th>
-          <th class="py-2 px-3">Cu Amps</th>
-          <th class="py-2 px-3">Al Amps</th>
-          <th class="py-2 px-3">Cu Ω/km</th>
-          <th class="py-2 px-3">Al Ω/km</th>
-          <th class="py-2 px-3">Cu kg/km</th>
-          <th class="py-2 px-3">Al kg/km</th>
+          <th scope="col" class="py-2 px-3">AWG</th>
+          <th scope="col" class="py-2 px-3">Cu Amps (75°C)</th>
+          <th scope="col" class="py-2 px-3">Al Amps (75°C)</th>
+          <th scope="col" class="py-2 px-3">Cu Ω/km</th>
+          <th scope="col" class="py-2 px-3">Al Ω/km</th>
+          <th scope="col" class="py-2 px-3">Cu kg/km</th>
+          <th scope="col" class="py-2 px-3">Al kg/km</th>
         </tr>
       </thead>
       <tbody><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/4-0/" class="text-blue-600 hover:underline">4/0</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">195A</td>
-          <td class="py-2 px-3">150A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">230A</td>
+          <td class="py-2 px-3">180A</td>
           <td class="py-2 px-3">0.1608</td>
           <td class="py-2 px-3">0.2472</td>
           <td class="py-2 px-3">960.685</td>
           <td class="py-2 px-3">289.492</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/3-0/" class="text-blue-600 hover:underline">3/0</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">165A</td>
-          <td class="py-2 px-3">130A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">200A</td>
+          <td class="py-2 px-3">155A</td>
           <td class="py-2 px-3">0.2028</td>
           <td class="py-2 px-3">0.3117</td>
           <td class="py-2 px-3">761.858</td>
           <td class="py-2 px-3">229.578</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/2-0/" class="text-blue-600 hover:underline">2/0</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">145A</td>
-          <td class="py-2 px-3">115A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">175A</td>
+          <td class="py-2 px-3">135A</td>
           <td class="py-2 px-3">0.2557</td>
           <td class="py-2 px-3">0.393</td>
           <td class="py-2 px-3">604.181</td>
           <td class="py-2 px-3">182.063</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/1-0/" class="text-blue-600 hover:underline">1/0</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">125A</td>
-          <td class="py-2 px-3">100A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">150A</td>
+          <td class="py-2 px-3">120A</td>
           <td class="py-2 px-3">0.3224</td>
           <td class="py-2 px-3">0.4956</td>
           <td class="py-2 px-3">479.137</td>
           <td class="py-2 px-3">144.383</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/1/" class="text-blue-600 hover:underline">1</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">110A</td>
-          <td class="py-2 px-3">85A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">130A</td>
+          <td class="py-2 px-3">100A</td>
           <td class="py-2 px-3">0.4065</td>
           <td class="py-2 px-3">0.6249</td>
           <td class="py-2 px-3">379.973</td>
           <td class="py-2 px-3">114.501</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/2/" class="text-blue-600 hover:underline">2</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">95A</td>
-          <td class="py-2 px-3">75A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">115A</td>
+          <td class="py-2 px-3">90A</td>
           <td class="py-2 px-3">0.5126</td>
           <td class="py-2 px-3">0.788</td>
           <td class="py-2 px-3">301.332</td>
           <td class="py-2 px-3">90.803</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/3/" class="text-blue-600 hover:underline">3</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">85A</td>
-          <td class="py-2 px-3">65A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">100A</td>
+          <td class="py-2 px-3">75A</td>
           <td class="py-2 px-3">0.6464</td>
           <td class="py-2 px-3">0.9936</td>
           <td class="py-2 px-3">238.967</td>
           <td class="py-2 px-3">72.01</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/4/" class="text-blue-600 hover:underline">4</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">70A</td>
-          <td class="py-2 px-3">55A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">85A</td>
+          <td class="py-2 px-3">65A</td>
           <td class="py-2 px-3">0.8151</td>
           <td class="py-2 px-3">1.2529</td>
           <td class="py-2 px-3">189.51</td>
           <td class="py-2 px-3">57.107</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/6/" class="text-blue-600 hover:underline">6</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">55A</td>
-          <td class="py-2 px-3">40A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">65A</td>
+          <td class="py-2 px-3">50A</td>
           <td class="py-2 px-3">1.2961</td>
           <td class="py-2 px-3">1.9922</td>
           <td class="py-2 px-3">119.184</td>
           <td class="py-2 px-3">35.915</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/8/" class="text-blue-600 hover:underline">8</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">40A</td>
-          <td class="py-2 px-3">30A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">50A</td>
+          <td class="py-2 px-3">40A</td>
           <td class="py-2 px-3">2.0608</td>
           <td class="py-2 px-3">3.1677</td>
           <td class="py-2 px-3">74.955</td>
           <td class="py-2 px-3">22.587</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/10/" class="text-blue-600 hover:underline">10</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">30A</td>
-          <td class="py-2 px-3">25A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">35A</td>
+          <td class="py-2 px-3">30A</td>
           <td class="py-2 px-3">3.2768</td>
           <td class="py-2 px-3">5.0369</td>
           <td class="py-2 px-3">47.14</td>
           <td class="py-2 px-3">14.205</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/12/" class="text-blue-600 hover:underline">12</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">20A</td>
-          <td class="py-2 px-3">15A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">25A</td>
+          <td class="py-2 px-3">20A</td>
           <td class="py-2 px-3">5.2104</td>
           <td class="py-2 px-3">8.009</td>
           <td class="py-2 px-3">29.647</td>
           <td class="py-2 px-3">8.934</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/14/" class="text-blue-600 hover:underline">14</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">15A</td>
-          <td class="py-2 px-3">—A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">20A</td>
+          <td class="py-2 px-3">—</td>
           <td class="py-2 px-3">8.2848</td>
           <td class="py-2 px-3">12.7348</td>
           <td class="py-2 px-3">18.645</td>
           <td class="py-2 px-3">5.618</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/16/" class="text-blue-600 hover:underline">16</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">10A</td>
-          <td class="py-2 px-3">—A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">13A</td>
+          <td class="py-2 px-3">—</td>
           <td class="py-2 px-3">13.1734</td>
           <td class="py-2 px-3">20.2492</td>
           <td class="py-2 px-3">11.726</td>
           <td class="py-2 px-3">3.533</td>
         </tr><tr class="border-b border-gray-100">
           <td class="py-2 px-3 font-medium"><a href="/awg/18/" class="text-blue-600 hover:underline">18</a></td>
-          <td class="py-2 px-3 font-bold text-blue-600">7A</td>
-          <td class="py-2 px-3">—A</td>
+          <td class="py-2 px-3 font-bold text-blue-600">10A</td>
+          <td class="py-2 px-3">—</td>
           <td class="py-2 px-3">20.9466</td>
           <td class="py-2 px-3">32.1974</td>
           <td class="py-2 px-3">7.374</td>

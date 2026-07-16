@@ -33,7 +33,7 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "AWG Wire Gauge Chart", "item": "https://wiresizing.com/awg/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "AWG Wire Gauge Chart", "description": "Complete AWG wire gauge chart from 4/0 to 40. Diameter in mm and inches, cross-sectional area in mm² and circular mils, ampacity, resistance, and weight for copper and aluminum.", "url": "https://wiresizing.com/awg/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/awg/"}, "dateModified": "2026-07-07", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "index.html AWG wire, American Wire Gauge, AWG chart, wire ampacity, wire diameter"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "AWG Wire Gauge Chart", "description": "Complete AWG wire gauge chart from 4/0 to 40. Diameter in mm and inches, cross-sectional area in mm² and circular mils, ampacity, resistance, and weight for copper and aluminum.", "url": "https://wiresizing.com/awg/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/awg/"}, "dateModified": "2026-07-07", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "AWG wire, American Wire Gauge, AWG chart, wire ampacity, wire diameter"}</script>
 </head>
 <body>
 <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
@@ -62,12 +62,13 @@
           <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
           <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
           <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
           <div class="border-t border-gray-100 my-1"></div>
           <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
         </div>
       </div>
     </nav>
-    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2">
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
   </div>
@@ -81,6 +82,7 @@
     <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
     <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
     <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
     <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
   </div>
 </header>
@@ -93,13 +95,13 @@
     <table class="w-full text-sm">
       <thead>
         <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-500 text-xs uppercase tracking-wide">
-          <th class="py-3 px-3">AWG</th>
-          <th class="py-3 px-3">Diameter (mm)</th>
-          <th class="py-3 px-3">Diameter (in)</th>
-          <th class="py-3 px-3">Area (mm²)</th>
-          <th class="py-3 px-3">Ampacity (Cu 75°C)</th>
-          <th class="py-3 px-3">Resistance (Ω/km)</th>
-          <th class="py-3 px-3">Weight (kg/km)</th>
+          <th scope="col" class="py-3 px-3">AWG</th>
+          <th scope="col" class="py-3 px-3">Diameter (mm)</th>
+          <th scope="col" class="py-3 px-3">Diameter (in)</th>
+          <th scope="col" class="py-3 px-3">Area (mm²)</th>
+          <th scope="col" class="py-3 px-3">Ampacity (Cu 75°C)</th>
+          <th scope="col" class="py-3 px-3">Resistance (Ω/km)</th>
+          <th scope="col" class="py-3 px-3">Weight (kg/km)</th>
         </tr>
       </thead>
       <tbody><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -107,7 +109,7 @@
           <td class="py-2 px-3">11.684</td>
           <td class="py-2 px-3">0.46</td>
           <td class="py-2 px-3">107.2193</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">195A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">230A</span></td>
           <td class="py-2 px-3">0.1608</td>
           <td class="py-2 px-3">960.685</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -115,7 +117,7 @@
           <td class="py-2 px-3">10.4049</td>
           <td class="py-2 px-3">0.409642</td>
           <td class="py-2 px-3">85.0288</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">165A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">200A</span></td>
           <td class="py-2 px-3">0.2028</td>
           <td class="py-2 px-3">761.858</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -123,7 +125,7 @@
           <td class="py-2 px-3">9.2658</td>
           <td class="py-2 px-3">0.364797</td>
           <td class="py-2 px-3">67.4309</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">145A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">175A</span></td>
           <td class="py-2 px-3">0.2557</td>
           <td class="py-2 px-3">604.181</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -131,7 +133,7 @@
           <td class="py-2 px-3">8.2515</td>
           <td class="py-2 px-3">0.324861</td>
           <td class="py-2 px-3">53.4751</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">125A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">150A</span></td>
           <td class="py-2 px-3">0.3224</td>
           <td class="py-2 px-3">479.137</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -139,7 +141,7 @@
           <td class="py-2 px-3">7.3481</td>
           <td class="py-2 px-3">0.289297</td>
           <td class="py-2 px-3">42.4077</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">110A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">130A</span></td>
           <td class="py-2 px-3">0.4065</td>
           <td class="py-2 px-3">379.973</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -147,7 +149,7 @@
           <td class="py-2 px-3">6.5437</td>
           <td class="py-2 px-3">0.257626</td>
           <td class="py-2 px-3">33.6308</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">95A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">115A</span></td>
           <td class="py-2 px-3">0.5126</td>
           <td class="py-2 px-3">301.332</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -155,7 +157,7 @@
           <td class="py-2 px-3">5.8273</td>
           <td class="py-2 px-3">0.229423</td>
           <td class="py-2 px-3">26.6705</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">85A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">100A</span></td>
           <td class="py-2 px-3">0.6464</td>
           <td class="py-2 px-3">238.967</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -163,7 +165,7 @@
           <td class="py-2 px-3">5.1894</td>
           <td class="py-2 px-3">0.204307</td>
           <td class="py-2 px-3">21.1506</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">70A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">85A</span></td>
           <td class="py-2 px-3">0.8151</td>
           <td class="py-2 px-3">189.51</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -179,7 +181,7 @@
           <td class="py-2 px-3">4.1154</td>
           <td class="py-2 px-3">0.162023</td>
           <td class="py-2 px-3">13.3018</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">55A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">65A</span></td>
           <td class="py-2 px-3">1.2961</td>
           <td class="py-2 px-3">119.184</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -195,7 +197,7 @@
           <td class="py-2 px-3">3.2636</td>
           <td class="py-2 px-3">0.12849</td>
           <td class="py-2 px-3">8.3656</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">40A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">50A</span></td>
           <td class="py-2 px-3">2.0608</td>
           <td class="py-2 px-3">74.955</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -211,7 +213,7 @@
           <td class="py-2 px-3">2.5882</td>
           <td class="py-2 px-3">0.101897</td>
           <td class="py-2 px-3">5.2612</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">30A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">35A</span></td>
           <td class="py-2 px-3">3.2768</td>
           <td class="py-2 px-3">47.14</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -227,7 +229,7 @@
           <td class="py-2 px-3">2.0525</td>
           <td class="py-2 px-3">0.080808</td>
           <td class="py-2 px-3">3.3088</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">20A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">25A</span></td>
           <td class="py-2 px-3">5.2104</td>
           <td class="py-2 px-3">29.647</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -243,7 +245,7 @@
           <td class="py-2 px-3">1.6277</td>
           <td class="py-2 px-3">0.064084</td>
           <td class="py-2 px-3">2.0809</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">15A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">20A</span></td>
           <td class="py-2 px-3">8.2848</td>
           <td class="py-2 px-3">18.645</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -259,7 +261,7 @@
           <td class="py-2 px-3">1.2908</td>
           <td class="py-2 px-3">0.050821</td>
           <td class="py-2 px-3">1.3087</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">10A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">13A</span></td>
           <td class="py-2 px-3">13.1734</td>
           <td class="py-2 px-3">11.726</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
@@ -275,7 +277,7 @@
           <td class="py-2 px-3">1.0237</td>
           <td class="py-2 px-3">0.040303</td>
           <td class="py-2 px-3">0.823</td>
-          <td class="py-2 px-3"><span class="font-bold text-blue-600">7A</span></td>
+          <td class="py-2 px-3"><span class="font-bold text-blue-600">10A</span></td>
           <td class="py-2 px-3">20.9466</td>
           <td class="py-2 px-3">7.374</td>
         </tr><tr class="border-b border-gray-100 hover:bg-blue-50">
