@@ -88,7 +88,7 @@
 
 <div class="max-w-4xl mx-auto px-4 py-8">
   <h1 class="text-3xl font-bold text-gray-900 mb-2">Wire Size Calculator</h1>
-  <p class="text-gray-600 mb-8">Enter your circuit parameters to find the correct wire gauge. Accounts for ampacity (NEC Table 310.16) and voltage drop.</p>
+  <p class="text-gray-600 mb-8">Enter your circuit parameters to find the correct wire gauge. Accounts for ampacity (NEC Table 310.16), the NEC 240.4(D) small-conductor limits, and voltage drop.</p>
 
   <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
     <div class="grid md:grid-cols-2 gap-6">
@@ -137,6 +137,10 @@
 
     <button onclick="calculateWire()" class="w-full mt-6 bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors">Calculate Wire Size</button>
 
+    <div id="calcError" class="mt-6 hidden bg-red-50 border border-red-200 rounded-xl p-4" role="alert">
+      <p class="text-sm text-red-800"><strong>Check your inputs:</strong> <span id="calcErrorText"></span></p>
+    </div>
+
     <div id="calcResult" class="mt-6 hidden">
       <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
         <div class="text-center">
@@ -145,7 +149,36 @@
           <div id="resultDetails" class="text-sm text-gray-600 mt-3"></div>
         </div>
       </div>
+      <div id="calcWarning" class="hidden mt-4 bg-amber-50 border border-amber-300 rounded-xl p-4">
+        <p class="text-sm text-amber-900"><span id="calcWarningText"></span></p>
+      </div>
     </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">NEC 240.4(D) — the small-conductor rule</h2>
+    <p class="text-gray-700 text-sm mb-4">NEC Table 310.16 lists a 75&deg;C ampacity for every conductor, but for the smallest building-wire sizes <strong>NEC 240.4(D)</strong> overrides it with a lower hard limit on the overcurrent device. This is the single most common source of wrong answers in wire-size calculators: 12 AWG copper appears in Table 310.16 at 25&nbsp;A, but you may never put it on a breaker larger than 20&nbsp;A. This calculator applies the 240.4(D) cap.</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-50 text-left">
+            <th class="py-2 px-4 font-semibold text-gray-700">Conductor</th>
+            <th class="py-2 px-4 font-semibold text-gray-700">Table 310.16 (75&deg;C)</th>
+            <th class="py-2 px-4 font-semibold text-gray-700">240.4(D) max breaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">18 AWG copper</td><td class="py-2 px-4 text-gray-500">&mdash;</td><td class="py-2 px-4 font-bold text-blue-600">7 A</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">16 AWG copper</td><td class="py-2 px-4 text-gray-500">&mdash;</td><td class="py-2 px-4 font-bold text-blue-600">10 A</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">14 AWG copper</td><td class="py-2 px-4">20 A</td><td class="py-2 px-4 font-bold text-blue-600">15 A</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">12 AWG copper</td><td class="py-2 px-4">25 A</td><td class="py-2 px-4 font-bold text-blue-600">20 A</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">10 AWG copper</td><td class="py-2 px-4">35 A</td><td class="py-2 px-4 font-bold text-blue-600">30 A</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">12 AWG aluminum</td><td class="py-2 px-4">20 A</td><td class="py-2 px-4 font-bold text-blue-600">15 A</td></tr>
+          <tr><td class="py-2 px-4">10 AWG aluminum</td><td class="py-2 px-4">30 A</td><td class="py-2 px-4 font-bold text-blue-600">25 A</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-gray-700 text-sm mt-4">Above 10 AWG the rule no longer applies and Table 310.16 governs directly. NEC 240.4(E) and 240.4(G) list the specific exceptions &mdash; tap conductors, motor circuits, welders, and similar loads sized under their own articles.</p>
   </div>
 
   <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4">
@@ -158,15 +191,70 @@ const awgData = [
   {"n":-3,"l":"4/0","r_cu":0.049,"r_al":0.0753,"amp_cu":230,"amp_al":180},{"n":-2,"l":"3/0","r_cu":0.0618,"r_al":0.095,"amp_cu":200,"amp_al":155},{"n":-1,"l":"2/0","r_cu":0.0779,"r_al":0.1198,"amp_cu":175,"amp_al":135},{"n":0,"l":"1/0","r_cu":0.0983,"r_al":0.151,"amp_cu":150,"amp_al":120},{"n":1,"l":"1","r_cu":0.1239,"r_al":0.1905,"amp_cu":130,"amp_al":100},{"n":2,"l":"2","r_cu":0.1562,"r_al":0.2402,"amp_cu":115,"amp_al":90},{"n":3,"l":"3","r_cu":0.197,"r_al":0.3029,"amp_cu":100,"amp_al":75},{"n":4,"l":"4","r_cu":0.2484,"r_al":0.3819,"amp_cu":85,"amp_al":65},{"n":5,"l":"5","r_cu":0.3133,"r_al":0.4816,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.395,"r_al":0.6072,"amp_cu":65,"amp_al":50},{"n":7,"l":"7","r_cu":0.4981,"r_al":0.7657,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.6281,"r_al":0.9655,"amp_cu":50,"amp_al":40},{"n":9,"l":"9","r_cu":0.7921,"r_al":1.2175,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":0.9988,"r_al":1.5353,"amp_cu":35,"amp_al":30},{"n":11,"l":"11","r_cu":1.2594,"r_al":1.9359,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.5881,"r_al":2.4411,"amp_cu":25,"amp_al":20},{"n":13,"l":"13","r_cu":2.0026,"r_al":3.0782,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":2.5252,"r_al":3.8816,"amp_cu":20,"amp_al":0},{"n":15,"l":"15","r_cu":3.1842,"r_al":4.8946,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.0153,"r_al":6.1719,"amp_cu":13,"amp_al":0},{"n":17,"l":"17","r_cu":5.0631,"r_al":7.7827,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":6.3845,"r_al":9.8138,"amp_cu":10,"amp_al":0}
 ];
 
+// NEC 240.4(D) small-conductor rule: regardless of the higher Table 310.16
+// ampacity, the overcurrent device (and therefore the usable load) on these
+// small conductors is capped at the values below.
+const smallConductorLimits = {
+  copper:   {"18": 7, "16": 10, "14": 15, "12": 20, "10": 30},
+  aluminum: {"12": 15, "10": 25}
+};
+
+// Ampacity actually usable on a branch circuit = Table 310.16 value limited by 240.4(D).
+function usableAmpacity(g, material) {
+  const tableAmp = material === 'copper' ? g.amp_cu : g.amp_al;
+  if (tableAmp <= 0) return 0;
+  const cap = smallConductorLimits[material][g.l];
+  return cap === undefined ? tableAmp : Math.min(tableAmp, cap);
+}
+
+function showCalcError(msg) {
+  document.getElementById('calcErrorText').textContent = msg;
+  document.getElementById('calcError').classList.remove('hidden');
+  document.getElementById('calcResult').classList.add('hidden');
+}
+
+// Returns a finite number, or null after displaying an error message.
+function readPositive(id, label, min, max, unit) {
+  const el = document.getElementById(id);
+  const raw = el.value.trim();
+  if (raw === '') {
+    showCalcError(label + ' is required — enter a value between ' + min + ' and ' + max + ' ' + unit + '.');
+    el.focus();
+    return null;
+  }
+  const val = Number(raw);
+  if (!isFinite(val)) {
+    showCalcError(label + ' must be a number.');
+    el.focus();
+    return null;
+  }
+  if (val <= 0) {
+    showCalcError(label + ' must be greater than zero — ' + raw + ' ' + unit + ' is not a valid circuit value.');
+    el.focus();
+    return null;
+  }
+  if (val < min || val > max) {
+    showCalcError(label + ' must be between ' + min + ' and ' + max + ' ' + unit + '. You entered ' + raw + '.');
+    el.focus();
+    return null;
+  }
+  return val;
+}
+
 function calculateWire() {
-  const amps = parseFloat(document.getElementById('calcAmps').value);
+  document.getElementById('calcError').classList.add('hidden');
+  document.getElementById('calcWarning').classList.add('hidden');
+
+  const amps = readPositive('calcAmps', 'Current', 1, 400, 'amps');
+  if (amps === null) return;
+  const dist = readPositive('calcDist', 'One-way distance', 1, 2000, 'feet');
+  if (dist === null) return;
+
   const voltage = parseFloat(document.getElementById('calcVoltage').value);
-  const dist = parseFloat(document.getElementById('calcDist').value);
   const material = document.getElementById('calcMaterial').value;
   const phase = parseInt(document.getElementById('calcPhase').value);
-  const maxDrop = parseFloat(document.getElementById('calcMaxDrop').value) / 100;
-
-  const maxVdrop = voltage * maxDrop;
+  const maxDropPct = parseFloat(document.getElementById('calcMaxDrop').value);
+  const maxVdrop = voltage * (maxDropPct / 100);
   const phaseFactor = phase === 3 ? 1.732 : 2;
 
   let bestByAmp = null;
@@ -176,7 +264,7 @@ function calculateWire() {
   // Skip gauges with no NEC ampacity rating for the chosen material (odd sizes, small aluminum).
   for (let i = awgData.length - 1; i >= 0; i--) {
     const g = awgData[i];
-    const ampacity = material === 'copper' ? g.amp_cu : g.amp_al;
+    const ampacity = usableAmpacity(g, material);
     const resistance = material === 'copper' ? g.r_cu : g.r_al;
     if (ampacity <= 0) continue;
 
@@ -199,21 +287,57 @@ function calculateWire() {
 
   // Pick the larger wire (lower AWG number) of the two requirements
   let recommended = bestByAmp;
-  if (bestByDrop && (!recommended || bestByDrop.n < recommended.n)) {
+  if (bestByDrop && bestByDrop.n < recommended.n) {
     recommended = bestByDrop;
   }
 
   const r = material === 'copper' ? recommended.r_cu : recommended.r_al;
   const actualDrop = phaseFactor * amps * (r / 1000) * dist;
-  const dropPct = (actualDrop / voltage * 100).toFixed(1);
+  const dropPct = actualDrop / voltage * 100;
 
   resultGauge.textContent = recommended.l + ' AWG';
   let details = material.charAt(0).toUpperCase() + material.slice(1) + ' conductor';
-  details += ' · Voltage drop: ' + actualDrop.toFixed(1) + 'V (' + dropPct + '%)';
-  if (bestByDrop && bestByAmp && bestByDrop.n < bestByAmp.n) {
+  details += ' · Voltage drop: ' + actualDrop.toFixed(1) + 'V (' + dropPct.toFixed(1) + '%)';
+  if (bestByDrop && bestByDrop.n < bestByAmp.n) {
     details += ' · ⚠️ Upsized for voltage drop';
   }
   resultDetails.textContent = details;
+
+  // Collect any caveats the recommendation carries.
+  const notes = [];
+
+  // The drop target could not be met by any wire in range.
+  if (!bestByDrop) {
+    notes.push('⚠️ No wire size in this calculator’s range keeps voltage drop within your ' +
+      maxDropPct + '% target over ' + dist + ' ft at ' + amps + 'A. The ' + recommended.l +
+      ' AWG shown above is the minimum safe size for ampacity only — it still drops ' +
+      dropPct.toFixed(1) + '%. Shorten the run, raise the system voltage, or use a conductor larger than 4/0 AWG.');
+  }
+
+  // 240.4(D) drove the sizing.
+  const tableAmp = material === 'copper' ? recommended.amp_cu : recommended.amp_al;
+  const cap = smallConductorLimits[material][recommended.l];
+  if (cap !== undefined && cap < tableAmp) {
+    notes.push('NEC 240.4(D): ' + recommended.l + ' AWG ' + material + ' is limited to a ' + cap +
+      'A overcurrent device even though Table 310.16 lists ' + tableAmp +
+      'A for it. This calculator applies that cap.');
+  }
+
+  // Sizes below 14 AWG are not general-purpose branch-circuit wiring.
+  if (recommended.n > 14) {
+    notes.push('Note: ' + recommended.l + ' AWG is smaller than the 14 AWG minimum normally used for ' +
+      'building branch circuits. It is code-legal only for fixture wire, flexible cords, and control ' +
+      'circuits under NEC 240.4(D)/402 — not for general premises wiring.');
+  }
+
+  const warnBox = document.getElementById('calcWarning');
+  if (notes.length) {
+    document.getElementById('calcWarningText').textContent = notes.join(' ');
+    warnBox.classList.remove('hidden');
+  } else {
+    warnBox.classList.add('hidden');
+  }
+
   result.classList.remove('hidden');
 }
 </script>

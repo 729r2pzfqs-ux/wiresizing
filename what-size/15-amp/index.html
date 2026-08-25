@@ -32,7 +32,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What wire size do I need for 15 amps?", "acceptedAnswer": {"@type": "Answer", "text": "For a 15-amp circuit, use 14 AWG copper wire or 12 AWG aluminum wire. This is per NEC Table 310.16 at 75°C insulation temperature. Common uses: lighting and standard outlet circuits."}}, {"@type": "Question", "name": "What breaker do I need for 15 amps?", "acceptedAnswer": {"@type": "Answer", "text": "A 15-amp circuit uses a 15A single-pole circuit breaker. The breaker protects the 14 AWG copper (or 12 AWG aluminum) wire from overload. Double-pole breakers are used for 240V circuits and occupy two slots in the panel."}}, {"@type": "Question", "name": "Can I use 14 AWG on a 20-amp breaker?", "acceptedAnswer": {"@type": "Answer", "text": "No — 14 AWG wire must not be used on a 20-amp breaker. NEC requires the breaker to match the wire's ampacity. 14 AWG is rated for 15A maximum, so it must be protected by a 15A breaker."}}, {"@type": "Question", "name": "What uses a 15-amp circuit?", "acceptedAnswer": {"@type": "Answer", "text": "15-amp circuits power most bedroom outlets, living room outlets, hallway lighting, and general-purpose circuits. They use 14 AWG wire and a 15A single-pole breaker. Kitchens, bathrooms, and garages require 20A circuits instead."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What Wire Size for 15 Amps?", "description": "For a 15-amp circuit, use 14 AWG copper or 12 AWG aluminum wire. Standard lighting and outlet circuits. Based on NEC Table 310.16.", "url": "https://wiresizing.com/what-size/15-amp/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/what-size/15-amp/"}, "dateModified": "2026-07-07", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "wire size for 15 amps, wire gauge by amps, NEC wire size, circuit breaker wire size"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What Wire Size for 15 Amps?", "description": "For a 15-amp circuit, use 14 AWG copper or 12 AWG aluminum wire. Standard lighting and outlet circuits. Based on NEC Table 310.16.", "url": "https://wiresizing.com/what-size/15-amp/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/what-size/15-amp/"}, "dateModified": "2026-08-25", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "wire size for 15 amps, wire gauge by amps, NEC wire size, circuit breaker wire size"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Wire Size by Amps", "item": "https://wiresizing.com/what-size/"}, {"@type": "ListItem", "position": 3, "name": "What Wire Size for 15 Amps?", "item": "https://wiresizing.com/what-size/15-amp/"}]}</script>
 </head>
 <body>
@@ -136,6 +136,44 @@
 
   <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-8">
     <p class="text-sm text-yellow-800"><strong>Important:</strong> For long wire runs, you may need to upsize the wire to compensate for voltage drop. NEC recommends keeping voltage drop under 3% for branch circuits. Use our <a href="/calculator/" class="text-blue-600 hover:underline">voltage drop calculator</a> to check.</p>
+  </div>
+
+  <div class="bg-amber-50 border border-amber-300 rounded-xl p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-3">NEC 240.4(D) &mdash; why 14 AWG and not something smaller</h2>
+    <p class="text-gray-700 text-sm mb-3">NEC Table 310.16 rates 14 AWG copper at <strong>20&nbsp;A</strong> at 75&deg;C, which looks like more headroom than a 15A circuit needs. It is not usable headroom. <strong>NEC 240.4(D)</strong>, the small-conductor rule, caps the overcurrent device on 14 AWG copper at <strong>15&nbsp;A</strong> regardless of what the ampacity table says. The same applies to aluminum: 12 AWG aluminum shows 20&nbsp;A in Table 310.16 but is capped at 15&nbsp;A by 240.4(D).</p>
+    <p class="text-gray-700 text-sm mb-3">This is why 14 AWG is the answer for a 15A circuit and why the next size down is not: the smaller conductor&rsquo;s own 240.4(D) cap falls below 15&nbsp;A. Any calculator that reads Table 310.16 without applying 240.4(D) will hand you an undersized, code-violating conductor.</p>
+    <p class="text-gray-700 text-sm">The rule covers 18 through 10 AWG copper and 12 through 10 AWG aluminum. NEC 240.4(E) and 240.4(G) carve out narrow exceptions &mdash; tap conductors, motor circuits, air-conditioning equipment, and welders are sized under their own articles instead. See the full table on the <a href="/calculator/" class="text-blue-600 hover:underline">wire size calculator</a>.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Voltage Drop by Distance &mdash; 14 AWG Copper at 15A</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-white text-left border-b border-gray-200">
+            <th class="py-2 px-4 font-semibold text-gray-700">One-way run</th>
+            <th class="py-2 px-4 font-semibold text-gray-700">Drop</th>
+            <th class="py-2 px-4 font-semibold text-gray-700">% of 120V</th>
+            <th class="py-2 px-4 font-semibold text-gray-700">Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">25 ft</td><td class="py-2 px-4">1.89 V</td><td class="py-2 px-4"><span class="text-green-700 font-semibold">1.6%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Within the 3% branch-circuit target</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">50 ft</td><td class="py-2 px-4">3.79 V</td><td class="py-2 px-4"><span class="text-amber-700 font-semibold">3.2%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Over 3% &mdash; upsize one gauge</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">75 ft</td><td class="py-2 px-4">5.68 V</td><td class="py-2 px-4"><span class="text-amber-700 font-semibold">4.7%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Over 3% &mdash; upsize one gauge</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">100 ft</td><td class="py-2 px-4">7.58 V</td><td class="py-2 px-4"><span class="text-red-700 font-semibold">6.3%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Over 5% &mdash; upsize two or more gauges</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">150 ft</td><td class="py-2 px-4">11.36 V</td><td class="py-2 px-4"><span class="text-red-700 font-semibold">9.5%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Over 5% &mdash; upsize two or more gauges</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">200 ft</td><td class="py-2 px-4">15.15 V</td><td class="py-2 px-4"><span class="text-red-700 font-semibold">12.6%</span></td><td class="py-2 px-4 text-gray-600 text-xs">Over 5% &mdash; upsize two or more gauges</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-600">
+      Single-phase, 120V, full 15A load, 2.5252 &Omega;/1000&nbsp;ft DC resistance (NEC Chapter 9, Table 8) at 75&deg;C terminations.
+      NEC 210.19(A) Informational Note recommends keeping branch-circuit drop at or below 3%, and 5% total across feeder plus branch circuit.
+      Voltage drop is a performance recommendation, not a code requirement &mdash; but exceeding it causes dim lights, slow motor starts, and wasted energy.
+    </div>
   </div>
 
   
