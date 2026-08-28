@@ -17,7 +17,6 @@
   <url><loc>https://wiresizing.com/appliances/water-heater/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/appliances/welder/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/appliances/well-pump/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://wiresizing.com/privacy/</loc><lastmod>2026-08-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://wiresizing.com/awg/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/awg/1-0/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/awg/1/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -63,10 +62,65 @@
   <url><loc>https://wiresizing.com/awg/7/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/awg/8/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/awg/9/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/100-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/15-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/20-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/200-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/30-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/40-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/50-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/breaker-size/60-amp/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/calculator/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/compare/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/compare/copper-vs-aluminum/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/compare/solid-vs-stranded/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/</loc><lastmod>2026-08-28</lastmod><priority>0.9</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/calculator/</loc><lastmod>2026-08-28</lastmod><priority>0.9</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/1-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/1-1-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/1-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/2-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/3-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/3-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/3-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/emt/4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/1-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/1-1-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/1-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/2-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/3-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/3-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/3-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/imc/4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/1-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/1-1-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/1-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/2-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/3-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/3-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/3-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/pvc/4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/1-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/1-1-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/1-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/2-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/3-1-2-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/3-4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/3-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/conduit-fill/rigid/4-inch/</loc><lastmod>2026-08-28</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/convert/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/convert/awg-to-mm2/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/convert/mm2-to-awg/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -159,6 +213,14 @@
   <url><loc>https://wiresizing.com/metric/6mm2/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/metric/70mm2/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/metric/95mm2/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/nec/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/nec/table-250-122/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/nec/table-250-66/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/nec/table-300-5/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/nec/table-310-15/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/nec/table-310-16/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/privacy/</loc><lastmod>2026-08-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://wiresizing.com/voltage-drop-formula/</loc><lastmod>2026-08-28</lastmod><priority>0.9</priority></url>
   <url><loc>https://wiresizing.com/what-size/</loc><lastmod>2026-08-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://wiresizing.com/what-size/100-amp/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/what-size/125-amp/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
@@ -172,4 +234,13 @@
   <url><loc>https://wiresizing.com/what-size/60-amp/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/what-size/70-amp/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://wiresizing.com/what-size/80-amp/</loc><lastmod>2026-08-25</lastmod><priority>0.6</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/</loc><lastmod>2026-08-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/romex-nm-b/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/soow-sjoow/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/speaker-wire/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/thhn-thwn/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/uf-b/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/use-2/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/welding-cable/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://wiresizing.com/wire-types/xhhw/</loc><lastmod>2026-08-28</lastmod><priority>0.7</priority></url>
 </urlset>

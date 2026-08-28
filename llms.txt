@@ -25,6 +25,35 @@
 ## Ampacity Tables
 - [NEC 310.16](https://wiresizing.com/ampacity/): Copper at 60/75/90°C, aluminum at 75°C
 
+## Conduit Fill Charts (NEC Chapter 9)
+- [Conduit Fill Hub](https://wiresizing.com/conduit-fill/): max conductors by conduit type and trade size
+- Types: [EMT](https://wiresizing.com/conduit-fill/emt/), [PVC Sch 40](https://wiresizing.com/conduit-fill/pvc/), [Rigid Metal](https://wiresizing.com/conduit-fill/rigid/), [IMC](https://wiresizing.com/conduit-fill/imc/)
+- 40 size pages: /conduit-fill/{emt,pvc,rigid,imc}/{1-2,3-4,1,1-1-4,1-1-2,2,2-1-2,3,3-1-2,4}-inch/
+- Each page: internal area, 53%/31%/40% fill areas, max THHN and XHHW conductors by gauge
+- [Conduit Fill Calculator](https://wiresizing.com/conduit-fill/calculator/): mixed wire sizes, pass/fail verdict, smallest compliant conduit
+- Fill limits: 53% one conductor, 31% two conductors, 40% three or more, 60% for nipples under 24 in.
+
+## NEC Table Reference
+- [NEC Tables Hub](https://wiresizing.com/nec/)
+- [Table 310.16](https://wiresizing.com/nec/table-310-16/): conductor ampacity, copper and aluminum, 60/75/90°C
+- [Table 310.15](https://wiresizing.com/nec/table-310-15/): ambient correction and >3 conductor derating factors
+- [Table 250.66](https://wiresizing.com/nec/table-250-66/): grounding electrode conductor sizing
+- [Table 250.122](https://wiresizing.com/nec/table-250-122/): equipment grounding conductor sizing
+- [Table 300.5](https://wiresizing.com/nec/table-300-5/): minimum burial depths
+
+## Circuit Breaker Sizes
+- [Breaker Size Hub](https://wiresizing.com/breaker-size/): 15A through 200A
+- Pages: /breaker-size/{15,20,30,40,50,60,100,200}-amp/
+- Each includes: copper and aluminum wire size, equipment ground size, max continuous load (80%), poles, what it powers, NEC requirements, voltage drop by distance
+
+## Wire Types
+- [Wire Types Hub](https://wiresizing.com/wire-types/): side-by-side comparison of ratings and ampacity columns
+- [THHN/THWN-2](https://wiresizing.com/wire-types/thhn-thwn/), [Romex NM-B](https://wiresizing.com/wire-types/romex-nm-b/), [XHHW](https://wiresizing.com/wire-types/xhhw/), [USE-2](https://wiresizing.com/wire-types/use-2/), [UF-B](https://wiresizing.com/wire-types/uf-b/), [SOOW/SJOOW](https://wiresizing.com/wire-types/soow-sjoow/), [Welding Cable](https://wiresizing.com/wire-types/welding-cable/), [Speaker Wire](https://wiresizing.com/wire-types/speaker-wire/)
+- Key distinction: NM-B and UF-B use the 60°C ampacity column (NEC 334.80, 340.80); THHN/XHHW/USE-2 derate from 90°C but are limited to 75°C at terminations (NEC 110.14(C))
+
+## Voltage Drop
+- [Voltage Drop Formula](https://wiresizing.com/voltage-drop-formula/): VD = 2 × I × R × L ÷ 1000 single phase, 1.732 × for three phase, with four worked examples and rearrangements
+
 ## Distance & Voltage Drop
 - [Distance Charts](https://wiresizing.com/distance/): 60 pages
 - Combinations of 10 common gauges × 6 distances (25, 50, 75, 100, 150, 200 ft)
@@ -51,6 +80,7 @@
 
 ## Calculator
 - [Wire Size Calculator](https://wiresizing.com/calculator/): Enter amps, voltage, distance, material, phase — get recommended wire gauge with voltage drop calculation
+- [Conduit Fill Calculator](https://wiresizing.com/conduit-fill/calculator/): Enter conduit type, size, and conductors — get NEC fill percentage and pass/fail
 
 ## Key Formulas
 - AWG diameter: d(n) = 0.005 × 92^((36-n)/39) inches
@@ -58,6 +88,7 @@
 - Resistance: R = ρ × L / A
 - Voltage drop (single phase): Vdrop = 2 × I × R × L
 - Voltage drop (three phase): Vdrop = √3 × I × R × L
+- Conduit fill: max conductors = floor(conduit internal area × fill % ÷ conductor area)
 
 ## Contact
 - info@wiresizing.com

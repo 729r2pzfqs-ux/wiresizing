@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speaker Wire Gauge — CL2/CL3 Ratings, OFC vs CCA | WireSizing</title>
+<meta name="description" content="Speaker wire is unshielded low-voltage cable in 12 to 18 AWG. Which gauge for your run length and impedance, what CL2 and CL3 in-wall ratings mean, and why copper-clad aluminum measures worse than it looks.">
+<link rel="canonical" href="https://wiresizing.com/wire-types/speaker-wire/">
+<link rel="alternate" hreflang="en" href="https://wiresizing.com/wire-types/speaker-wire/">
+<link rel="alternate" hreflang="x-default" href="https://wiresizing.com/wire-types/speaker-wire/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/tailwind.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Speaker Wire Gauge — CL2/CL3 Ratings, OFC vs CCA | WireSizing">
+<meta property="og:description" content="Speaker wire is unshielded low-voltage cable in 12 to 18 AWG. Which gauge for your run length and impedance, what CL2 and CL3 in-wall ratings mean, and why copper-clad aluminum measures worse than it looks.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/wire-types/speaker-wire/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Speaker Wire Gauge — CL2/CL3 Ratings, OFC vs CCA | WireSizing">
+<meta name="twitter:description" content="Speaker wire is unshielded low-voltage cable in 12 to 18 AWG. Which gauge for your run length and impedance, what CL2 and CL3 in-wall ratings mean, and why copper-clad aluminum measures worse than it looks.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What gauge speaker wire do I need?", "acceptedAnswer": {"@type": "Answer", "text": "For 8-ohm speakers, 16 AWG is adequate to about 50 feet, 14 AWG to about 80 feet, and 12 AWG beyond that. Halve those distances for 4-ohm speakers. The target is to keep the round-trip wire resistance under about 5% of the speaker impedance."}}, {"@type": "Question", "name": "Does speaker wire need to be CL2 rated?", "acceptedAnswer": {"@type": "Answer", "text": "Only when it is installed inside a wall, floor or ceiling. NEC 725.179 requires a CL2 or CL3 listing for in-wall cable, CL2P or CL3P in plenum spaces, and CL2R or CL3R in risers. Cable that simply runs along a skirting board or behind furniture does not need it."}}, {"@type": "Question", "name": "Is copper-clad aluminum speaker wire any good?", "acceptedAnswer": {"@type": "Answer", "text": "It works, but aluminum has about 61% of copper's conductivity, so CCA behaves roughly two gauge sizes smaller than its label suggests. It is also more brittle at terminations and corrodes at the copper-aluminum boundary. For permanent in-wall runs, use oxygen-free copper."}}, {"@type": "Question", "name": "Does expensive speaker wire sound better?", "acceptedAnswer": {"@type": "Answer", "text": "Gauge and length are the only variables with a measurable effect on a speaker-level signal. A correctly sized ordinary copper cable performs identically to an expensive one of the same gauge. Spend the money on gauge and on a proper in-wall rating instead."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Speaker Wire — Gauge, Construction and In-Wall Ratings", "description": "Speaker wire is unshielded low-voltage cable in 12 to 18 AWG. Which gauge for your run length and impedance, what CL2 and CL3 in-wall ratings mean, and why copper-clad aluminum measures worse than it looks.", "url": "https://wiresizing.com/wire-types/speaker-wire/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/wire-types/speaker-wire/"}, "dateModified": "2026-08-28", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "speaker wire gauge, speaker wire size, CL2 speaker wire, OFC vs CCA speaker wire"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Wire Types", "item": "https://wiresizing.com/wire-types/"}, {"@type": "ListItem", "position": 3, "name": "Speaker Wire", "item": "https://wiresizing.com/wire-types/speaker-wire/"}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference &amp; calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/conduit-fill/" class="text-gray-600 hover:text-gray-900">Conduit Fill</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/nec/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">NEC Tables</a>
+          <a href="/breaker-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Breaker Sizes</a>
+          <a href="/wire-types/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Types</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/conduit-fill/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conduit Fill</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/nec/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">NEC Tables</a>
+    <a href="/breaker-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Breaker Sizes</a>
+    <a href="/wire-types/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Types</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <a href="/wire-types/" class="hover:text-blue-600">Wire Types</a> &rsaquo;
+    <span class="text-gray-900">Speaker Wire</span>
+  </nav>
+
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Speaker Wire — Gauge, Construction and In-Wall Ratings</h1>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
+    <p class="text-gray-800"><strong>Speaker wire</strong> is a two-conductor unshielded cable carrying an amplifier's output to a loudspeaker. It sits outside the NEC power wiring rules — it is a Class 2 or Class 3 circuit under Article 725 — but two things about it are governed by code: anything run <strong>inside a wall</strong> must carry a <strong>CL2 or CL3</strong> fire rating, and in a plenum space it must be CL2P or CL3P.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Speaker Wire &mdash; Specifications</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-white text-left border-b border-gray-200"><th scope="col" class="py-2 px-4 font-semibold text-gray-700">Property</th><th scope="col" class="py-2 px-4 font-semibold text-gray-700">Value</th></tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">Typical sizes</td><td class="py-2 px-4">18, 16, 14 and 12 AWG</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">Conductor</td><td class="py-2 px-4">Oxygen-free copper (OFC) or copper-clad aluminum (CCA)</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">Insulation</td><td class="py-2 px-4">PVC, usually clear or with a polarity stripe</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">Shielding</td><td class="py-2 px-4">None &mdash; speaker level is high enough to be immune to most noise</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">In-wall rating</td><td class="py-2 px-4">CL2 or CL3 required (NEC 725.179)</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">Plenum rating</td><td class="py-2 px-4">CL2P or CL3P required in air-handling spaces</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">Outdoor / burial</td><td class="py-2 px-4">Requires direct-burial rated speaker cable</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">NEC article</td><td class="py-2 px-4">Article 725, Class 2 and Class 3 circuits</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">Voltage</td><td class="py-2 px-4">Low voltage; CL2 is rated 150 V, CL3 is rated 300 V</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-600">Specifications reflect the common commercial product and the governing NEC article. Always confirm the markings printed on the conductor or jacket, which are the authoritative statement of what a given reel is listed for.</div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Choosing a gauge</h2>
+    <p class="text-gray-700 text-sm mb-4">The engineering rule of thumb is to keep the total resistance of the wire run below about 5% of the speaker impedance. That keeps the damping factor intact and the loss inaudible. For an 8-ohm speaker that budget is 0.4 ohms for the round trip; for a 4-ohm speaker it halves to 0.2 ohms, which is why low-impedance speakers need heavier wire over the same distance.</p>
+    <p class="text-gray-700 text-sm mb-4">In practice: <strong>16 AWG</strong> covers most 8-ohm runs up to about 50 feet. <strong>14 AWG</strong> takes you to roughly 80 feet, or 40 feet at 4 ohms. <strong>12 AWG</strong> handles long runs, in-wall installations you cannot easily change later, and any 4-ohm speaker past about 60 feet. <strong>18 AWG</strong> is fine for short surround or bookshelf runs under 25 feet but is not worth the marginal saving anywhere else.</p>
+    <p class="text-gray-700 text-sm mb-4">Beyond that, gauge is the only variable that measurably matters. Exotic conductor geometry, directional marking and cryogenic treatment have no measurable effect on a speaker-level signal, and the difference between a good 12 AWG cable and an expensive one is not audible.</p>
+  </div>
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">OFC versus CCA</h2>
+    <p class="text-gray-700 text-sm mb-4"><strong>OFC</strong> is oxygen-free copper — solid copper strands. <strong>CCA</strong> is copper-clad aluminum: an aluminum core with a thin copper plating, sold at a fraction of the price and often labelled only in small print.</p>
+    <p class="text-gray-700 text-sm mb-4">Aluminum has roughly 61% of the conductivity of copper, so a 16 AWG CCA cable behaves electrically like about 18 AWG copper. If you buy CCA, size up two gauges to compensate. CCA is also more brittle, more prone to breaking at terminations, and corrodes at the copper-aluminum interface over time in humid environments.</p>
+    <p class="text-gray-700 text-sm mb-4">For a short run to a bookshelf speaker it makes little practical difference. For an in-wall run you will never see again, buy OFC.</p>
+  </div>
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">In-wall and outdoor ratings</h2>
+    <p class="text-gray-700 text-sm mb-4">NEC 725.179 requires cable installed inside building walls, floors or ceilings to be listed and marked <strong>CL2</strong> or <strong>CL3</strong>. The difference between them is only voltage rating — 150 V versus 300 V — and both are far beyond what a speaker circuit carries; either is acceptable. The rating is about flame spread and smoke, not about audio.</p>
+    <p class="text-gray-700 text-sm mb-4">In a plenum — an air-handling space above a suspended ceiling or under a raised floor — you need <strong>CL2P</strong> or <strong>CL3P</strong>, which use low-smoke insulation. For risers between floors, CL2R or CL3R.</p>
+    <p class="text-gray-700 text-sm mb-4">Outdoors and buried, use cable specifically listed for direct burial with a UV-stable jacket. Ordinary CL2 speaker cable in a garden trench will fail within a few seasons.</p>
+  </div>
+
+  <div class="mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Other Wire Types</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3"><a href="/wire-types/thhn-thwn/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">THHN / THWN-2</span></a><a href="/wire-types/romex-nm-b/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">Romex (NM-B)</span></a><a href="/wire-types/xhhw/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">XHHW / XHHW-2</span></a><a href="/wire-types/use-2/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">USE-2</span></a><a href="/wire-types/uf-b/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">UF-B</span></a><a href="/wire-types/soow-sjoow/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">SOOW / SJOOW</span></a><a href="/wire-types/welding-cable/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all"><span class="font-semibold text-gray-900">Welding Cable</span></a><a href="/wire-types/speaker-wire/" class="block bg-white rounded-lg border border-gray-200 px-3 py-2 text-center text-sm hover:shadow-md hover:border-blue-300 transition-all bg-blue-50"><span class="font-semibold text-gray-900">Speaker Wire</span></a></div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+    <h4 class="font-bold text-gray-900 mb-2">Related</h4>
+<a href="/guides/speaker-wire/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Speaker wire sizing guide &rarr;</a><a href="/awg/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">AWG wire chart &rarr;</a><a href="/wire-types/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire types index &rarr;</a><a href="/guides/automotive/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Automotive wiring guide &rarr;</a><a href="/compare/copper-vs-aluminum/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Copper vs aluminum &rarr;</a>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/nec/" class="block text-sm mb-2 hover:text-white">NEC Table Reference</a>
+        <a href="/wire-types/" class="block text-sm mb-2 hover:text-white">Wire Types</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/conduit-fill/calculator/" class="block text-sm mb-2 hover:text-white">Conduit Fill Calculator</a>
+        <a href="/conduit-fill/" class="block text-sm mb-2 hover:text-white">Conduit Fill Charts</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/breaker-size/" class="block text-sm mb-2 hover:text-white">Breaker Size Charts</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="/privacy/" class="block text-sm mb-2 hover:text-white">Privacy Policy</a>
+        <a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

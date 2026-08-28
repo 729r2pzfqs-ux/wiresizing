@@ -52,11 +52,15 @@
     <nav class="hidden md:flex items-center gap-5 text-sm">
       <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
       <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/conduit-fill/" class="text-gray-600 hover:text-gray-900">Conduit Fill</a>
       <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
       <div class="relative group">
         <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
         <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
           <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/nec/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">NEC Tables</a>
+          <a href="/breaker-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Breaker Sizes</a>
+          <a href="/wire-types/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Types</a>
           <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
           <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
           <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
@@ -75,8 +79,12 @@
   <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
     <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
     <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/conduit-fill/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conduit Fill</a>
     <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
     <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/nec/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">NEC Tables</a>
+    <a href="/breaker-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Breaker Sizes</a>
+    <a href="/wire-types/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Types</a>
     <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
     <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
     <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
@@ -215,6 +223,48 @@
 </section>
 
 <section class="max-w-7xl mx-auto px-4 mt-16">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Conduit Fill &amp; NEC Reference</h2>
+  <div class="grid md:grid-cols-2 gap-4">
+    <a href="/conduit-fill/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">Conduit Fill Charts</div>
+        <div class="text-sm text-blue-600">EMT, PVC, rigid &amp; IMC &middot; 1/2&Prime; to 4&Prime;</div>
+      </div>
+    </a>
+    <a href="/conduit-fill/calculator/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">Conduit Fill Calculator</div>
+        <div class="text-sm text-blue-600">Check any pull against NEC Chapter 9</div>
+      </div>
+    </a>
+    <a href="/breaker-size/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">Circuit Breaker Size Chart</div>
+        <div class="text-sm text-blue-600">Wire &amp; ground size for 15A to 200A</div>
+      </div>
+    </a>
+    <a href="/wire-types/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">Wire Types</div>
+        <div class="text-sm text-blue-600">THHN, Romex, XHHW, UF-B, USE-2</div>
+      </div>
+    </a>
+    <a href="/nec/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">NEC Table Reference</div>
+        <div class="text-sm text-blue-600">310.16, 310.15, 250.66, 250.122, 300.5</div>
+      </div>
+    </a>
+    <a href="/voltage-drop-formula/" class="flex items-center gap-3 bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all">
+      <div>
+        <div class="font-semibold text-gray-900">Voltage Drop Formula</div>
+        <div class="text-sm text-blue-600">VD = 2 &times; I &times; R &times; L &divide; 1000</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4 mt-16">
   <h2 class="text-2xl font-bold text-gray-900 mb-6">Appliance Wiring Guides</h2>
   <div class="grid md:grid-cols-2 gap-4">
     
@@ -309,6 +359,7 @@ const searchData = [
   ,{"t":"AWG to mm² Converter","u":"/convert/awg-to-mm2/","k":"awg mm2 mm² convert conversion metric"}
   ,{"t":"Wire Size Calculator","u":"/calculator/","k":"calculator wire size voltage drop"}
   ,{"t":"Ampacity Tables","u":"/ampacity/","k":"ampacity amps current capacity nec table"}
+  ,{"t": "Conduit Fill Charts", "u": "/conduit-fill/", "k": "conduit fill chart pipe fill nec chapter 9 how many wires"},{"t": "Conduit Fill Calculator", "u": "/conduit-fill/calculator/", "k": "conduit fill calculator nec compliance check"},{"t": "Voltage Drop Formula", "u": "/voltage-drop-formula/", "k": "voltage drop formula calculation vd equation"},{"t": "NEC Table Reference", "u": "/nec/", "k": "nec tables code reference"},{"t": "NEC Table 310.16 — Ampacity", "u": "/nec/table-310-16/", "k": "nec table 310.16 310-16 ampacity conductor"},{"t": "NEC Table 310.15 — Derating", "u": "/nec/table-310-15/", "k": "nec table 310.15 310-15 derating adjustment ambient correction"},{"t": "NEC Table 250.66 — Grounding Electrode", "u": "/nec/table-250-66/", "k": "nec table 250.66 250-66 grounding electrode conductor gec"},{"t": "NEC Table 250.122 — Equipment Ground", "u": "/nec/table-250-122/", "k": "nec table 250.122 250-122 equipment grounding conductor egc ground wire size"},{"t": "NEC Table 300.5 — Burial Depth", "u": "/nec/table-300-5/", "k": "nec table 300.5 300-5 burial depth minimum cover underground"},{"t": "Circuit Breaker Size Chart", "u": "/breaker-size/", "k": "circuit breaker size chart breaker wire size"},{"t": "Wire Types", "u": "/wire-types/", "k": "wire types insulation thhn romex xhhw uf-b use-2"},{"t": "15 Amp Breaker Wire Size", "u": "/breaker-size/15-amp/", "k": "15 amp breaker wire size circuit breaker"},{"t": "20 Amp Breaker Wire Size", "u": "/breaker-size/20-amp/", "k": "20 amp breaker wire size circuit breaker"},{"t": "30 Amp Breaker Wire Size", "u": "/breaker-size/30-amp/", "k": "30 amp breaker wire size circuit breaker"},{"t": "40 Amp Breaker Wire Size", "u": "/breaker-size/40-amp/", "k": "40 amp breaker wire size circuit breaker"},{"t": "50 Amp Breaker Wire Size", "u": "/breaker-size/50-amp/", "k": "50 amp breaker wire size circuit breaker"},{"t": "60 Amp Breaker Wire Size", "u": "/breaker-size/60-amp/", "k": "60 amp breaker wire size circuit breaker"},{"t": "100 Amp Breaker Wire Size", "u": "/breaker-size/100-amp/", "k": "100 amp breaker wire size circuit breaker"},{"t": "200 Amp Breaker Wire Size", "u": "/breaker-size/200-amp/", "k": "200 amp breaker wire size circuit breaker"},{"t": "THHN / THWN-2 Wire", "u": "/wire-types/thhn-thwn/", "k": "thhn thwn thwn-2 building wire nylon"},{"t": "Romex (NM-B) Cable", "u": "/wire-types/romex-nm-b/", "k": "romex nm-b nm cable wire size chart"},{"t": "XHHW / XHHW-2 Wire", "u": "/wire-types/xhhw/", "k": "xhhw xhhw-2 xlpe cross-linked"},{"t": "USE-2 Wire", "u": "/wire-types/use-2/", "k": "use-2 underground service entrance direct burial"},{"t": "UF-B Cable", "u": "/wire-types/uf-b/", "k": "uf-b uf underground feeder direct burial grey"},{"t": "SOOW / SJOOW Cord", "u": "/wire-types/soow-sjoow/", "k": "soow sjoow portable cord flexible"},{"t": "Welding Cable", "u": "/wire-types/welding-cable/", "k": "welding cable class k class m"},{"t": "Speaker Wire", "u": "/wire-types/speaker-wire/", "k": "speaker wire gauge cl2 cl3 ofc cca"},{"t": "EMT Conduit Fill Chart", "u": "/conduit-fill/emt/", "k": "emt conduit fill chart emt"},{"t": "1/2\" EMT Conduit Fill", "u": "/conduit-fill/emt/1-2-inch/", "k": "1/2 inch emt conduit fill how many wires emt"},{"t": "3/4\" EMT Conduit Fill", "u": "/conduit-fill/emt/3-4-inch/", "k": "3/4 inch emt conduit fill how many wires emt"},{"t": "1\" EMT Conduit Fill", "u": "/conduit-fill/emt/1-inch/", "k": "1 inch emt conduit fill how many wires emt"},{"t": "1-1/4\" EMT Conduit Fill", "u": "/conduit-fill/emt/1-1-4-inch/", "k": "1-1/4 inch emt conduit fill how many wires emt"},{"t": "1-1/2\" EMT Conduit Fill", "u": "/conduit-fill/emt/1-1-2-inch/", "k": "1-1/2 inch emt conduit fill how many wires emt"},{"t": "2\" EMT Conduit Fill", "u": "/conduit-fill/emt/2-inch/", "k": "2 inch emt conduit fill how many wires emt"},{"t": "2-1/2\" EMT Conduit Fill", "u": "/conduit-fill/emt/2-1-2-inch/", "k": "2-1/2 inch emt conduit fill how many wires emt"},{"t": "3\" EMT Conduit Fill", "u": "/conduit-fill/emt/3-inch/", "k": "3 inch emt conduit fill how many wires emt"},{"t": "3-1/2\" EMT Conduit Fill", "u": "/conduit-fill/emt/3-1-2-inch/", "k": "3-1/2 inch emt conduit fill how many wires emt"},{"t": "4\" EMT Conduit Fill", "u": "/conduit-fill/emt/4-inch/", "k": "4 inch emt conduit fill how many wires emt"},{"t": "PVC Schedule 40 Conduit Fill Chart", "u": "/conduit-fill/pvc/", "k": "pvc conduit fill chart pvc schedule 40"},{"t": "1/2\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/1-2-inch/", "k": "1/2 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "3/4\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/3-4-inch/", "k": "3/4 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "1\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/1-inch/", "k": "1 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "1-1/4\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/1-1-4-inch/", "k": "1-1/4 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "1-1/2\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/1-1-2-inch/", "k": "1-1/2 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "2\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/2-inch/", "k": "2 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "2-1/2\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/2-1-2-inch/", "k": "2-1/2 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "3\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/3-inch/", "k": "3 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "3-1/2\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/3-1-2-inch/", "k": "3-1/2 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "4\" PVC Schedule 40 Conduit Fill", "u": "/conduit-fill/pvc/4-inch/", "k": "4 inch pvc conduit fill how many wires pvc schedule 40"},{"t": "Rigid Metal (RMC) Conduit Fill Chart", "u": "/conduit-fill/rigid/", "k": "rigid conduit fill chart rigid metal (rmc)"},{"t": "1/2\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/1-2-inch/", "k": "1/2 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "3/4\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/3-4-inch/", "k": "3/4 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "1\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/1-inch/", "k": "1 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "1-1/4\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/1-1-4-inch/", "k": "1-1/4 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "1-1/2\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/1-1-2-inch/", "k": "1-1/2 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "2\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/2-inch/", "k": "2 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "2-1/2\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/2-1-2-inch/", "k": "2-1/2 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "3\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/3-inch/", "k": "3 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "3-1/2\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/3-1-2-inch/", "k": "3-1/2 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "4\" Rigid Metal (RMC) Conduit Fill", "u": "/conduit-fill/rigid/4-inch/", "k": "4 inch rigid conduit fill how many wires rigid metal (rmc)"},{"t": "IMC Conduit Fill Chart", "u": "/conduit-fill/imc/", "k": "imc conduit fill chart imc"},{"t": "1/2\" IMC Conduit Fill", "u": "/conduit-fill/imc/1-2-inch/", "k": "1/2 inch imc conduit fill how many wires imc"},{"t": "3/4\" IMC Conduit Fill", "u": "/conduit-fill/imc/3-4-inch/", "k": "3/4 inch imc conduit fill how many wires imc"},{"t": "1\" IMC Conduit Fill", "u": "/conduit-fill/imc/1-inch/", "k": "1 inch imc conduit fill how many wires imc"},{"t": "1-1/4\" IMC Conduit Fill", "u": "/conduit-fill/imc/1-1-4-inch/", "k": "1-1/4 inch imc conduit fill how many wires imc"},{"t": "1-1/2\" IMC Conduit Fill", "u": "/conduit-fill/imc/1-1-2-inch/", "k": "1-1/2 inch imc conduit fill how many wires imc"},{"t": "2\" IMC Conduit Fill", "u": "/conduit-fill/imc/2-inch/", "k": "2 inch imc conduit fill how many wires imc"},{"t": "2-1/2\" IMC Conduit Fill", "u": "/conduit-fill/imc/2-1-2-inch/", "k": "2-1/2 inch imc conduit fill how many wires imc"},{"t": "3\" IMC Conduit Fill", "u": "/conduit-fill/imc/3-inch/", "k": "3 inch imc conduit fill how many wires imc"},{"t": "3-1/2\" IMC Conduit Fill", "u": "/conduit-fill/imc/3-1-2-inch/", "k": "3-1/2 inch imc conduit fill how many wires imc"},{"t": "4\" IMC Conduit Fill", "u": "/conduit-fill/imc/4-inch/", "k": "4 inch imc conduit fill how many wires imc"}
 ];
 const si = document.getElementById('searchInput');
 const sr = document.getElementById('searchResults');
@@ -333,13 +384,18 @@ si.addEventListener('input', function() {
         <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
         <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
         <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/nec/" class="block text-sm mb-2 hover:text-white">NEC Table Reference</a>
+        <a href="/wire-types/" class="block text-sm mb-2 hover:text-white">Wire Types</a>
         <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
       </div>
       <div>
         <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
         <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/conduit-fill/calculator/" class="block text-sm mb-2 hover:text-white">Conduit Fill Calculator</a>
+        <a href="/conduit-fill/" class="block text-sm mb-2 hover:text-white">Conduit Fill Charts</a>
         <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
         <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/breaker-size/" class="block text-sm mb-2 hover:text-white">Breaker Size Charts</a>
         <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
       </div>
       <div>

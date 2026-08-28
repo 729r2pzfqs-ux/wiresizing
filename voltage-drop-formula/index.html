@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltage Drop Formula — VD = 2 × I × R × L ÷ 1000 (Worked Examples) | WireSizing</title>
+<meta name="description" content="The voltage drop formula is VD = 2 × I × R × L ÷ 1000 for single phase, with √3 replacing the 2 for three phase. Where each term comes from, four worked examples, and the NEC 3% and 5% recommendations.">
+<link rel="canonical" href="https://wiresizing.com/voltage-drop-formula/">
+<link rel="alternate" hreflang="en" href="https://wiresizing.com/voltage-drop-formula/">
+<link rel="alternate" hreflang="x-default" href="https://wiresizing.com/voltage-drop-formula/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/tailwind.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Voltage Drop Formula — VD = 2 × I × R × L ÷ 1000 (Worked Examples) | WireSizing">
+<meta property="og:description" content="The voltage drop formula is VD = 2 × I × R × L ÷ 1000 for single phase, with √3 replacing the 2 for three phase. Where each term comes from, four worked examples, and the NEC 3% and 5% recommendations.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/voltage-drop-formula/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Voltage Drop Formula — VD = 2 × I × R × L ÷ 1000 (Worked Examples) | WireSizing">
+<meta name="twitter:description" content="The voltage drop formula is VD = 2 × I × R × L ÷ 1000 for single phase, with √3 replacing the 2 for three phase. Where each term comes from, four worked examples, and the NEC 3% and 5% recommendations.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the voltage drop formula?", "acceptedAnswer": {"@type": "Answer", "text": "For a single-phase circuit, VD = 2 × I × R × L ÷ 1000, where I is the current in amperes, R is the conductor resistance in ohms per 1000 feet, and L is the one-way run length in feet. The 2 accounts for current travelling out on the hot and back on the neutral. For three-phase, replace the 2 with the square root of 3, about 1.732."}}, {"@type": "Question", "name": "Why is there a 2 in the voltage drop formula?", "acceptedAnswer": {"@type": "Answer", "text": "Because current flows through two conductors — out along the ungrounded conductor and back along the neutral or the second hot leg. The physical length of wire in the circuit is twice the one-way run, so the resistance is doubled. In a three-phase circuit the return currents partly cancel, which is why the multiplier drops to the square root of 3."}}, {"@type": "Question", "name": "What is an acceptable voltage drop?", "acceptedAnswer": {"@type": "Answer", "text": "The NEC Informational Notes to 210.19(A) and 215.2(A) recommend a maximum of 3% on a branch circuit and 5% total across the feeder plus branch circuit combined. These are recommendations rather than enforceable requirements in most installations, but exceeding them causes dim lights, slow motor starts, and wasted energy as heat in the wire."}}, {"@type": "Question", "name": "How do I calculate the percentage voltage drop?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the voltage drop by the nominal system voltage and multiply by 100. A 4.8 volt drop on a 240 V circuit is 4.8 ÷ 240 × 100 = 2.0%. Always use the nominal system voltage, not the measured voltage at the panel."}}, {"@type": "Question", "name": "Does voltage drop change the wire size I need?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Ampacity sets the minimum wire size for safety; voltage drop sets a second minimum for performance on long runs. You use whichever is larger. A 20 A circuit needs 12 AWG for ampacity, but past about 100 feet at 120 V you need 10 AWG to stay under 3%."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Voltage Drop Formula", "description": "The voltage drop formula is VD = 2 × I × R × L ÷ 1000 for single phase, with √3 replacing the 2 for three phase. Where each term comes from, four worked examples, and the NEC 3% and 5% recommendations.", "url": "https://wiresizing.com/voltage-drop-formula/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/voltage-drop-formula/"}, "dateModified": "2026-08-28", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "voltage drop formula, voltage drop calculation, VD formula, how to calculate voltage drop, single phase voltage drop, three phase voltage drop"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Voltage Drop Formula", "item": "https://wiresizing.com/voltage-drop-formula/"}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference &amp; calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/conduit-fill/" class="text-gray-600 hover:text-gray-900">Conduit Fill</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/nec/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">NEC Tables</a>
+          <a href="/breaker-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Breaker Sizes</a>
+          <a href="/wire-types/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Types</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/conduit-fill/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conduit Fill</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/nec/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">NEC Tables</a>
+    <a href="/breaker-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Breaker Sizes</a>
+    <a href="/wire-types/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Types</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <span class="text-gray-900">Voltage Drop Formula</span>
+  </nav>
+
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Voltage Drop Formula</h1>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
+    <div class="text-center">
+      <div class="text-sm text-blue-700 font-medium mb-2">Single phase</div>
+      <div class="text-2xl md:text-3xl font-bold text-blue-600 font-mono">VD = 2 × I × R × L ÷ 1000</div>
+      <div class="text-sm text-blue-700 font-medium mb-2 mt-6">Three phase</div>
+      <div class="text-2xl md:text-3xl font-bold text-blue-600 font-mono">VD = 1.732 × I × R × L ÷ 1000</div>
+    </div>
+    <div class="text-center mt-5 text-sm text-gray-600">
+      <strong>I</strong> = load current in amperes &middot;
+      <strong>R</strong> = conductor resistance in ohms per 1000 feet &middot;
+      <strong>L</strong> = one-way run length in feet
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">What each term means</h2>
+    <p class="text-gray-700 text-sm mb-4">The formula is Ohm's law, V = I × R, with the resistance
+    worked out for the actual length of wire in the circuit. Everything else is bookkeeping.</p>
+    <ul class="text-gray-700 text-sm space-y-3 list-disc pl-5">
+      <li><strong>The 2.</strong> Current leaves on the ungrounded conductor and returns on the
+      neutral or the opposite hot leg, so it passes through twice the one-way length of wire. In a
+      balanced three-phase circuit the return currents partly cancel and the multiplier becomes
+      √3 ≈ 1.732 instead.</li>
+      <li><strong>I, the current.</strong> Use the actual load, not the breaker size. A 50 A breaker
+      feeding a 32 A load drops voltage for 32 A. For continuous loads, use the full continuous
+      current.</li>
+      <li><strong>R, the resistance.</strong> Ohms per 1000 feet, from NEC Chapter 9, Table 8. This
+      is why the formula divides by 1000 — it converts the tabulated per-1000-foot figure to the
+      actual run.</li>
+      <li><strong>L, the length.</strong> One-way distance from the panel to the load, measured along
+      the actual cable route, not in a straight line. Vertical drops, stud bays, and slack at both
+      ends all count.</li>
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Conductor Resistance — Ohms per 1000 Feet (NEC Chapter 9, Table 8)</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-white text-left border-b border-gray-200"><th scope="col" class="py-2 px-4 font-semibold text-gray-700">Size</th><th scope="col" class="py-2 px-4 font-semibold text-gray-700">Uncoated copper</th><th scope="col" class="py-2 px-4 font-semibold text-gray-700">Aluminum</th></tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">14</td><td class="py-2 px-4">3.14</td><td class="py-2 px-4">&mdash;</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">12</td><td class="py-2 px-4">1.98</td><td class="py-2 px-4">3.25</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">10</td><td class="py-2 px-4">1.24</td><td class="py-2 px-4">2.04</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">8</td><td class="py-2 px-4">0.778</td><td class="py-2 px-4">1.28</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">6</td><td class="py-2 px-4">0.491</td><td class="py-2 px-4">0.808</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">4</td><td class="py-2 px-4">0.308</td><td class="py-2 px-4">0.508</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">3</td><td class="py-2 px-4">0.245</td><td class="py-2 px-4">0.403</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">2</td><td class="py-2 px-4">0.194</td><td class="py-2 px-4">0.319</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">1</td><td class="py-2 px-4">0.154</td><td class="py-2 px-4">0.253</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">1/0</td><td class="py-2 px-4">0.122</td><td class="py-2 px-4">0.201</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">2/0</td><td class="py-2 px-4">0.0967</td><td class="py-2 px-4">0.159</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">3/0</td><td class="py-2 px-4">0.0766</td><td class="py-2 px-4">0.126</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">4/0</td><td class="py-2 px-4">0.0608</td><td class="py-2 px-4">0.1</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">250 kcmil</td><td class="py-2 px-4">0.0515</td><td class="py-2 px-4">0.0847</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">350 kcmil</td><td class="py-2 px-4">0.0367</td><td class="py-2 px-4">0.0605</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">500 kcmil</td><td class="py-2 px-4">0.0258</td><td class="py-2 px-4">0.0424</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-600">Direct-current resistance at 75&deg;C for stranded conductors. Solid conductors and coated (tinned) copper differ slightly. For alternating-current circuits above about 1/0 in a metal raceway, NEC Chapter 9, Table 9 gives effective impedance values that are marginally higher because of skin effect and reactance.</div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">Example 1 — 20 A branch circuit, 12 AWG copper, 100 feet, 120 V</h2>
+    <p class="text-gray-600 text-sm mb-4">A 20 amp kitchen circuit run 100 feet from the panel, carrying a full 20 A load.</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-1">
+      <p class="text-gray-700">VD = 2 × 20 × 1.98 × 100 ÷ 1000</p>
+      <p class="text-gray-700">VD = 2 × 20 × 0.198 = 7.92 volts</p>
+      <p class="text-gray-700">Percentage = 7.92 ÷ 120 × 100 = 6.6%</p>
+      <p class="font-semibold text-amber-700 pt-2">Fails the 3% recommendation badly. Upsize to 10 AWG (4.96 V, 4.1%) or 8 AWG (3.11 V, 2.6%). At 120 V, long runs are punishing — the same circuit at 240 V would be at 3.3%.</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">Example 2 — 50 A range circuit, 6 AWG copper, 60 feet, 240 V</h2>
+    <p class="text-gray-600 text-sm mb-4">An electric range on a 50 A double-pole breaker, 60 feet of 6 AWG copper.</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-1">
+      <p class="text-gray-700">VD = 2 × 50 × 0.491 × 60 ÷ 1000</p>
+      <p class="text-gray-700">VD = 2 × 50 × 0.02946 = 2.95 volts</p>
+      <p class="text-gray-700">Percentage = 2.95 ÷ 240 × 100 = 1.2%</p>
+      <p class="font-semibold text-green-700 pt-2">Comfortably within the 3% recommendation. No upsizing needed.</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">Example 3 — 100 A sub-panel to a detached garage, 3 AWG copper, 150 feet, 240 V</h2>
+    <p class="text-gray-600 text-sm mb-4">A feeder to a detached garage, 150 feet one way, carrying a calculated 80 A load.</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-1">
+      <p class="text-gray-700">VD = 2 × 80 × 0.245 × 150 ÷ 1000</p>
+      <p class="text-gray-700">VD = 2 × 80 × 0.03675 = 5.88 volts</p>
+      <p class="text-gray-700">Percentage = 5.88 ÷ 240 × 100 = 2.5%</p>
+      <p class="font-semibold text-green-700 pt-2">Within the 5% feeder-plus-branch allowance with 2.5% left for the branch circuits inside the garage. Note that upsizing here would also require upsizing the equipment grounding conductor under NEC 250.122(B).</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-2">Example 4 — three-phase 480 V motor feeder, 2 AWG copper, 400 feet</h2>
+    <p class="text-gray-600 text-sm mb-4">A 65 A three-phase motor load 400 feet from the distribution panel.</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-1">
+      <p class="text-gray-700">VD = 1.732 × 65 × 0.194 × 400 ÷ 1000</p>
+      <p class="text-gray-700">VD = 1.732 × 65 × 0.0776 = 8.74 volts</p>
+      <p class="text-gray-700">Percentage = 8.74 ÷ 480 × 100 = 1.8%</p>
+      <p class="font-semibold text-green-700 pt-2">Within 3%. Higher voltages carry the same power at lower current, which is exactly why long runs are done at 480 V rather than 240 V.</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Rearranging the formula</h2>
+    <p class="text-gray-700 text-sm mb-4">Most real problems are not "what is the drop" but "how big
+    a wire do I need" or "how far can I run this". Solve for the term you want:</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-3">
+      <div>
+        <p class="font-mono text-gray-900">R = (VD × 1000) ÷ (2 × I × L)</p>
+        <p class="text-gray-600 text-xs mt-1">Maximum allowable resistance per 1000 feet. Look up the
+        first conductor in the table above with a resistance at or below this figure.</p>
+      </div>
+      <div>
+        <p class="font-mono text-gray-900">L = (VD × 1000) ÷ (2 × I × R)</p>
+        <p class="text-gray-600 text-xs mt-1">Maximum one-way run for a given conductor. This is what
+        the <a href="/distance/" class="text-blue-600 hover:underline">distance charts</a> tabulate.</p>
+      </div>
+      <div>
+        <p class="font-mono text-gray-900">VD<sub>max</sub> = V<sub>nominal</sub> × 0.03</p>
+        <p class="text-gray-600 text-xs mt-1">The 3% branch-circuit target: 3.6 V at 120 V, 7.2 V at
+        240 V, 14.4 V at 480 V.</p>
+      </div>
+    </div>
+    <p class="text-gray-700 text-sm mt-4"><strong>Worked backwards:</strong> a 30 A circuit at 240 V
+    running 200 feet. Allowable drop at 3% is 7.2 V. R = (7.2 × 1000) ÷ (2 × 30 × 200) = 0.60 ohms
+    per 1000 feet. The first copper conductor at or below 0.60 is 6 AWG at 0.491. So a 30 A circuit
+    that only needs 10 AWG for ampacity needs 6 AWG at 200 feet.</p>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">The 3% and 5% recommendations</h2>
+    <p class="text-gray-700 text-sm mb-4">Voltage drop appears in the NEC as Informational Notes, not
+    as enforceable rules, in 210.19(A) for branch circuits and 215.2(A) for feeders. The guidance is
+    3% maximum on the branch circuit and 5% maximum for the feeder and branch circuit combined.</p>
+    <p class="text-gray-700 text-sm mb-4">Informational Notes are explicitly not enforceable under
+    NEC 90.5(C), so an inspector cannot fail an installation for a 4% drop on that basis alone. Several
+    other articles <em>do</em> make it mandatory in specific cases — 647.4(D) for sensitive electronic
+    equipment, 695.7 for fire pump feeders, and Article 680 for some pool equipment.</p>
+    <p class="text-gray-700 text-sm">What excessive drop actually costs you: incandescent lamps dim
+    noticeably and lose far more light output than the voltage lost; motors draw higher current at
+    lower voltage and run hotter, shortening their life; electronics with switching supplies compensate
+    by drawing more current, which makes the drop worse; and every volt dropped is power turned into
+    heat inside your walls.</p>
+  </div>
+
+  <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-2">Skip the arithmetic</h2>
+    <p class="text-gray-700 text-sm mb-4">Our calculator applies this formula along with NEC Table
+    310.16 ampacity and the 240.4(D) small-conductor limits, and returns the larger of the two
+    requirements.</p>
+    <a href="/calculator/" class="inline-block bg-blue-600 text-white font-bold px-5 py-2 rounded-xl hover:bg-blue-700 transition-colors">Open the wire size calculator</a>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+    <h4 class="font-bold text-gray-900 mb-2">Related</h4>
+    <a href="/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire size &amp; voltage drop calculator &rarr;</a>
+    <a href="/distance/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Voltage drop by distance charts &rarr;</a>
+    <a href="/awg/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">AWG chart with resistance values &rarr;</a>
+    <a href="/nec/table-310-16/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">NEC Table 310.16 — conductor ampacity &rarr;</a>
+    <a href="/nec/table-250-122/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">NEC 250.122(B) — upsizing the ground wire &rarr;</a>
+  </div>
+</div>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/nec/" class="block text-sm mb-2 hover:text-white">NEC Table Reference</a>
+        <a href="/wire-types/" class="block text-sm mb-2 hover:text-white">Wire Types</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/conduit-fill/calculator/" class="block text-sm mb-2 hover:text-white">Conduit Fill Calculator</a>
+        <a href="/conduit-fill/" class="block text-sm mb-2 hover:text-white">Conduit Fill Charts</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/breaker-size/" class="block text-sm mb-2 hover:text-white">Breaker Size Charts</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="/privacy/" class="block text-sm mb-2 hover:text-white">Privacy Policy</a>
+        <a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

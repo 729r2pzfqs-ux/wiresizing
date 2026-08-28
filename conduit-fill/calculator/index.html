@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conduit Fill Calculator — NEC Chapter 9 Compliance Check | WireSizing</title>
+<meta name="description" content="Pick a conduit type and size, add your conductors, and get the exact NEC fill percentage with a pass or fail verdict. Handles mixed wire sizes and recommends the smallest compliant conduit. Free, no signup.">
+<link rel="canonical" href="https://wiresizing.com/conduit-fill/calculator/">
+<link rel="alternate" hreflang="en" href="https://wiresizing.com/conduit-fill/calculator/">
+<link rel="alternate" hreflang="x-default" href="https://wiresizing.com/conduit-fill/calculator/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/tailwind.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Conduit Fill Calculator — NEC Chapter 9 Compliance Check | WireSizing">
+<meta property="og:description" content="Pick a conduit type and size, add your conductors, and get the exact NEC fill percentage with a pass or fail verdict. Handles mixed wire sizes and recommends the smallest compliant conduit. Free, no signup.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/conduit-fill/calculator/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Conduit Fill Calculator — NEC Chapter 9 Compliance Check | WireSizing">
+<meta name="twitter:description" content="Pick a conduit type and size, add your conductors, and get the exact NEC fill percentage with a pass or fail verdict. Handles mixed wire sizes and recommends the smallest compliant conduit. Free, no signup.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Conduit Fill Calculator", "url": "https://wiresizing.com/conduit-fill/calculator/", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does the conduit fill calculator work?", "acceptedAnswer": {"@type": "Answer", "text": "Enter the conduit type and trade size, then add each conductor size and how many of them. The calculator sums the conductor areas from NEC Chapter 9, Table 5, compares that total against the allowable fill area from Tables 1 and 4, and reports the fill percentage with a pass or fail verdict."}}, {"@type": "Question", "name": "What fill percentage applies to my conduit?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the total conductor count. One conductor may fill 53% of the raceway, exactly two conductors 31%, and three or more conductors 40%. The calculator selects the correct limit automatically from the number of conductors you enter."}}, {"@type": "Question", "name": "Can I mix wire sizes in the same conduit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and the calculation still works — you add the individual conductor areas together and compare the sum to the allowable fill area. The NEC Annex C tables only cover conduits filled with conductors that are all the same size and insulation, so mixed pulls have to be worked out by area, which is what this calculator does."}}, {"@type": "Question", "name": "Do I count the ground wire?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for fill. Every conductor physically in the raceway occupies area, including equipment grounding conductors and neutrals. The separate current-carrying conductor count used for ampacity derating under NEC 310.15(C)(1) excludes grounds and most neutrals."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Conduit Fill Charts", "item": "https://wiresizing.com/conduit-fill/"}, {"@type": "ListItem", "position": 3, "name": "Conduit Fill Calculator", "item": "https://wiresizing.com/conduit-fill/calculator/"}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference &amp; calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a>
+      <a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a>
+      <a href="/conduit-fill/" class="text-blue-600 font-medium">Conduit Fill</a>
+      <a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a>
+          <a href="/nec/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">NEC Tables</a>
+          <a href="/breaker-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Breaker Sizes</a>
+          <a href="/wire-types/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Types</a>
+          <a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a>
+          <a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a>
+          <a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a>
+          <a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a>
+          <a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a>
+          <a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a>
+          <div class="border-t border-gray-100 my-1"></div>
+          <a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a>
+    <a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a>
+    <a href="/conduit-fill/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conduit Fill</a>
+    <a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a>
+    <a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a>
+    <a href="/nec/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">NEC Tables</a>
+    <a href="/breaker-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Breaker Sizes</a>
+    <a href="/wire-types/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Types</a>
+    <a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a>
+    <a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a>
+    <a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a>
+    <a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a>
+    <a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a>
+    <a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a>
+    <a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <a href="/conduit-fill/" class="hover:text-blue-600">Conduit Fill Charts</a> &rsaquo;
+    <span class="text-gray-900">Conduit Fill Calculator</span>
+  </nav>
+
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">Conduit Fill Calculator</h1>
+  <p class="text-gray-600 mb-8">Choose a conduit, add your conductors, and check the fill against
+  NEC Chapter 9. Applies the correct 53% / 31% / 40% limit for the conductor count, handles mixed
+  wire sizes, and tells you the smallest conduit that would work.</p>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div>
+        <label for="cfType" class="block text-sm font-medium text-gray-700 mb-1">Conduit type</label>
+        <select id="cfType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"><option value="emt" selected>EMT (Electrical Metallic Tubing)</option><option value="pvc">PVC Conduit, Schedule 40</option><option value="rigid">Rigid Metal Conduit (RMC)</option><option value="imc">Intermediate Metal Conduit (IMC)</option></select>
+      </div>
+      <div>
+        <label for="cfSize" class="block text-sm font-medium text-gray-700 mb-1">Trade size</label>
+        <select id="cfSize" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"><option value="1/2">1/2&Prime;</option><option value="3/4" selected>3/4&Prime;</option><option value="1">1&Prime;</option><option value="1-1/4">1-1/4&Prime;</option><option value="1-1/2">1-1/2&Prime;</option><option value="2">2&Prime;</option><option value="2-1/2">2-1/2&Prime;</option><option value="3">3&Prime;</option><option value="3-1/2">3-1/2&Prime;</option><option value="4">4&Prime;</option></select>
+      </div>
+      <div>
+        <label for="cfInsul" class="block text-sm font-medium text-gray-700 mb-1">Insulation type</label>
+        <select id="cfInsul" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="thhn" selected>THHN / THWN / THWN-2</option>
+          <option value="xhhw">XHHW / XHHW-2</option>
+        </select>
+      </div>
+      <div>
+        <label for="cfNipple" class="block text-sm font-medium text-gray-700 mb-1">Raceway length</label>
+        <select id="cfNipple" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <option value="0" selected>Normal run (over 24 in.)</option>
+          <option value="1">Nipple, 24 in. or shorter (60% fill)</option>
+        </select>
+      </div>
+    </div>
+
+    <h2 class="font-bold text-gray-900 mb-2">Conductors in the raceway</h2>
+    <p class="text-sm text-gray-600 mb-3">Count every conductor, including neutrals and equipment
+    grounding conductors. A 12/2 circuit pulled as loose wire is 3 conductors.</p>
+    <div id="cfRows" class="space-y-3"></div>
+    <button type="button" onclick="cfAddRow()" class="mt-3 text-sm text-blue-600 font-medium hover:underline">+ Add another wire size</button>
+
+    <button type="button" onclick="cfCalculate()" class="w-full mt-6 bg-blue-600 text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors">Check Conduit Fill</button>
+
+    <div id="cfError" class="mt-6 hidden bg-red-50 border border-red-200 rounded-xl p-4" role="alert">
+      <p class="text-sm text-red-800"><strong>Check your inputs:</strong> <span id="cfErrorText"></span></p>
+    </div>
+
+    <div id="cfResult" class="mt-6 hidden">
+      <div id="cfVerdictBox" class="border rounded-xl p-6">
+        <div class="text-center">
+          <div id="cfVerdict" class="text-2xl font-bold"></div>
+          <div class="text-5xl font-bold mt-2" id="cfPct"></div>
+          <div class="text-sm text-gray-600 mt-1">of conduit internal area</div>
+        </div>
+        <div class="mt-4 h-3 w-full bg-gray-200 rounded-full overflow-hidden">
+          <div id="cfBar" class="h-3 rounded-full"></div>
+        </div>
+        <div id="cfDetails" class="text-sm text-gray-700 mt-4"></div>
+      </div>
+      <div id="cfSuggest" class="hidden mt-4 bg-amber-50 border border-amber-300 rounded-xl p-4">
+        <p class="text-sm text-amber-900"><span id="cfSuggestText"></span></p>
+      </div>
+      <div id="cfDerate" class="hidden mt-4 bg-blue-50 border border-blue-200 rounded-xl p-4">
+        <p class="text-sm text-blue-900"><span id="cfDerateText"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">The three NEC fill limits</h2>
+    <p class="text-gray-700 text-sm mb-4">NEC Chapter 9, Table 1 gives the maximum percentage of a
+    raceway's internal cross-section that conductors may occupy. The limit changes with the number of
+    conductors, not their size:</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-50 text-left">
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Number of conductors</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Max fill</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">1 conductor</td><td class="py-2 px-4 font-bold text-blue-600">53%</td><td class="py-2 px-4 text-gray-600 text-xs">A single wire runs straight down the centre of the raceway.</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4">2 conductors</td><td class="py-2 px-4 font-bold text-blue-600">31%</td><td class="py-2 px-4 text-gray-600 text-xs">Two circles inside a circle waste the most space — the lowest limit in the table.</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4">3 or more conductors</td><td class="py-2 px-4 font-bold text-blue-600">40%</td><td class="py-2 px-4 text-gray-600 text-xs">Multiple conductors nest efficiently, so the limit rises again.</td></tr>
+          <tr class="bg-gray-50"><td class="py-2 px-4">Nipple, 24 in. or shorter</td><td class="py-2 px-4 font-bold text-blue-600">60%</td><td class="py-2 px-4 text-gray-600 text-xs">Table 1, Note 4. Short nipples between enclosures are also exempt from ampacity derating.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Worked example</h2>
+    <p class="text-gray-700 text-sm mb-4">Six 12 AWG THHN and three 10 AWG THHN in 3/4-inch EMT:</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm space-y-1">
+      <p class="text-gray-700">6 × 0.0133 in² = 0.0798 in²</p>
+      <p class="text-gray-700">3 × 0.0211 in² = 0.0633 in²</p>
+      <p class="text-gray-900 font-semibold">Total conductor area = 0.1431 in²</p>
+      <p class="text-gray-700">3/4-inch EMT internal area = 0.533 in², and 9 conductors means the 40% limit applies: 0.213 in²</p>
+      <p class="text-gray-900 font-semibold">0.1431 ÷ 0.533 = 26.8% fill — passes, with room to spare</p>
+    </div>
+    <p class="text-gray-700 text-sm mt-4">Note that nine current-carrying conductors would trigger a
+    70% ampacity adjustment under <a href="/nec/table-310-15/" class="text-blue-600 hover:underline">NEC
+    310.15(C)(1)</a>, dropping 12 AWG THHN from 30 A to 21 A before the 240.4(D) 20 A cap is even
+    applied. Passing fill is not the same as passing ampacity.</p>
+  </div>
+
+  <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-4 mb-8">
+    <p class="text-sm text-yellow-800"><strong>Disclaimer:</strong> This calculator is for reference
+    only, based on NEC Chapter 9, Tables 1, 4 and 5. It does not check bend allowances, box fill,
+    conductor derating, or local amendments. Always consult a licensed electrician and your local
+    authority having jurisdiction for actual electrical work.</p>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+    <h4 class="font-bold text-gray-900 mb-2">Related</h4>
+    <a href="/conduit-fill/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">All conduit fill charts &rarr;</a>
+    <a href="/conduit-fill/emt/3-4-inch/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">3/4-inch EMT fill chart &rarr;</a>
+    <a href="/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire size calculator &rarr;</a>
+    <a href="/nec/table-310-15/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">NEC Table 310.15 derating factors &rarr;</a>
+    <a href="/wire-types/thhn-thwn/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">THHN / THWN specifications &rarr;</a>
+  </div>
+</div>
+
+<script>
+// NEC Chapter 9, Table 4: [total, 53%, 31%, 40%] internal area in square inches.
+const cfConduit = {"emt": {"1/2": [0.304, 0.161, 0.094, 0.122], "3/4": [0.533, 0.283, 0.165, 0.213], "1": [0.864, 0.458, 0.268, 0.346], "1-1/4": [1.496, 0.793, 0.464, 0.598], "1-1/2": [2.036, 1.079, 0.631, 0.814], "2": [3.356, 1.778, 1.04, 1.342], "2-1/2": [5.858, 3.105, 1.816, 2.343], "3": [8.846, 4.688, 2.742, 3.538], "3-1/2": [11.545, 6.119, 3.579, 4.618], "4": [14.753, 7.819, 4.573, 5.901]}, "pvc": {"1/2": [0.285, 0.151, 0.088, 0.114], "3/4": [0.508, 0.269, 0.157, 0.203], "1": [0.832, 0.441, 0.258, 0.333], "1-1/4": [1.453, 0.77, 0.45, 0.581], "1-1/2": [1.986, 1.052, 0.616, 0.794], "2": [3.291, 1.744, 1.02, 1.316], "2-1/2": [4.695, 2.488, 1.455, 1.878], "3": [7.268, 3.852, 2.253, 2.907], "3-1/2": [9.737, 5.161, 3.018, 3.895], "4": [12.554, 6.654, 3.892, 5.022]}, "rigid": {"1/2": [0.314, 0.166, 0.097, 0.125], "3/4": [0.549, 0.291, 0.17, 0.22], "1": [0.887, 0.47, 0.275, 0.355], "1-1/4": [1.526, 0.809, 0.473, 0.61], "1-1/2": [2.071, 1.098, 0.642, 0.829], "2": [3.408, 1.806, 1.056, 1.363], "2-1/2": [4.866, 2.579, 1.508, 1.946], "3": [7.499, 3.974, 2.325, 3.0], "3-1/2": [10.01, 5.305, 3.103, 4.004], "4": [12.882, 6.828, 3.994, 5.153]}, "imc": {"1/2": [0.342, 0.181, 0.106, 0.137], "3/4": [0.586, 0.311, 0.182, 0.235], "1": [0.959, 0.508, 0.297, 0.384], "1-1/4": [1.647, 0.873, 0.51, 0.659], "1-1/2": [2.225, 1.179, 0.69, 0.89], "2": [3.63, 1.924, 1.125, 1.452], "2-1/2": [5.135, 2.722, 1.592, 2.054], "3": [7.922, 4.199, 2.456, 3.169], "3-1/2": [10.584, 5.61, 3.281, 4.234], "4": [13.631, 7.224, 4.226, 5.452]}};
+// NEC Chapter 9, Table 5: approximate area of insulated conductors, square inches.
+const cfWire = {"thhn": {"14": 0.0097, "12": 0.0133, "10": 0.0211, "8": 0.0366, "6": 0.0507, "4": 0.0824, "3": 0.0973, "2": 0.1158, "1": 0.1562, "1/0": 0.1855, "2/0": 0.2223, "3/0": 0.2679, "4/0": 0.3237, "250 kcmil": 0.397, "300 kcmil": 0.4608, "350 kcmil": 0.5242, "400 kcmil": 0.5863, "500 kcmil": 0.7073}, "xhhw": {"14": 0.0139, "12": 0.0181, "10": 0.0243, "8": 0.0437, "6": 0.059, "4": 0.0814, "3": 0.0962, "2": 0.1146, "1": 0.1534, "1/0": 0.1825, "2/0": 0.219, "3/0": 0.2642, "4/0": 0.3197, "250 kcmil": 0.3904, "350 kcmil": 0.5153, "500 kcmil": 0.6984}};
+const cfSizes = ["1/2", "3/4", "1", "1-1/4", "1-1/2", "2", "2-1/2", "3", "3-1/2", "4"];
+const cfTypeNames = {"emt": "EMT", "pvc": "PVC Sch 40", "rigid": "Rigid (RMC)", "imc": "IMC"};
+
+const cfGaugeOptions = `<option value="14">14</option><option value="12" selected>12</option><option value="10">10</option><option value="8">8</option><option value="6">6</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="1/0">1/0</option><option value="2/0">2/0</option><option value="3/0">3/0</option><option value="4/0">4/0</option><option value="250 kcmil">250 kcmil</option><option value="300 kcmil">300 kcmil</option><option value="350 kcmil">350 kcmil</option><option value="400 kcmil">400 kcmil</option><option value="500 kcmil">500 kcmil</option>`;
+let cfRowSeq = 0;
+
+function cfAddRow(gauge, qty) {
+  const id = ++cfRowSeq;
+  const wrap = document.createElement('div');
+  wrap.className = 'grid grid-cols-12 gap-3 items-end';
+  wrap.id = 'cfRow' + id;
+  wrap.innerHTML =
+    '<div class="col-span-6"><label for="cfG' + id + '" class="block text-xs font-medium text-gray-700 mb-1">Wire size</label>' +
+    '<select id="cfG' + id + '" class="cf-gauge w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">' + cfGaugeOptions + '</select></div>' +
+    '<div class="col-span-4"><label for="cfQ' + id + '" class="block text-xs font-medium text-gray-700 mb-1">Quantity</label>' +
+    '<input type="number" id="cfQ' + id + '" min="0" max="500" value="3" class="cf-qty w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></div>' +
+    '<div class="col-span-2"><button type="button" aria-label="Remove this wire size" onclick="cfRemoveRow(' + id + ')" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-red-50 hover:text-red-700 hover:border-red-300">Remove</button></div>';
+  document.getElementById('cfRows').appendChild(wrap);
+  if (gauge) document.getElementById('cfG' + id).value = gauge;
+  if (qty !== undefined) document.getElementById('cfQ' + id).value = qty;
+}
+
+function cfRemoveRow(id) {
+  const el = document.getElementById('cfRow' + id);
+  if (el && document.querySelectorAll('#cfRows > div').length > 1) el.remove();
+}
+
+function cfShowError(msg) {
+  document.getElementById('cfErrorText').textContent = msg;
+  document.getElementById('cfError').classList.remove('hidden');
+  document.getElementById('cfResult').classList.add('hidden');
+}
+
+// Reads the conductor rows. Returns null after displaying an error.
+function cfReadConductors(areas) {
+  let total = 0, count = 0;
+  const rows = document.querySelectorAll('#cfRows > div');
+  for (const row of rows) {
+    const gauge = row.querySelector('.cf-gauge').value;
+    const qtyEl = row.querySelector('.cf-qty');
+    const raw = qtyEl.value.trim();
+    if (raw === '') continue;
+    const qty = Number(raw);
+    if (!isFinite(qty) || qty < 0 || Math.floor(qty) !== qty) {
+      cfShowError('Quantity for ' + gauge + ' AWG must be a whole number of conductors.');
+      qtyEl.focus();
+      return null;
+    }
+    if (qty > 500) {
+      cfShowError('Quantity for ' + gauge + ' AWG is capped at 500 conductors.');
+      qtyEl.focus();
+      return null;
+    }
+    if (areas[gauge] === undefined) {
+      cfShowError(gauge + ' is not listed for this insulation type in NEC Chapter 9, Table 5. Pick a different wire size or switch insulation.');
+      return null;
+    }
+    total += qty * areas[gauge];
+    count += qty;
+  }
+  if (count === 0) {
+    cfShowError('Add at least one conductor before checking fill.');
+    return null;
+  }
+  return { area: total, count: count };
+}
+
+// The allowable fill fraction depends only on how many conductors are in the raceway.
+function cfLimit(count, isNipple) {
+  if (isNipple) return 0.60;
+  if (count === 1) return 0.53;
+  if (count === 2) return 0.31;
+  return 0.40;
+}
+
+function cfCalculate() {
+  document.getElementById('cfError').classList.add('hidden');
+  document.getElementById('cfSuggest').classList.add('hidden');
+  document.getElementById('cfDerate').classList.add('hidden');
+
+  const type = document.getElementById('cfType').value;
+  const size = document.getElementById('cfSize').value;
+  const insul = document.getElementById('cfInsul').value;
+  const isNipple = document.getElementById('cfNipple').value === '1';
+  const areas = cfWire[insul];
+
+  const c = cfReadConductors(areas);
+  if (c === null) return;
+
+  const totalArea = cfConduit[type][size][0];
+  const fraction = cfLimit(c.count, isNipple);
+  const allowed = totalArea * fraction;
+  const pct = (c.area / totalArea) * 100;
+  const pass = c.area <= allowed;
+
+  const box = document.getElementById('cfVerdictBox');
+  const bar = document.getElementById('cfBar');
+  box.className = 'border rounded-xl p-6 ' + (pass ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300');
+  bar.className = 'h-3 rounded-full ' + (pass ? 'bg-green-600' : 'bg-red-600');
+  bar.style.width = Math.min(100, pct) + '%';
+
+  const verdict = document.getElementById('cfVerdict');
+  verdict.textContent = pass ? 'Compliant' : 'Over the NEC limit';
+  verdict.className = 'text-2xl font-bold ' + (pass ? 'text-green-800' : 'text-red-800');
+  const pctEl = document.getElementById('cfPct');
+  pctEl.textContent = pct.toFixed(1) + '%';
+  pctEl.className = 'text-5xl font-bold mt-2 ' + (pass ? 'text-green-700' : 'text-red-700');
+
+  document.getElementById('cfDetails').innerHTML =
+    '<strong>' + c.count + ' conductor' + (c.count === 1 ? '' : 's') + '</strong> totalling ' +
+    c.area.toFixed(4) + ' in² in ' + size + '&Prime; ' + cfTypeNames[type] + '.<br>' +
+    'Conduit internal area ' + totalArea.toFixed(3) + ' in²; the ' + Math.round(fraction * 100) +
+    '% limit allows ' + allowed.toFixed(4) + ' in²' +
+    (isNipple ? ' (nipple, NEC Chapter 9 Table 1 Note 4)' : '') + '.<br>' +
+    (pass ? 'Remaining capacity: ' + (allowed - c.area).toFixed(4) + ' in².'
+          : 'Over by ' + (c.area - allowed).toFixed(4) + ' in².');
+
+  if (!pass) {
+    // Find the smallest trade size of the same conduit type that fits this pull.
+    let fix = null;
+    for (const s of cfSizes) {
+      if (c.area <= cfConduit[type][s][0] * fraction) { fix = s; break; }
+    }
+    document.getElementById('cfSuggestText').innerHTML = fix
+      ? 'Smallest ' + cfTypeNames[type] + ' that fits this pull: <strong>' + fix + '&Prime;</strong>. You could also reduce the conductor count or split the run across two raceways.'
+      : 'No ' + cfTypeNames[type] + ' size up to 4&Prime; fits this pull. Split the conductors across multiple raceways or move up to a larger raceway type.';
+    document.getElementById('cfSuggest').classList.remove('hidden');
+  }
+
+  if (c.count > 3 && !isNipple) {
+    let factor = '80%', band = '4 to 6';
+    if (c.count > 40) { factor = '35%'; band = '41 or more'; }
+    else if (c.count > 30) { factor = '40%'; band = '31 to 40'; }
+    else if (c.count > 20) { factor = '45%'; band = '21 to 30'; }
+    else if (c.count > 9) { factor = '50%'; band = '10 to 20'; }
+    else if (c.count > 6) { factor = '70%'; band = '7 to 9'; }
+    document.getElementById('cfDerateText').innerHTML =
+      'If all ' + c.count + ' conductors are current-carrying, NEC 310.15(C)(1) derates their ampacity to <strong>' +
+      factor + '</strong> (the ' + band + ' conductor band). Equipment grounding conductors and most neutrals do not count as current-carrying. ' +
+      '<a href="/nec/table-310-15/" class="text-blue-600 hover:underline">See the full adjustment table</a>.';
+    document.getElementById('cfDerate').classList.remove('hidden');
+  }
+
+  document.getElementById('cfResult').classList.remove('hidden');
+}
+
+cfAddRow('12', 3);
+</script>
+
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/nec/" class="block text-sm mb-2 hover:text-white">NEC Table Reference</a>
+        <a href="/wire-types/" class="block text-sm mb-2 hover:text-white">Wire Types</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/conduit-fill/calculator/" class="block text-sm mb-2 hover:text-white">Conduit Fill Calculator</a>
+        <a href="/conduit-fill/" class="block text-sm mb-2 hover:text-white">Conduit Fill Charts</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm² Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/breaker-size/" class="block text-sm mb-2 hover:text-white">Breaker Size Charts</a>
+        <a href="/appliances/" class="block text-sm mb-2 hover:text-white">Appliance Wiring</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="/privacy/" class="block text-sm mb-2 hover:text-white">Privacy Policy</a>
+        <a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-500">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
