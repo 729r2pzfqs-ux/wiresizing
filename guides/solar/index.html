@@ -34,7 +34,7 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://wiresizing.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "Solar Wiring \u2014 Wire Gauge Guide for PV Systems", "item": "https://wiresizing.com/guides/solar/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Solar Wiring — Wire Gauge Guide for PV Systems", "description": "Wire sizing guide for solar panel installations. DC wire sizing for panel strings, charge controllers, inverters, and battery banks. NEC Article 690 requirements.", "url": "https://wiresizing.com/guides/solar/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/guides/solar/"}, "dateModified": "2026-08-25", "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "wire sizing guide, wire gauge, electrical wiring"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What wire size for solar panel strings?", "acceptedAnswer": {"@type": "Answer", "text": "Solar panel string wire must be rated for the short-circuit current (Isc) × 1.25 safety factor. Most residential panels with 10–11A Isc use 10 AWG PV wire or USE-2. For runs over 50 feet, upsize to 8 AWG to keep voltage drop under 1% (recommended for DC solar circuits)."}}, {"@type": "Question", "name": "What wire size from charge controller to battery bank?", "acceptedAnswer": {"@type": "Answer", "text": "The charge controller to battery wire size depends on the controller's output current. A 40A MPPT controller needs at least 8 AWG copper. A 60A controller needs 6 AWG. Keep this run as short as possible (under 6 feet) to minimize voltage drop and fire risk."}}, {"@type": "Question", "name": "What wire type is required for solar installations?", "acceptedAnswer": {"@type": "Answer", "text": "NEC 690 requires PV wire or USE-2 (Underground Service Entrance) cable for exposed solar array wiring. These are rated for UV exposure, outdoor temperature extremes, and wet locations. Standard THHN or NM-B cable is NOT permitted for exposed solar DC wiring."}}, {"@type": "Question", "name": "What is the maximum voltage drop for solar DC wiring?", "acceptedAnswer": {"@type": "Answer", "text": "NEC recommends 3% max voltage drop for branch circuits, but for solar PV, keeping DC wiring under 1–2% voltage drop is best practice to maximize energy harvest. Use our calculator with the array Voc (open-circuit voltage) and string current to find the minimum wire gauge."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What wire size for solar panel strings?", "acceptedAnswer": {"@type": "Answer", "text": "Solar panel string wire must have an ampacity of at least 156% of the module short-circuit current (Isc × 1.25 × 1.25, NEC 690.8(A) and (B)). Most residential panels with 10–11A Isc use 10 AWG PV wire or USE-2. For runs over 50 feet, upsize to 8 AWG to keep voltage drop under 1% (recommended for DC solar circuits)."}}, {"@type": "Question", "name": "What wire size from charge controller to battery bank?", "acceptedAnswer": {"@type": "Answer", "text": "The charge controller to battery wire size depends on the controller's output current. A 40A MPPT controller needs at least 8 AWG copper. A 60A controller needs 4 AWG (60A × 1.25 = 75A). Keep this run as short as possible (under 6 feet) to minimize voltage drop and fire risk."}}, {"@type": "Question", "name": "What wire type is required for solar installations?", "acceptedAnswer": {"@type": "Answer", "text": "NEC 690 requires PV wire or USE-2 (Underground Service Entrance) cable for exposed solar array wiring. These are rated for UV exposure, outdoor temperature extremes, and wet locations. Standard THHN or NM-B cable is NOT permitted for exposed solar DC wiring."}}, {"@type": "Question", "name": "What is the maximum voltage drop for solar DC wiring?", "acceptedAnswer": {"@type": "Answer", "text": "The NEC has no voltage-drop requirement for PV circuits; keeping DC wiring under 1–2% is industry best practice to maximize energy harvest. Calculate it with the string’s operating voltage and current (Vmp and Imp), not the open-circuit voltage, to find the minimum wire gauge."}}]}</script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
 </head>
 <body>
@@ -110,7 +110,7 @@
   
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
     <h2 class="font-bold text-gray-900 mb-3">Solar DC Wiring</h2>
-    <p class="text-gray-700">Panel-to-combiner box: typically 10-12 AWG USE-2 or PV wire. String wiring uses the panel's maximum series fuse rating. DC home runs to the inverter may need 6-2 AWG depending on distance and current. NEC Article 690 requires wire sizing at 125% of the short-circuit current (Isc).</p>
+    <p class="text-gray-700">Panel-to-combiner box: typically 10-12 AWG USE-2 or PV wire. String wiring uses the panel's maximum series fuse rating. DC home runs to the inverter may need 6-2 AWG depending on distance and current. NEC 690.8 requires PV source conductors to carry 156% of the short-circuit current (Isc × 1.25 for irradiance, × 1.25 again for continuous duty).</p>
   </div>
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
     <h2 class="font-bold text-gray-900 mb-3">Battery Bank Wiring</h2>
@@ -118,7 +118,7 @@
   </div>
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
     <h2 class="font-bold text-gray-900 mb-3">Voltage Drop in Solar</h2>
-    <p class="text-gray-700">NEC recommends maximum 2% voltage drop on DC circuits (stricter than the 3% for AC). For a 100-foot run of 10 AWG copper at 8A and 48V, the voltage drop is about 0.8V (1.7%). At higher currents or longer distances, upgrade to a larger gauge.</p>
+    <p class="text-gray-700">The NEC sets no voltage-drop limit for PV circuits, but 1–2% is common practice to protect energy harvest. A 100-foot one-way run of 10 AWG copper at 8A and 48V drops about 2.0V (4.1%) using NEC Table 8 resistance, so that run would call for 6 AWG (about 1.6%). At higher currents or longer distances, upgrade to a larger gauge.</p>
   </div>
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
     <h2 class="font-bold text-gray-900 mb-3">Wire Types for Solar</h2>
@@ -140,11 +140,11 @@
     <div class="space-y-3">
       <div>
         <h3 class="font-semibold text-gray-900 mb-1">What wire size for solar panel strings?</h3>
-        <p class="text-sm text-gray-700">Solar panel string wire must be rated for the short-circuit current (Isc) × 1.25 safety factor. Most residential panels with 10–11A Isc use 10 AWG PV wire or USE-2. For runs over 50 feet, upsize to 8 AWG to keep voltage drop under 1% (recommended for DC solar circuits).</p>
+        <p class="text-sm text-gray-700">Solar panel string wire must have an ampacity of at least 156% of the module short-circuit current (Isc × 1.25 × 1.25, NEC 690.8(A) and (B)). Most residential panels with 10–11A Isc use 10 AWG PV wire or USE-2. For runs over 50 feet, upsize to 8 AWG to keep voltage drop under 1% (recommended for DC solar circuits).</p>
       </div>
       <div>
         <h3 class="font-semibold text-gray-900 mb-1">What wire size from charge controller to battery bank?</h3>
-        <p class="text-sm text-gray-700">The charge controller to battery wire size depends on the controller&#x27;s output current. A 40A MPPT controller needs at least 8 AWG copper. A 60A controller needs 6 AWG. Keep this run as short as possible (under 6 feet) to minimize voltage drop and fire risk.</p>
+        <p class="text-sm text-gray-700">The charge controller to battery wire size depends on the controller&#x27;s output current. A 40A MPPT controller needs at least 8 AWG copper. A 60A controller needs 4 AWG (60A × 1.25 = 75A). Keep this run as short as possible (under 6 feet) to minimize voltage drop and fire risk.</p>
       </div>
       <div>
         <h3 class="font-semibold text-gray-900 mb-1">What wire type is required for solar installations?</h3>
@@ -152,7 +152,7 @@
       </div>
       <div>
         <h3 class="font-semibold text-gray-900 mb-1">What is the maximum voltage drop for solar DC wiring?</h3>
-        <p class="text-sm text-gray-700">NEC recommends 3% max voltage drop for branch circuits, but for solar PV, keeping DC wiring under 1–2% voltage drop is best practice to maximize energy harvest. Use our calculator with the array Voc (open-circuit voltage) and string current to find the minimum wire gauge.</p>
+        <p class="text-sm text-gray-700">The NEC has no voltage-drop requirement for PV circuits; keeping DC wiring under 1–2% is industry best practice to maximize energy harvest. Calculate it with the string’s operating voltage and current (Vmp and Imp), not the open-circuit voltage, to find the minimum wire gauge.</p>
       </div>
     </div>
   </section>

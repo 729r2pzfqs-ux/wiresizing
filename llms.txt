@@ -10,12 +10,12 @@
 ## Metric Wire Sizes (IEC 60228)
 - [Metric Chart](https://wiresizing.com/metric/): 19 standard sizes from 0.5 mm² to 300 mm²
 - Individual pages: /metric/2.5mm2/, /metric/4mm2/, /metric/10mm2/, etc.
-- Includes ampacity, resistance, weight, closest AWG equivalent
+- Includes ampacity (IEC 60364-5-52 method A1; BS 7671 cord ratings for 0.5–1 mm²), IEC 60228 maximum resistance, weight, closest AWG or kcmil equivalent
 
 ## Wire Size by Amperage
 - [Amp Lookup](https://wiresizing.com/what-size/): 15A through 200A
 - Pages like /what-size/30-amp/, /what-size/50-amp/
-- Shows recommended copper and aluminum wire gauge per NEC Table 310.16
+- Shows copper and aluminum wire gauge per NEC Table 310.16 for both the 60°C and 75°C columns (NEC 110.14(C)), with NEC 240.4(D) limits and NEC 310.12 dwelling-service sizes
 
 ## Appliance Wiring Guides
 - [All Appliances](https://wiresizing.com/appliances/): 13 guides
@@ -23,7 +23,7 @@
 - Each includes: wire size, breaker, voltage, typical amps, NEC reference, max distance
 
 ## Ampacity Tables
-- [NEC 310.16](https://wiresizing.com/ampacity/): Copper at 60/75/90°C, aluminum at 75°C
+- [NEC 310.16](https://wiresizing.com/ampacity/): 18 AWG to 4/0, copper at 60/75/90°C, aluminum at 75°C, with NEC 240.4(D) small-conductor limits
 
 ## Conduit Fill Charts (NEC Chapter 9)
 - [Conduit Fill Hub](https://wiresizing.com/conduit-fill/): max conductors by conduit type and trade size
@@ -57,7 +57,7 @@
 ## Distance & Voltage Drop
 - [Distance Charts](https://wiresizing.com/distance/): 60 pages
 - Combinations of 10 common gauges × 6 distances (25, 50, 75, 100, 150, 200 ft)
-- Voltage drop at 120V and 240V for multiple amperages
+- Voltage drop at 120V and 240V for loads across each gauge’s range, using NEC Chapter 9 Table 8 resistance at 75°C, plus maximum run length for 3% drop
 
 ## Conversions
 - [AWG to mm²](https://wiresizing.com/convert/awg-to-mm2/)
@@ -85,10 +85,10 @@
 ## Key Formulas
 - AWG diameter: d(n) = 0.005 × 92^((36-n)/39) inches
 - Area: A = π/4 × d²
-- Resistance: R = ρ × L / A
+- Resistance: R = ρ × L / A (spec pages, 20°C); voltage drop uses NEC Chapter 9 Table 8 values at 75°C
 - Voltage drop (single phase): Vdrop = 2 × I × R × L
 - Voltage drop (three phase): Vdrop = √3 × I × R × L
-- Conduit fill: max conductors = floor(conduit internal area × fill % ÷ conductor area)
+- Conduit fill: max conductors = conduit internal area × fill % ÷ conductor area, rounded down, or up when the decimal is 0.8 or more (NEC Chapter 9, Note 7)
 
 ## Contact
 - info@wiresizing.com
