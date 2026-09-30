@@ -156,6 +156,7 @@
           <div class="text-sm text-blue-700 font-medium">Recommended Wire Size</div>
           <div id="resultGauge" class="text-5xl font-bold text-blue-600 mt-2"></div>
           <div id="resultDetails" class="text-sm text-gray-600 mt-3"></div>
+          <div id="resultLinks" class="text-sm mt-3"></div>
         </div>
       </div>
       <div id="calcWarning" class="hidden mt-4 bg-amber-50 border border-amber-300 rounded-xl p-4">
@@ -318,6 +319,7 @@ function calculateWire() {
 
   if (!bestByAmp) {
     resultGauge.textContent = 'Too large';
+    document.getElementById('resultLinks').innerHTML = '';
     resultDetails.textContent = 'No wire in this range is rated for ' + amps + 'A in ' + material + '. This circuit exceeds the calculator range — consult an electrician.';
     result.classList.remove('hidden');
     return;
@@ -334,6 +336,13 @@ function calculateWire() {
   const dropPct = actualDrop / voltage * 100;
 
   resultGauge.textContent = recommended.l + ' AWG';
+  const slug = recommended.l.replace('/', '-');
+  const distances = ['14', '12', '10', '8', '6', '4', '2', '1-0', '2-0', '4-0'];
+  let links = '<a href="/awg/' + slug + '/" class="text-blue-600 hover:underline">' + recommended.l + ' AWG specifications</a>';
+  if (distances.includes(slug)) {
+    links += ' &middot; <a href="/distance/' + slug + '-awg-100-feet/" class="text-blue-600 hover:underline">' + recommended.l + ' AWG voltage drop chart</a>';
+  }
+  document.getElementById('resultLinks').innerHTML = links;
   let details = material.charAt(0).toUpperCase() + material.slice(1) + ' conductor';
   details += ' · Voltage drop: ' + actualDrop.toFixed(1) + 'V (' + dropPct.toFixed(1) + '%)';
   if (bestByDrop && bestByDrop.n < bestByAmp.n) {
