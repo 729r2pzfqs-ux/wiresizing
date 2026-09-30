@@ -204,7 +204,7 @@
           <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">14</td><td class="py-2 px-4 text-gray-600">0.0139</td><td class="py-2 px-4 font-bold text-blue-600">59</td></tr>
           <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">12</td><td class="py-2 px-4 text-gray-600">0.0181</td><td class="py-2 px-4 font-bold text-blue-600">45</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">10</td><td class="py-2 px-4 text-gray-600">0.0243</td><td class="py-2 px-4 font-bold text-blue-600">34</td></tr>
-          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">8</td><td class="py-2 px-4 text-gray-600">0.0437</td><td class="py-2 px-4 font-bold text-blue-600">18</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">8</td><td class="py-2 px-4 text-gray-600">0.0437</td><td class="py-2 px-4 font-bold text-blue-600">19</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">6</td><td class="py-2 px-4 text-gray-600">0.0590</td><td class="py-2 px-4 font-bold text-blue-600">14</td></tr>
           <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">4</td><td class="py-2 px-4 text-gray-600">0.0814</td><td class="py-2 px-4 font-bold text-blue-600">10</td></tr>
           <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">3</td><td class="py-2 px-4 text-gray-600">0.0962</td><td class="py-2 px-4 font-bold text-blue-600">8</td></tr>
@@ -227,12 +227,11 @@
     <h2 class="text-xl font-bold text-gray-900 mb-3">How the 40% conduit fill rule works</h2>
     <p class="text-gray-700 text-sm mb-4">Conduit fill is a pure area calculation. Take the internal
     area of the raceway from NEC Chapter 9, Table 4, multiply by the allowable percentage from
-    Table 1, then divide by the area of one conductor from Table 5. Round <em>down</em> — you cannot
-    install a fraction of a wire.</p>
+    Table 1, then divide by the area of one conductor from Table 5. Round down, except that NEC Chapter 9, Note 7 lets you round up to the next whole number when the result has a decimal of 0.8 or more and all conductors are the same size.</p>
     <div class="bg-gray-50 rounded-xl p-4 mb-4 text-sm">
-      <p class="font-mono text-gray-900">Max conductors = floor( conduit area × fill % ÷ conductor area )</p>
+      <p class="font-mono text-gray-900">Max conductors = conduit area × fill % ÷ conductor area (Note 7 rounding)</p>
       <p class="text-gray-600 mt-2">For 1-1/2" Rigid (RMC) with 12 AWG THHN:
-      floor( 2.071 × 0.40 ÷ 0.0133 ) = <strong>62 conductors</strong></p>
+      2.071 × 0.40 ÷ 0.0133 = 62.29 → <strong>62 conductors</strong></p>
     </div>
     <p class="text-gray-700 text-sm mb-4">The three percentages in NEC Chapter 9, Table 1 are not
     arbitrary. A single conductor gets 53% because it can be pulled straight down the middle. Exactly
@@ -260,7 +259,7 @@
 
   <div class="mb-8">
     <h2 class="font-bold text-gray-900 mb-4">1-1/2" in Other Conduit Types</h2>
-    <div class="grid md:grid-cols-3 gap-4"><a href="/conduit-fill/emt/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch EMT</div><div class="text-sm text-gray-600">61 × 12 AWG THHN &middot; 0.814 in² usable</div></a><a href="/conduit-fill/pvc/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch PVC Sch 40</div><div class="text-sm text-gray-600">59 × 12 AWG THHN &middot; 0.794 in² usable</div></a><a href="/conduit-fill/imc/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch IMC</div><div class="text-sm text-gray-600">66 × 12 AWG THHN &middot; 0.890 in² usable</div></a></div>
+    <div class="grid md:grid-cols-3 gap-4"><a href="/conduit-fill/emt/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch EMT</div><div class="text-sm text-gray-600">62 × 12 AWG THHN &middot; 0.814 in² usable</div></a><a href="/conduit-fill/pvc/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch PVC Sch 40</div><div class="text-sm text-gray-600">62 × 12 AWG THHN &middot; 0.794 in² usable</div></a><a href="/conduit-fill/imc/1-1-2-inch/" class="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all"><div class="font-semibold text-gray-900">1-1/2-inch IMC</div><div class="text-sm text-gray-600">62 × 12 AWG THHN &middot; 0.890 in² usable</div></a></div>
   </div>
 
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
