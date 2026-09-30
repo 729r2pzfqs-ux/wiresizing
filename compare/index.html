@@ -97,7 +97,8 @@
 </header>
 
 <div class="max-w-4xl mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold text-gray-900 mb-6">Wire Comparisons</h1>
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Wire Comparisons</h1>
+  <p class="text-lg text-gray-600 mb-8">Copper conducts better, but aluminum is lighter and cheaper, so large feeders are usually aluminum one or two sizes up. Solid wire is cheaper and easier to terminate, while stranded wire flexes and pulls better. The two guides below give the numbers behind each choice.</p>
   <div class="grid md:grid-cols-2 gap-4">
     <a href="/compare/copper-vs-aluminum/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
       <h3 class="font-bold text-gray-900 mb-2">Copper vs Aluminum</h3>
@@ -109,10 +110,30 @@
     </a>
   </div>
 
+  <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Quick Comparison</h2>
+    </div>
+    <div class="overflow-x-auto">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-gray-200 text-left text-gray-500 text-xs uppercase"><th scope="col" class="py-2 px-4">Property</th><th scope="col" class="py-2 px-4">Copper</th><th scope="col" class="py-2 px-4">Aluminum (EC-1350)</th></tr></thead>
+      <tbody>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-600">Conductivity</td><td class="py-2 px-4">100% IACS</td><td class="py-2 px-4">61% IACS</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 text-gray-600">Resistivity at 20°C</td><td class="py-2 px-4">1.72 × 10⁻⁸ Ω·m</td><td class="py-2 px-4">2.83 × 10⁻⁸ Ω·m</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 text-gray-600">Density</td><td class="py-2 px-4">8,960 kg/m³</td><td class="py-2 px-4">2,700 kg/m³</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 text-gray-600">Size for 100A (75°C)</td><td class="py-2 px-4">3 AWG</td><td class="py-2 px-4">1 AWG</td></tr>
+        <tr><td class="py-2 px-4 text-gray-600">Size for 200A (75°C)</td><td class="py-2 px-4">3/0 AWG</td><td class="py-2 px-4">250 kcmil</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="px-4 py-3 text-xs text-gray-600">Sizes from NEC Table 310.16 with 75°C terminations. Stranded conductors are required in raceways from 8 AWG up (NEC 310.3(C)); below that, solid 14–10 AWG is standard in NM-B cable.</p>
+  </div>
+
   <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/wire-types/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire types and insulation ratings &rarr;</a>
     <a href="/nec/table-310-16/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">NEC Table 310.16 — conductor ampacity &rarr;</a>
+    <a href="/materials/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire conductor materials &rarr;</a>
   </div>
 </div>
 

@@ -105,28 +105,47 @@
     </ol>
   </nav>
   <h1 class="text-3xl font-bold text-gray-900 mb-2">Wiring Guides</h1>
-  <p class="text-gray-600 mb-8">Application-specific wire sizing guides for different industries and use cases. Each guide covers recommended wire gauges, code requirements, and practical tips.</p>
+  <p class="text-gray-600 mb-8">Wire sizing rules change with the application: building wiring follows the NEC, boats follow ABYC E-11, and low-voltage DC and audio runs are usually limited by voltage drop long before ampacity. Each guide covers the governing standard, recommended gauges and practical tips.</p>
 
   <div class="grid md:grid-cols-2 gap-4">
     <a href="/guides/home-wiring/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">Residential Home Wiring Guide</h3>
-          <p class="text-sm text-gray-600">Complete guide to residential electrical wire sizing. Standard wire gauges for lighting, outlets, kitchen circuits, HVAC...</p>
+          <p class="text-sm text-gray-600">14 AWG copper for 15A lighting, 12 AWG for 20A outlets, 10 AWG for 30A dryers and water heaters, with NM-B limited to the 60°C column.</p>
         </a><a href="/guides/automotive/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">Automotive Wire Sizing Guide</h3>
-          <p class="text-sm text-gray-600">Wire sizing guide for car and vehicle electrical systems. 12V DC automotive wire gauges for lighting, audio, accessories...</p>
+          <p class="text-sm text-gray-600">Size 12V wire by current and the full round-trip length: a 20A load 10 feet from the battery needs 8 AWG to stay under 3% drop.</p>
         </a><a href="/guides/solar/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">Solar Panel Wire Sizing Guide</h3>
-          <p class="text-sm text-gray-600">Wire sizing guide for solar panel installations. DC wire sizing for panel strings, charge controllers, inverters, and ba...</p>
+          <p class="text-sm text-gray-600">PV conductors must carry 156% of module Isc (NEC 690.8); most residential strings use 10 AWG PV wire, upsized for long home runs.</p>
         </a><a href="/guides/marine/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">Marine & Boat Wiring Guide</h3>
-          <p class="text-sm text-gray-600">Wire sizing guide for marine and boat electrical systems. ABYC standards for 12V/24V DC boat wiring, tinned copper requi...</p>
+          <p class="text-sm text-gray-600">ABYC E-11 requires stranded copper and limits voltage drop to 3% for critical circuits and 10% for others; tinned boat cable is standard.</p>
         </a><a href="/guides/speaker-wire/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">Speaker Wire Gauge Guide</h3>
-          <p class="text-sm text-gray-600">Speaker wire sizing guide. What gauge for home theater, car audio, outdoor speakers, and professional PA systems. Distan...</p>
+          <p class="text-sm text-gray-600">Keep wire resistance under 5% of speaker impedance: for 8Ω, 16 AWG to about 50 feet, 14 AWG to 80 feet, 12 AWG to 125 feet.</p>
         </a><a href="/guides/ev-charging/" class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-blue-300 transition-all">
           <h3 class="font-bold text-gray-900 mb-2">EV Charger Wire Sizing Guide</h3>
-          <p class="text-sm text-gray-600">Wire sizing guide for electric vehicle chargers. Level 1, Level 2, and Tesla Wall Connector wiring requirements. NEC Art...</p>
+          <p class="text-sm text-gray-600">EV chargers are continuous loads: a 40A charger needs a 50A circuit and a 48A charger a 60A circuit, sized at 125% (NEC 625.41).</p>
         </a>
+  </div>
+
+  <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Sizing Rules by Application</h2>
+    </div>
+    <div class="overflow-x-auto">
+    <table class="w-full text-sm">
+      <thead><tr class="border-b border-gray-200 text-left text-gray-500 text-xs uppercase"><th scope="col" class="py-2 px-4">Application</th><th scope="col" class="py-2 px-4">Standard</th><th scope="col" class="py-2 px-4">Key sizing rule</th><th scope="col" class="py-2 px-4">Voltage-drop target</th></tr></thead>
+      <tbody>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium"><a href="/guides/home-wiring/" class="text-blue-600 hover:underline">Home wiring</a></td><td class="py-2 px-4">NEC</td><td class="py-2 px-4">Table 310.16 + 240.4(D) limits</td><td class="py-2 px-4">3% branch, 5% total (recommended)</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium"><a href="/guides/ev-charging/" class="text-blue-600 hover:underline">EV charging</a></td><td class="py-2 px-4">NEC 625</td><td class="py-2 px-4">Circuit at 125% of charger current</td><td class="py-2 px-4">3%</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium"><a href="/guides/solar/" class="text-blue-600 hover:underline">Solar PV</a></td><td class="py-2 px-4">NEC 690</td><td class="py-2 px-4">156% of module Isc</td><td class="py-2 px-4">1–2% (industry practice)</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium"><a href="/guides/marine/" class="text-blue-600 hover:underline">Marine</a></td><td class="py-2 px-4">ABYC E-11</td><td class="py-2 px-4">Stranded copper, ABYC ampacity tables</td><td class="py-2 px-4">3% critical, 10% other</td></tr>
+        <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium"><a href="/guides/automotive/" class="text-blue-600 hover:underline">Automotive</a></td><td class="py-2 px-4">SAE J1128</td><td class="py-2 px-4">Current and round-trip length</td><td class="py-2 px-4">About 3% (common practice)</td></tr>
+        <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium"><a href="/guides/speaker-wire/" class="text-blue-600 hover:underline">Speaker wire</a></td><td class="py-2 px-4">None (not a code item)</td><td class="py-2 px-4">Resistance under 5% of impedance</td><td class="py-2 px-4">—</td></tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 
   <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-4">
