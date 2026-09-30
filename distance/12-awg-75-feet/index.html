@@ -187,6 +187,25 @@
     <p class="text-sm text-yellow-800"><strong>If voltage drop is too high:</strong> Use the next larger wire size. Each single AWG step up in size cuts voltage drop by about 21% — it takes three steps to roughly halve it, since each step increases the conductor area by a factor of 1.26. Alternatively, for 120V loads, consider rewiring for 240V — same absolute drop but half the percentage.</p>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Can I use 12 AWG wire for a 75-foot run?</h3>
+        <p class="text-sm text-gray-700">It depends on the load and voltage. With NEC Table 8 resistance (1.98 Ω per 1000 ft at 75°C), a 75-foot run of 12 AWG copper drops 3.7% at 15A, 5.0% at 20A on 120V, and half those percentages on 240V. All of these meet the 3% branch-circuit guideline at 240V.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">How far can you run 12 AWG wire?</h3>
+        <p class="text-sm text-gray-700">To stay within 3% voltage drop, 12 AWG copper can run about 60 ft at 15A on 120V, or 90 ft at 20A on 240V (one-way). Its maximum load is 20A (the NEC 240.4(D) limit); lighter loads can run proportionally farther.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">When should I upsize from 12 AWG over 75 feet?</h3>
+        <p class="text-sm text-gray-700">Upsize when your load pushes drop above 3%. At 20A on 240V over 75 feet, 12 AWG drops 2.5%; stepping up to 10 AWG cuts that to 1.6%. For motors, well pumps or sensitive electronics, aim for 2% or less.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/voltage-drop-formula/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Voltage drop formula &rarr;</a>

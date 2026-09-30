@@ -213,6 +213,29 @@
     authority having jurisdiction for actual electrical work.</p>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">How does the conduit fill calculator work?</h3>
+        <p class="text-sm text-gray-700">Enter the conduit type and trade size, then add each conductor size and how many of them. The calculator sums the conductor areas from NEC Chapter 9, Table 5, compares that total against the allowable fill area from Tables 1 and 4, and reports the fill percentage with a pass or fail verdict.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What fill percentage applies to my conduit?</h3>
+        <p class="text-sm text-gray-700">It depends on the total conductor count. One conductor may fill 53% of the raceway, exactly two conductors 31%, and three or more conductors 40%. The calculator selects the correct limit automatically from the number of conductors you enter.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Can I mix wire sizes in the same conduit?</h3>
+        <p class="text-sm text-gray-700">Yes, and the calculation still works — you add the individual conductor areas together and compare the sum to the allowable fill area. The NEC Annex C tables only cover conduits filled with conductors that are all the same size and insulation, so mixed pulls have to be worked out by area, which is what this calculator does.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Do I count the ground wire?</h3>
+        <p class="text-sm text-gray-700">Yes, for fill. Every conductor physically in the raceway occupies area, including equipment grounding conductors and neutrals. The separate current-carrying conductor count used for ampacity derating under NEC 310.15(C)(1) excludes grounds and most neutrals.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/conduit-fill/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">All conduit fill charts &rarr;</a>

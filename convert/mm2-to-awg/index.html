@@ -243,6 +243,25 @@
   <div class="mt-6">
     <a href="/convert/awg-to-mm2/" class="text-blue-600 hover:text-blue-800 font-medium">Looking for AWG to mm²? &rarr;</a>
   </div>
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What AWG is 1.5 mm² wire?</h3>
+        <p class="text-sm text-gray-700">1.5 mm² wire is closest to 15 AWG (not a standard US size). The nearest standard AWG sizes are 14 AWG (2.08 mm², slightly larger) or 16 AWG (1.31 mm², smaller). When substituting, use 14 AWG copper as the safe choice since it has more capacity.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What AWG is 2.5 mm² wire?</h3>
+        <p class="text-sm text-gray-700">2.5 mm² is closest to 13 AWG (not a standard US size). The nearest standard AWG sizes are 12 AWG (3.31 mm², larger) or 14 AWG (2.08 mm², smaller). 2.5 mm² is the standard size for 20A circuits in European/IEC wiring — use 12 AWG as the US equivalent.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">How do you convert mm² to AWG?</h3>
+        <p class="text-sm text-gray-700">Use the formula: AWG = -39 × log(diameter/0.127) / log(92) + 36, where diameter = 2 × √(area/π). For example, 6 mm² has a diameter of 2.764 mm, giving AWG = 36 − 39 × log(2.764/0.127)/log(92) ≈ 9 AWG. Use the lookup table for quick conversions.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
 </div>
 
 <footer class="bg-gray-900 text-gray-400 mt-16">

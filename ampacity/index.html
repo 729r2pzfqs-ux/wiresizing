@@ -210,6 +210,29 @@
     <p class="text-sm text-yellow-800"><strong>Note:</strong> These ampacity values assume no more than 3 current-carrying conductors in a raceway, cable, or direct burial at 30°C ambient temperature. Derate for higher temperatures, more conductors, or conduit fill per NEC 310.15.<br><sup>*</sup> NEC 240.4(D) caps overcurrent protection at 15A (14 AWG), 20A (12 AWG) and 30A (10 AWG) copper; 15A and 25A for 12 and 10 AWG aluminum. <sup>†</sup> 18 and 16 AWG appear only in the 90°C column and are not permitted for general branch circuits.</p>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is ampacity?</h3>
+        <p class="text-sm text-gray-700">Ampacity is the maximum continuous current (in amps) a wire can carry safely without overheating its insulation. NEC Table 310.16 lists ampacity for conductors in conduit at ambient temperature of 30°C (86°F).</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is the ampacity of 12 AWG copper wire?</h3>
+        <p class="text-sm text-gray-700">12 AWG copper wire has an ampacity of 20A at 60°C, 25A at 75°C, and 30A at 90°C insulation rating per NEC Table 310.16. NEC 240.4(D) still limits it to a 20A breaker, and NM-B cable must use the 60°C column (NEC 334.80).</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Why does insulation temperature affect ampacity?</h3>
+        <p class="text-sm text-gray-700">Higher-rated insulation can withstand more heat, allowing more current through the same conductor. NEC publishes ampacity values at 60°C, 75°C, and 90°C. THHN/THWN-2 is rated 90°C wet or dry, but the usable ampacity is limited by the lowest-rated termination (NEC 110.14(C)): usually 75°C for THHN in conduit, and 60°C for NM-B cable or equipment 100A and below not marked 75°C.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is the ampacity of 10 AWG wire?</h3>
+        <p class="text-sm text-gray-700">10 AWG copper wire has an ampacity of 30A at 60°C, 35A at 75°C, and 40A at 90°C per NEC Table 310.16. 10 AWG aluminum wire rates at 25A (60°C), 30A (75°C), 35A (90°C).</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/breaker-size/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Circuit breaker size chart &rarr;</a>

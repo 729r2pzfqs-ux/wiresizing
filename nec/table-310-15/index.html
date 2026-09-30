@@ -177,6 +177,33 @@
     <p class="text-gray-700 text-sm mb-4">NEC 310.15(C)(1) lists exceptions worth knowing. Conductors in a nipple 24 inches or shorter between enclosures are exempt. Underground conductors entering or leaving an outdoor trench are exempt where they are protected by a raceway no longer than 10 feet and there are no more than four conductors. (The separate “10 feet or 10%, whichever is less” rule is in NEC 310.15(A): where a short section of a run has a lower ampacity, the higher ampacity may be used for the whole run.) And where the load diversity is such that not all conductors carry current simultaneously, the count only includes those that do.</p>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is NEC Table 310.15?</h3>
+        <p class="text-sm text-gray-700">NEC 310.15 contains two derating tables. Table 310.15(B)(1) corrects conductor ampacity for ambient temperatures other than 30°C. Table 310.15(C)(1) adjusts ampacity when more than three current-carrying conductors share a raceway or cable: 80% for 4–6 conductors, 70% for 7–9, 50% for 10–20, 45% for 21–30, 40% for 31–40, and 35% for 41 or more.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">How many conductors before derating starts?</h3>
+        <p class="text-sm text-gray-700">Derating begins at the fourth current-carrying conductor in a raceway or cable bundled for more than 24 inches. Three or fewer current-carrying conductors use the Table 310.16 ampacity unchanged.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Does the ground wire count for derating?</h3>
+        <p class="text-sm text-gray-700">No. Equipment grounding conductors are never counted as current-carrying conductors for NEC 310.15(C)(1). They do still count toward conduit fill, which is a separate area calculation.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Does the neutral count as a current-carrying conductor?</h3>
+        <p class="text-sm text-gray-700">It depends on the circuit. The neutral of a 3-wire circuit from a single-phase system carries only the unbalanced current and does not count. The neutral of a 4-wire, 3-phase wye circuit does count when the major portion of the load is nonlinear, because harmonic currents add rather than cancel in the neutral.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Do I derate from the 90°C column?</h3>
+        <p class="text-sm text-gray-700">Yes. Derating starts from the ampacity column matching the conductor insulation rating, so THHN and THWN-2 derate from the 90°C column. The final derated result is then limited by the termination temperature rating under NEC 110.14(C), normally 75°C.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
 <a href="/nec/table-310-16/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">NEC Table 310.16 — conductor ampacity &rarr;</a><a href="/conduit-fill/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Conduit fill charts &rarr;</a><a href="/conduit-fill/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Conduit fill calculator &rarr;</a><a href="/ampacity/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Ampacity tables &rarr;</a><a href="/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire size calculator &rarr;</a>

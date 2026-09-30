@@ -265,6 +265,33 @@
     <a href="/calculator/" class="inline-block bg-blue-600 text-white font-bold px-5 py-2 rounded-xl hover:bg-blue-700 transition-colors">Open the wire size calculator</a>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is the voltage drop formula?</h3>
+        <p class="text-sm text-gray-700">For a single-phase circuit, VD = 2 × I × R × L ÷ 1000, where I is the current in amperes, R is the conductor resistance in ohms per 1000 feet, and L is the one-way run length in feet. The 2 accounts for current travelling out on the hot and back on the neutral. For three-phase, replace the 2 with the square root of 3, about 1.732.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Why is there a 2 in the voltage drop formula?</h3>
+        <p class="text-sm text-gray-700">Because current flows through two conductors — out along the ungrounded conductor and back along the neutral or the second hot leg. The physical length of wire in the circuit is twice the one-way run, so the resistance is doubled. In a three-phase circuit the return currents partly cancel, which is why the multiplier drops to the square root of 3.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is an acceptable voltage drop?</h3>
+        <p class="text-sm text-gray-700">The NEC Informational Notes to 210.19(A) and 215.2(A) recommend a maximum of 3% on a branch circuit and 5% total across the feeder plus branch circuit combined. These are recommendations rather than enforceable requirements in most installations, but exceeding them causes dim lights, slow motor starts, and wasted energy as heat in the wire.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">How do I calculate the percentage voltage drop?</h3>
+        <p class="text-sm text-gray-700">Divide the voltage drop by the nominal system voltage and multiply by 100. A 4.8 volt drop on a 240 V circuit is 4.8 ÷ 240 × 100 = 2.0%. Always use the nominal system voltage, not the measured voltage at the panel.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Does voltage drop change the wire size I need?</h3>
+        <p class="text-sm text-gray-700">It can. Ampacity sets the minimum wire size for safety; voltage drop sets a second minimum for performance on long runs. You use whichever is larger. A 20 A circuit needs 12 AWG for ampacity, but past about 100 feet at 120 V you need 10 AWG to stay under 3%.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/calculator/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Wire size &amp; voltage drop calculator &rarr;</a>

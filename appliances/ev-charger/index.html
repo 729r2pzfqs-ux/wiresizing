@@ -149,6 +149,29 @@
     <p class="text-gray-700">A 40A charger needs a 50A circuit (40 × 1.25 = 50). A 48A charger (the maximum for a 60A circuit) needs 6 AWG THHN with 75°C terminations, or 4 AWG NM-B, on a 60A breaker. For future-proofing, many electricians recommend installing a 60A circuit even for a 40A charger.</p>
   </div>
 
+  <!-- faq:start -->
+  <section id="faq" class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What wire size for a Level 2 EV charger?</h3>
+        <p class="text-sm text-gray-700">EV chargers are continuous loads under NEC, so the circuit must be rated at 125% of the charger current. A 48A charger needs a 60A breaker with 6 AWG copper THHN in conduit and 75°C-rated terminations (65A in NEC Table 310.16). 6 AWG NM-B is limited to 55A, so a 48A charger on NM-B needs 4 AWG. A 32A charger needs a 40A breaker with 8 AWG copper.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">What is the most common Level 2 EV charger amperage?</h3>
+        <p class="text-sm text-gray-700">Most popular home EV chargers output 32A–48A. A 48A EVSE needs a 60A dedicated circuit (6 AWG THHN with 75°C terminations, or 4 AWG NM-B). A 32A EVSE needs a 40A circuit (8 AWG copper). Many homeowners install a 60A circuit to future-proof for higher-amperage chargers.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Can I install a Level 2 charger on a 50-amp circuit?</h3>
+        <p class="text-sm text-gray-700">Yes, but only for a 40A or lower charger. A 50A breaker with 6 AWG copper supports up to 40A continuous (50A × 80% = 40A). For a 48A charger, you need a 60A circuit: 6 AWG THHN with 75°C terminations, or 4 AWG NM-B. Always check the charger&#x27;s nameplate for the required circuit amperage.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-1">Does an EV charger need a dedicated circuit?</h3>
+        <p class="text-sm text-gray-700">Yes — NEC Article 625 requires Level 2 EV chargers to be on a dedicated branch circuit. No other loads can share the circuit. GFCI protection may be required depending on charger type and installation location.</p>
+      </div>
+    </div>
+  </section>
+  <!-- faq:end -->
   <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
     <h4 class="font-bold text-gray-900 mb-2">Related</h4>
     <a href="/breaker-size/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Circuit breaker size chart &rarr;</a>
