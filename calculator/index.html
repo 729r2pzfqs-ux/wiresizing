@@ -32,7 +32,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wire Size Calculator", "url": "https://wiresizing.com/calculator/", "applicationCategory": "UtilityApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I use the wire size calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your circuit amperage, voltage (120V or 240V), wire run distance in feet, and conductor material (copper or aluminum). The calculator returns the minimum safe AWG gauge and the voltage drop percentage for that run."}}, {"@type": "Question", "name": "What voltage drop is acceptable?", "acceptedAnswer": {"@type": "Answer", "text": "NEC recommends no more than 3% voltage drop on a branch circuit and 5% total including feeder. For sensitive equipment, keep it under 2%. For long runs, you may need to upsize the wire gauge to stay within these limits."}}, {"@type": "Question", "name": "Should I use copper or aluminum wire?", "acceptedAnswer": {"@type": "Answer", "text": "Copper is standard for branch circuits (outlets, lighting, appliances) because it is more conductive and easier to work with. Aluminum is common for large feeder runs and service entrance where cost savings matter — you need a wire 2 sizes larger than copper for the same ampacity."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I use the wire size calculator?", "acceptedAnswer": {"@type": "Answer", "text": "Enter your circuit amperage, voltage (120V, 208V, 230V, 240V, 277V or 480V; single- or three-phase), wire run distance in feet, and conductor material (copper or aluminum). The calculator returns the minimum safe AWG gauge and the voltage drop percentage for that run."}}, {"@type": "Question", "name": "What voltage drop is acceptable?", "acceptedAnswer": {"@type": "Answer", "text": "NEC recommends no more than 3% voltage drop on a branch circuit and 5% total including feeder. For sensitive equipment, keep it under 2%. For long runs, you may need to upsize the wire gauge to stay within these limits."}}, {"@type": "Question", "name": "Should I use copper or aluminum wire?", "acceptedAnswer": {"@type": "Answer", "text": "Copper is standard for branch circuits (outlets, lighting, appliances) because it is more conductive and easier to work with. Aluminum is common for large feeder runs and service entrance where cost savings matter — you need a wire 2 sizes larger than copper for the same ampacity."}}]}</script>
 <script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
 </head>
 <body>
@@ -97,7 +97,7 @@
 
 <div class="max-w-4xl mx-auto px-4 py-8">
   <h1 class="text-3xl font-bold text-gray-900 mb-2">Wire Size Calculator</h1>
-  <p class="text-gray-600 mb-8">Enter your circuit parameters to find the correct wire gauge. Accounts for ampacity (NEC Table 310.16), the NEC 240.4(D) small-conductor limits, and voltage drop.</p>
+  <p class="text-gray-600 mb-8">Enter your circuit parameters to find the correct wire gauge. Accounts for ampacity (NEC Table 310.16), the NEC 240.4(D) small-conductor limits, and voltage drop (NEC Chapter 9 Table 8 resistance at 75°C).</p>
 
   <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
     <div class="grid md:grid-cols-2 gap-6">
@@ -204,8 +204,10 @@
 </div>
 
 <script>
+// r_cu / r_al: ohms per 1000 ft, NEC Chapter 9 Table 8 (stranded, 75°C).
+// 16/18 AWG carry no amp_cu: they are not permitted for branch circuits.
 const awgData = [
-  {"n":-3,"l":"4/0","r_cu":0.049,"r_al":0.0753,"amp_cu":230,"amp_al":180},{"n":-2,"l":"3/0","r_cu":0.0618,"r_al":0.095,"amp_cu":200,"amp_al":155},{"n":-1,"l":"2/0","r_cu":0.0779,"r_al":0.1198,"amp_cu":175,"amp_al":135},{"n":0,"l":"1/0","r_cu":0.0983,"r_al":0.151,"amp_cu":150,"amp_al":120},{"n":1,"l":"1","r_cu":0.1239,"r_al":0.1905,"amp_cu":130,"amp_al":100},{"n":2,"l":"2","r_cu":0.1562,"r_al":0.2402,"amp_cu":115,"amp_al":90},{"n":3,"l":"3","r_cu":0.197,"r_al":0.3029,"amp_cu":100,"amp_al":75},{"n":4,"l":"4","r_cu":0.2484,"r_al":0.3819,"amp_cu":85,"amp_al":65},{"n":5,"l":"5","r_cu":0.3133,"r_al":0.4816,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.395,"r_al":0.6072,"amp_cu":65,"amp_al":50},{"n":7,"l":"7","r_cu":0.4981,"r_al":0.7657,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.6281,"r_al":0.9655,"amp_cu":50,"amp_al":40},{"n":9,"l":"9","r_cu":0.7921,"r_al":1.2175,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":0.9988,"r_al":1.5353,"amp_cu":35,"amp_al":30},{"n":11,"l":"11","r_cu":1.2594,"r_al":1.9359,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.5881,"r_al":2.4411,"amp_cu":25,"amp_al":20},{"n":13,"l":"13","r_cu":2.0026,"r_al":3.0782,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":2.5252,"r_al":3.8816,"amp_cu":20,"amp_al":0},{"n":15,"l":"15","r_cu":3.1842,"r_al":4.8946,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.0153,"r_al":6.1719,"amp_cu":13,"amp_al":0},{"n":17,"l":"17","r_cu":5.0631,"r_al":7.7827,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":6.3845,"r_al":9.8138,"amp_cu":10,"amp_al":0}
+  {"n":-3,"l":"4/0","r_cu":0.0608,"r_al":0.1,"amp_cu":230,"amp_al":180},{"n":-2,"l":"3/0","r_cu":0.0766,"r_al":0.126,"amp_cu":200,"amp_al":155},{"n":-1,"l":"2/0","r_cu":0.0967,"r_al":0.159,"amp_cu":175,"amp_al":135},{"n":0,"l":"1/0","r_cu":0.122,"r_al":0.201,"amp_cu":150,"amp_al":120},{"n":1,"l":"1","r_cu":0.154,"r_al":0.253,"amp_cu":130,"amp_al":100},{"n":2,"l":"2","r_cu":0.194,"r_al":0.319,"amp_cu":115,"amp_al":90},{"n":3,"l":"3","r_cu":0.245,"r_al":0.403,"amp_cu":100,"amp_al":75},{"n":4,"l":"4","r_cu":0.308,"r_al":0.508,"amp_cu":85,"amp_al":65},{"n":5,"l":"5","r_cu":0.389,"r_al":0.638,"amp_cu":0,"amp_al":0},{"n":6,"l":"6","r_cu":0.491,"r_al":0.808,"amp_cu":65,"amp_al":50},{"n":7,"l":"7","r_cu":0.6184,"r_al":1.0142,"amp_cu":0,"amp_al":0},{"n":8,"l":"8","r_cu":0.778,"r_al":1.28,"amp_cu":50,"amp_al":40},{"n":9,"l":"9","r_cu":0.9834,"r_al":1.6128,"amp_cu":0,"amp_al":0},{"n":10,"l":"10","r_cu":1.24,"r_al":2.04,"amp_cu":35,"amp_al":30},{"n":11,"l":"11","r_cu":1.5635,"r_al":2.5641,"amp_cu":0,"amp_al":0},{"n":12,"l":"12","r_cu":1.98,"r_al":3.25,"amp_cu":25,"amp_al":20},{"n":13,"l":"13","r_cu":2.4862,"r_al":4.0774,"amp_cu":0,"amp_al":0},{"n":14,"l":"14","r_cu":3.14,"r_al":5.1496,"amp_cu":20,"amp_al":0},{"n":15,"l":"15","r_cu":3.9532,"r_al":6.4832,"amp_cu":0,"amp_al":0},{"n":16,"l":"16","r_cu":4.99,"r_al":8.1836,"amp_cu":0,"amp_al":0},{"n":17,"l":"17","r_cu":6.2858,"r_al":10.3087,"amp_cu":0,"amp_al":0},{"n":18,"l":"18","r_cu":7.95,"r_al":13.038,"amp_cu":0,"amp_al":0}
 ];
 
 // NEC 240.4(D) small-conductor rule: regardless of the higher Table 310.16
@@ -331,20 +333,20 @@ function calculateWire() {
       dropPct.toFixed(1) + '%. Shorten the run, raise the system voltage, or use a conductor larger than 4/0 AWG.');
   }
 
-  // 240.4(D) drove the sizing.
-  const tableAmp = material === 'copper' ? recommended.amp_cu : recommended.amp_al;
-  const cap = smallConductorLimits[material][recommended.l];
-  if (cap !== undefined && cap < tableAmp) {
-    notes.push('NEC 240.4(D): ' + recommended.l + ' AWG ' + material + ' is limited to a ' + cap +
-      'A overcurrent device even though Table 310.16 lists ' + tableAmp +
-      'A for it. This calculator applies that cap.');
-  }
-
-  // Sizes below 14 AWG are not general-purpose branch-circuit wiring.
-  if (recommended.n > 14) {
-    notes.push('Note: ' + recommended.l + ' AWG is smaller than the 14 AWG minimum normally used for ' +
-      'building branch circuits. It is code-legal only for fixture wire, flexible cords, and control ' +
-      'circuits under NEC 240.4(D)/402 — not for general premises wiring.');
+  // 240.4(D) drove the sizing: a smaller wire would pass on its Table 310.16
+  // ampacity alone, but its capped overcurrent limit is below the load.
+  if (recommended === bestByAmp) {
+    const smaller = awgData.filter(g => g.n > recommended.n && usableAmpacity(g, material) > 0)
+      .sort((a, b) => a.n - b.n)[0];
+    if (smaller) {
+      const smallerTable = material === 'copper' ? smaller.amp_cu : smaller.amp_al;
+      const smallerCap = smallConductorLimits[material][smaller.l];
+      if (smallerTable >= amps && smallerCap !== undefined && smallerCap < amps) {
+        notes.push('NEC 240.4(D): ' + smaller.l + ' AWG ' + material + ' is listed at ' + smallerTable +
+          'A in Table 310.16 but may not be protected above ' + smallerCap + 'A, so ' + recommended.l +
+          ' AWG is required for a ' + amps + 'A load.');
+      }
+    }
   }
 
   const warnBox = document.getElementById('calcWarning');
