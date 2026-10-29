@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ampacity Derating Factors — NEC 310.15 | WireSizing</title>
+<meta name="description" content="NEC 310.15 ambient temperature correction and conductor bundle adjustment factors. Interactive calculator for derated ampacity.">
+<link rel="canonical" href="https://wiresizing.com/ampacity/derating/">
+<link rel="alternate" hreflang="en" href="https://wiresizing.com/ampacity/derating/">
+<link rel="alternate" hreflang="x-default" href="https://wiresizing.com/ampacity/derating/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2563eb">
+<link rel="stylesheet" href="/assets/tailwind.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{font-family:'Inter',sans-serif}body{background:#f8fafc}</style>
+<meta property="og:title" content="Ampacity Derating Factors — NEC 310.15 | WireSizing">
+<meta property="og:description" content="NEC 310.15 ambient temperature correction and conductor bundle adjustment factors. Interactive calculator for derated ampacity.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://wiresizing.com/ampacity/derating/">
+<meta property="og:site_name" content="WireSizing">
+<meta property="og:image" content="https://wiresizing.com/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ampacity Derating Factors — NEC 310.15 | WireSizing">
+<meta name="twitter:description" content="NEC 310.15 ambient temperature correction and conductor bundle adjustment factors. Interactive calculator for derated ampacity.">
+<meta name="twitter:image" content="https://wiresizing.com/og-default.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BB4F2WJZQG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-BB4F2WJZQG');</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Ampacity Derating Factors", "description": "NEC 310.15 ambient temperature correction and conductor bundle adjustment factors. Interactive calculator for derated ampacity.", "url": "https://wiresizing.com/ampacity/derating/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wiresizing.com/ampacity/derating/"}, "inLanguage": "en", "image": "https://wiresizing.com/og-default.png", "author": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com"}, "publisher": {"@type": "Organization", "name": "WireSizing", "url": "https://wiresizing.com", "logo": {"@type": "ImageObject", "url": "https://wiresizing.com/android-chrome-512x512.png"}}, "keywords": "ampacity derating, NEC 310.15, temperature correction, conductor adjustment, derating factors"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wiresizing.com/"}, {"@type": "ListItem", "position": 2, "name": "Ampacity Tables", "item": "https://wiresizing.com/ampacity/"}, {"@type": "ListItem", "position": 3, "name": "Derating Factors", "item": "https://wiresizing.com"}]}</script>
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="LvsxKc/Jb0fFsVRNwiNEXg" async></script>
+</head>
+<body>
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-bold text-gray-900">WireSizing</div>
+        <div class="text-xs text-gray-500">Wire gauge reference &amp; calculator</div>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-5 text-sm">
+      <a href="/awg/" class="text-gray-600 hover:text-gray-900">AWG Chart</a><a href="/metric/" class="text-gray-600 hover:text-gray-900">Metric Sizes</a><a href="/conduit-fill/" class="text-gray-600 hover:text-gray-900">Conduit Fill</a><a href="/calculator/" class="text-gray-600 hover:text-gray-900">Calculator</a>
+      <div class="relative group">
+        <button class="text-gray-600 hover:text-gray-900 flex items-center gap-1">More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+          <a href="/ampacity/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Ampacity Tables</a><a href="/nec/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">NEC Tables</a><a href="/breaker-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Breaker Sizes</a><a href="/wire-types/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Types</a><a href="/what-size/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Size by Amps</a><a href="/motor-fla/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Motor FLA</a><a href="/appliances/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Appliance Wiring</a><a href="/distance/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Distance Charts</a><a href="/convert/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Conversions</a><a href="/materials/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wire Materials</a><a href="/guides/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">Wiring Guides</a><div class="border-t border-gray-100 my-1"></div><a href="/about/" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700">About</a>
+        </div>
+      </div>
+    </nav>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" aria-label="Open menu" class="md:hidden p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <a href="/awg/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">AWG Chart</a><a href="/metric/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Metric Sizes</a><a href="/conduit-fill/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conduit Fill</a><a href="/calculator/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Calculator</a><a href="/ampacity/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Ampacity Tables</a><a href="/nec/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">NEC Tables</a><a href="/breaker-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Breaker Sizes</a><a href="/wire-types/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Types</a><a href="/what-size/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Size by Amps</a><a href="/motor-fla/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Motor FLA</a><a href="/appliances/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Appliance Wiring</a><a href="/distance/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Distance Charts</a><a href="/convert/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Conversions</a><a href="/materials/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wire Materials</a><a href="/guides/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">Wiring Guides</a><a href="/about/" class="block px-4 py-3 text-gray-700 hover:bg-blue-50">About</a>
+  </div>
+</header>
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="/" class="hover:text-blue-600">Home</a> &rsaquo;
+    <a href="/ampacity/" class="hover:text-blue-600">Ampacity Tables</a> &rsaquo;
+    <span class="text-gray-900">Derating Factors</span>
+    </nav>
+
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ampacity Derating Factors</h1>
+  <p class="text-gray-600 mb-8">Two independent derating factors reduce conductor ampacity: (1) ambient temperature above 30°C and (2) more than three current-carrying conductors in a raceway or cable. Apply both when both conditions exist.</p>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Ambient Temperature Correction Factors</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-white text-left border-b border-gray-200">
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Temp (°C)</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Temp (°F)</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">60°C insulation</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">75°C insulation</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">90°C insulation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">≤10</td><td class="py-2 px-4">≤50</td><td class="py-2 px-4">1.29</td><td class="py-2 px-4">1.2</td><td class="py-2 px-4">1.15</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">11–15</td><td class="py-2 px-4">51–59</td><td class="py-2 px-4">1.22</td><td class="py-2 px-4">1.15</td><td class="py-2 px-4">1.12</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">16–20</td><td class="py-2 px-4">60–68</td><td class="py-2 px-4">1.15</td><td class="py-2 px-4">1.11</td><td class="py-2 px-4">1.08</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">21–25</td><td class="py-2 px-4">69–77</td><td class="py-2 px-4">1.08</td><td class="py-2 px-4">1.05</td><td class="py-2 px-4">1.04</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">26–30</td><td class="py-2 px-4">78–86</td><td class="py-2 px-4">1.0</td><td class="py-2 px-4">1.0</td><td class="py-2 px-4">1.0</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">31–35</td><td class="py-2 px-4">87–95</td><td class="py-2 px-4">0.91</td><td class="py-2 px-4">0.94</td><td class="py-2 px-4">0.96</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">36–40</td><td class="py-2 px-4">96–104</td><td class="py-2 px-4">0.82</td><td class="py-2 px-4">0.88</td><td class="py-2 px-4">0.91</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">41–45</td><td class="py-2 px-4">105–113</td><td class="py-2 px-4">0.71</td><td class="py-2 px-4">0.82</td><td class="py-2 px-4">0.87</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">46–50</td><td class="py-2 px-4">114–122</td><td class="py-2 px-4">0.58</td><td class="py-2 px-4">0.75</td><td class="py-2 px-4">0.82</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">51–55</td><td class="py-2 px-4">123–131</td><td class="py-2 px-4">0.41</td><td class="py-2 px-4">0.67</td><td class="py-2 px-4">0.76</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">56–60</td><td class="py-2 px-4">132–140</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.58</td><td class="py-2 px-4">0.71</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">61–65</td><td class="py-2 px-4">141–149</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.47</td><td class="py-2 px-4">0.65</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">66–70</td><td class="py-2 px-4">150–158</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.33</td><td class="py-2 px-4">0.58</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">71–75</td><td class="py-2 px-4">159–167</td><td class="py-2 px-4">—</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.5</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">76–80</td><td class="py-2 px-4">168–176</td><td class="py-2 px-4">—</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.41</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">81–85</td><td class="py-2 px-4">177–185</td><td class="py-2 px-4">—</td><td class="py-2 px-4">—</td><td class="py-2 px-4">0.29</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-600">Based on NEC 310.15(B)(1). Multiply the table ampacity by this factor when ambient temperature differs from 30°C.</div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200">
+      <h2 class="font-bold text-gray-900">Conductor Bundle Adjustment Factors</h2>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-white text-left border-b border-gray-200">
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Current-Carrying Conductors</th>
+            <th scope="col" class="py-2 px-4 font-semibold text-gray-700">Adjustment Factor (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">4–6</td><td class="py-2 px-4 font-bold text-blue-600">80%</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">7–9</td><td class="py-2 px-4 font-bold text-blue-600">70%</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">10–20</td><td class="py-2 px-4 font-bold text-blue-600">50%</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">21–30</td><td class="py-2 px-4 font-bold text-blue-600">45%</td></tr>
+          <tr class="border-b border-gray-100"><td class="py-2 px-4 font-medium">31–40</td><td class="py-2 px-4 font-bold text-blue-600">40%</td></tr>
+          <tr class="border-b border-gray-100 bg-gray-50"><td class="py-2 px-4 font-medium">41–& above</td><td class="py-2 px-4 font-bold text-blue-600">35%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-3 bg-gray-50 border-t border-gray-200 text-xs text-gray-600">NEC 310.15(C)(1). Applies when more than three current-carrying conductors are in a raceway, cable, or directly buried. Neutrals that carry only unbalanced current and equipment grounding conductors are not counted.</div>
+  </div>
+
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-3">How to Apply Both Factors</h2>
+    <p class="text-gray-700 text-sm mb-3">When both conditions apply, multiply the table ampacity by <em>both</em> factors:</p>
+    <div class="bg-gray-50 rounded-xl p-4 text-sm">
+      <p class="font-mono text-gray-900">Derated ampacity = Table ampacity &times; temperature factor &times; bundle factor</p>
+      <p class="text-gray-600 mt-2">Example: 12 AWG THHN (90°C column = 30 A) at 40°C ambient with 6 current-carrying conductors: 30 &times; 0.91 &times; 0.80 = <strong>21.8 A</strong></p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+    <h4 class="font-bold text-gray-900 mb-2">Related</h4>
+    <a href="/ampacity/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Ampacity tables overview &rarr;</a>
+    <a href="/nec/table-310-16/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Table 310.16 — raceway &amp; cable &rarr;</a>
+    <a href="/ampacity/table-310-17/" class="block py-2 px-3 rounded hover:bg-blue-50 text-sm text-blue-600">Table 310.17 — free air &rarr;</a>
+  </div>
+  <p class="text-xs text-gray-500 mt-6 mb-2">WireSizing.com is an independent reference. NEC&reg; is a registered trademark of the NFPA. Values shown are commonly published engineering data; always confirm against the edition adopted in your jurisdiction and consult a licensed electrician.</p>
+</div>
+<footer class="bg-gray-900 text-gray-400 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-white font-bold mb-3">WireSizing</h3>
+        <p class="text-sm">Free wire gauge reference and sizing calculator. Data calculated from AWG formulas and NEC/IEC standards.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Reference</h4>
+        <a href="/awg/" class="block text-sm mb-2 hover:text-white">AWG Wire Chart</a>
+        <a href="/metric/" class="block text-sm mb-2 hover:text-white">Metric Wire Sizes</a>
+        <a href="/ampacity/" class="block text-sm mb-2 hover:text-white">Ampacity Tables</a>
+        <a href="/nec/" class="block text-sm mb-2 hover:text-white">NEC Table Reference</a>
+        <a href="/wire-types/" class="block text-sm mb-2 hover:text-white">Wire Types</a>
+        <a href="/materials/" class="block text-sm mb-2 hover:text-white">Wire Materials</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">Tools</h4>
+        <a href="/calculator/" class="block text-sm mb-2 hover:text-white">Wire Size Calculator</a>
+        <a href="/conduit-fill/calculator/" class="block text-sm mb-2 hover:text-white">Conduit Fill Calculator</a>
+        <a href="/conduit-fill/" class="block text-sm mb-2 hover:text-white">Conduit Fill Charts</a>
+        <a href="/convert/awg-to-mm2/" class="block text-sm mb-2 hover:text-white">AWG to mm&sup2; Converter</a>
+        <a href="/what-size/" class="block text-sm mb-2 hover:text-white">Wire Size by Amps</a>
+        <a href="/breaker-size/" class="block text-sm mb-2 hover:text-white">Breaker Size Charts</a>
+        <a href="/motor-fla/" class="block text-sm mb-2 hover:text-white">Motor FLA Tables</a>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3 text-sm">About</h4>
+        <a href="/about/" class="block text-sm mb-2 hover:text-white">About &amp; Sources</a>
+        <a href="/privacy/" class="block text-sm mb-2 hover:text-white">Privacy Policy</a>
+        <!--email_off--><a href="mailto:info@wiresizing.com" class="block text-sm mb-2 hover:text-white">Contact Us</a><!--/email_off-->
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-sm text-center">
+      <p>&copy; 2026 WireSizing.com &mdash; Wire Gauge Reference &amp; Calculator</p>
+      <p class="mt-1 text-xs text-gray-400">Data calculated from ASTM B258 (AWG), NEC Table 310.16 (ampacity), and IEC 60228 (metric). For reference only &mdash; always consult a licensed electrician for actual installations.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
